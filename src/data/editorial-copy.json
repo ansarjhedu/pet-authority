@@ -1,0 +1,130 @@
+{
+  "review": "Edited under the supervision of Dr. Sarah Jenkins, DVM, of the PetAuthority Veterinary Medical Advisory Board. These pages describe clinical possibilities and a Green, Yellow, or Red triage path. They do not diagnose an individual animal or replace an examination by a licensed veterinarian.",
+  "regulator": "The FDA regulates pet food and animal drugs in the United States. The VMD licenses veterinary medicines in the United Kingdom, where DEFRA also sets animal-health rules, and the APVMA registers veterinary chemical products in Australia. This page is an educational summary, not a product label or a prescription.",
+  "dogStandard": "The American Kennel Club in the United States, The Kennel Club in the United Kingdom, and the Australian National Kennel Council publish a conformation standard for this breed. Those standards describe appearance and typical temperament. They do not predict an individual dog's health, and a veterinarian still has to examine your dog.",
+  "catStandard": "Registries such as CFA in the United States, GCCF in the United Kingdom, and ACF in Australia publish a conformation description for many pedigreed cats. That description covers coat, size, and typical temperament. It does not diagnose heart disease, urinary blockage, or any other illness in the cat you live with.",
+  "birdStandard": "There is no kennel-club standard that predicts this bird's health. Care on this page follows clinical avian practice used in the United States, the United Kingdom, and Australia. A quiet change in droppings, appetite, or breathing still needs an avian veterinarian rather than a show-standard comparison.",
+  "smallPetStandard": "There is no kennel-club standard for rabbits, guinea pigs, hamsters, or ferrets. Husbandry on this page follows clinical exotic-pet practice in the United States, the United Kingdom, and Australia. Appetite, droppings, and hiding still matter more than a show type when you decide how urgent a sign is.",
+  "costNote": "United States and United Kingdom figures are typical yearly costs for food, routine care, and preventive visits for a healthy adult. The Australian figure is a planning conversion at about 1.5 Australian dollars per US dollar, rounded to the nearest hundred, and it is not a clinic quote.",
+  "checklistIntro": "Use this checklist once, then stop if handling increases distress or breathing worsens. Breathing rate, gum color, and appetite are the checks that change the plan, and a missed meal is more urgent in a bird or rabbit than the same gap in a dog. Write down what you see, including when the sign started, before you call.",
+  "calorieAddition": "Enter the current weight in pounds (kilograms) in the calculator, because a lean animal and an overweight animal do not share the same portion.",
+  "dietAdditions": [
+    "Measure meals in ounces (grams), and keep treats near ten percent of the daily calorie target.",
+    "Ask a veterinarian before you add supplements or switch to a homemade recipe."
+  ],
+  "taglineAdditions": [
+    "The weight, exercise, and yearly cost figures below are ranges for a typical healthy adult.",
+    "A licensed veterinarian who has examined your animal still has to confirm the plan.",
+    "Confirm that plan before you bring the animal home."
+  ],
+  "faqAdditions": [
+    "These points are educational ranges, and a veterinarian who has examined your animal still has to confirm them.",
+    "Confirm this before you bring the animal home."
+  ],
+  "symptomLedeAddition": "This is a triage guide, not a diagnosis for the animal in front of you.",
+  "toxicServingAdditions": [
+    "There is no safe home portion in ounces (grams), and a smaller pet can be harmed by less than a larger one.",
+    "Powder, broth, and baked goods count the same as the plain ingredient."
+  ],
+  "safeServingAdditions": [
+    "Measure any allowed portion in teaspoons or grams, and keep treats near ten percent of daily calories rather than a full cup, about 180 g.",
+    "Offer fresh water beside the meal."
+  ],
+  "eatenAdditions": [
+    "Bring the package and the pet's weight in pounds (kilograms) when you call.",
+    "Do not induce vomiting unless a veterinarian or poison specialist tells you to."
+  ],
+  "medicationAdditions": [
+    "A veterinarian sets any amount from the animal's weight in pounds (kilograms) and the exact product in hand.",
+    "This page does not publish a home milligram chart."
+  ],
+  "foodChemistry": {
+    "chocolate": "Theobromine and caffeine are methylxanthines that dogs, cats, birds, and small pets clear slowly. Baking chocolate and cocoa powder contain more theobromine per ounce (per gram) than milk chocolate, so a small missing piece is more dangerous in a small animal.",
+    "grapes": "Tartaric acid is the leading identified kidney toxin in grapes and raisins for dogs, and it is not a safe experiment in other pets. Fresh grapes, raisins, sultanas, and currants all count, and the risk is not a reliable function of how many ounces (grams) were eaten.",
+    "xylitol": "Xylitol, also labeled birch sugar, can trigger a sharp insulin release in dogs and drop blood sugar within about an hour. Cats do not show that same spike in published reports, but a xylitol sweetener is still not food for any pet.",
+    "onion": "Organosulfur compounds in onions, garlic, chives, and leeks can damage red blood cells in dogs, cats, and many small pets. Raw, cooked, powdered, and broth forms all count, including seasoned leftovers measured in teaspoons (grams).",
+    "lily": "True lilies in the Lilium group, and daylilies in the Hemerocallis group, contain a water-soluble toxin that can cause kidney failure in cats. In dogs those plants are mainly a stomach irritant, and peace lilies are a different plant with a different risk.",
+    "avocado": "Persin is concentrated in avocado leaves, bark, pit, and fruit, and birds are the species most often seriously harmed. In dogs the flesh is a high-fat stomach upset, and the pit is a choking and blockage risk measured in ounces (grams).",
+    "macadamia": "Macadamia nuts contain a toxin that is still not fully identified, and they can cause weakness, vomiting, and tremors in dogs. Cookies and trail mix count. There is no established safe number of nuts in ounces (grams).",
+    "caffeine": "Caffeine is a methylxanthine, like theobromine in chocolate, and dogs and cats clear it slowly. Coffee, tea, energy drinks, grounds, and pills all count, and a spoon of grounds can matter more than a sip of milky coffee.",
+    "blueberry": "Plain fresh or frozen blueberries have no identified toxin for dogs or cats. The risk is the food around the berry, including muffins, jam, and sugar-free snacks that may contain xylitol or onion.",
+    "pumpkin": "Plain cooked pumpkin, or a can labeled 100 percent pumpkin, has no identified toxin for dogs or cats. Pie filling is a different product because it adds sugar and spices, so read the label before you offer any.",
+    "chicken": "Unseasoned, boneless, cooked chicken has no identified toxin for dogs or cats. Cooked bones can splinter, the skin is very fatty, and onion or garlic seasoning is a separate poison measured in teaspoons (grams).",
+    "carrot": "Plain raw or cooked carrot has no identified toxin for dogs, rabbits, or guinea pigs. For herbivores it is a sugary treat, not a replacement for unlimited timothy hay offered by the handful.",
+    "beans": "Plain green beans have no identified toxin when they are fresh, frozen, or canned without added salt. Casseroles and sauces that add onion, garlic, or a sugar-free sweetener are a separate hazard.",
+    "salmon": "Fully cooked, boneless salmon has no identified toxin for dogs or cats. Raw Pacific salmon can carry a fluke in some regions, and bones plus onion seasoning are separate risks to avoid.",
+    "hay": "Timothy hay has no toxin and is the staple food for adult rabbits and guinea pigs, offered without a cup limit. Dusty or moldy hay irritates airways, and alfalfa is for growth or nursing rather than the default adult diet."
+  },
+  "foodSnippets": {
+    "chocolate-dogs": "No, dogs should not eat chocolate, including milk chocolate, dark chocolate, baking chocolate, and cocoa powder. Theobromine and caffeine can cause vomiting, a racing heart, tremors, or seizures, so call a poison hotline the same hour and bring the wrapper.",
+    "chocolate-cats": "No, cats should not eat chocolate in any form, even if they rarely seek it out. A small amount still contains theobromine and caffeine. Call a poison hotline the same hour, and do not wait for dramatic signs.",
+    "chocolate-birds": "No, birds should not eat chocolate, cocoa, or baked goods made with either one. A bird's small body means a lick can be a serious dose of theobromine and caffeine. Contact an avian veterinarian or a poison hotline the same hour.",
+    "chocolate-small-pets": "No, rabbits, guinea pigs, hamsters, and ferrets should not eat chocolate. Theobromine and caffeine are not a treat in any amount of ounces (grams). Call an exotic-pet veterinarian or a poison hotline the same hour.",
+    "grapes-raisins-dogs": "No, dogs should not eat grapes, raisins, sultanas, or currants, even as a small handful. Kidney injury is not reliably predicted by how many were eaten. Treat any amount as an emergency and call before the dog looks sick.",
+    "grapes-raisins-cats": "Do not feed grapes or raisins to cats. Kidney injury is proven in dogs, and there is no established safe cat serving in ounces (grams). Call a veterinarian the same day if a cat eats any, and do not use a home emetic.",
+    "xylitol-dogs": "No, dogs should not eat xylitol, also called birch sugar, in gum, peanut butter, baked goods, or toothpaste. It can drop blood sugar within about an hour and can injure the liver. This is a same-hour poison-hotline call.",
+    "xylitol-cats": "Do not feed xylitol products to cats, including sugar-free gum and some liquid medicines. Cats do not show the dog insulin spike in published reports, but the sweetener is still not cat food. Call if a cat eats a labeled product.",
+    "onions-garlic-dogs": "No, dogs should not eat onions, garlic, chives, or leeks in any form, including powder and broth. These foods can damage red blood cells, and anemia may appear days later. Garlic is not a safe flea remedy.",
+    "onions-garlic-cats": "No, cats should not eat onion or garlic, and powdered onion in broth is enough to matter. Red-blood-cell damage can show up as pale gums, fast breathing, or dark urine. Call a veterinarian the same day.",
+    "onions-garlic-small-pets": "No, rabbits, guinea pigs, hamsters, and ferrets should not eat onion or garlic in food or broth. There is no safe portion in teaspoons (grams). Call an exotic-pet veterinarian the same day if they already ate some.",
+    "lilies-cats": "No, True lilies and daylilies are an emergency for cats, including Easter, tiger, and Asiatic lilies. Pollen, leaves, flowers, and vase water all count, and the cat does not need to eat a large piece. Go to a clinic the same hour.",
+    "lilies-dogs": "Do not let dogs chew lily plants. True lilies are a kidney emergency in cats and mostly a stomach irritant in dogs. Call a clinic if vomiting continues, especially if a cat shares the home.",
+    "avocado-birds": "No, birds should not eat avocado flesh, guacamole, leaves, or pits. Persin in the plant can cause breathing trouble and weakness. Contact an avian veterinarian the same hour and keep the bird warm and quiet.",
+    "avocado-dogs": "Avocado is not recommended for dogs. A little plain flesh is less dangerous than the pit, the skin, or a fatty guacamole, and the pit can block the gut. Call the same day if the pit was swallowed or vomiting continues.",
+    "macadamia-nuts-dogs": "No, dogs should not eat macadamia nuts, including nuts hidden in cookies or trail mix. Weakness, vomiting, and tremors can follow, and hind-leg weakness can look like a spinal emergency. Call a poison hotline or a clinic the same day.",
+    "caffeine-dogs": "No, dogs should not have coffee, tea, energy drinks, coffee grounds, or caffeine pills. Caffeine can cause restlessness, vomiting, a racing heart, tremors, or seizures. Grounds and pills are a same-hour poison-hotline call, so bring the container.",
+    "caffeine-cats": "No, cats should not drink coffee, tea, or energy drinks, and coffee grounds can be enough to matter. Caffeine can cause hyperactivity, vomiting, a fast heart rate, or tremors. Call a veterinarian or a poison hotline the same hour.",
+    "blueberries-dogs": "Yes, in a small portion. Plain fresh or frozen blueberries are an occasional treat, a few berries for a small dog or a small handful for a large dog. Skip muffins, jam, and any sugar-free product that might contain xylitol.",
+    "blueberries-cats": "A cat may taste one or two plain blueberries, but cats do not need fruit. Plain berries have no identified toxin. Skip baked goods and anything that might contain xylitol or onion, and watch the litter box for a day.",
+    "pumpkin-dogs": "Yes, if it is plain cooked pumpkin or a can labeled 100 percent pumpkin. A teaspoon for a toy dog, up to a tablespoon for a large dog, is a fiber topper, not a meal. Do not use pie filling, nutmeg, or xylitol.",
+    "pumpkin-cats": "Yes, about one teaspoon (5 g) of plain pumpkin mixed into food can be a fiber aid for a cat. It is not a meal, and pie filling is not the same food. Call the same day if the cat stops eating.",
+    "cooked-chicken-dogs": "Yes, if it is boneless, skinless, and unseasoned. Plain cooked chicken can top a complete diet or serve as a short bland meal, measured in ounces (grams). It is not a complete diet, and cooked bones or onion seasoning are unsafe.",
+    "cooked-chicken-cats": "Yes, in small boneless pieces of unseasoned cooked chicken. A chicken-only menu becomes incomplete over time because it lacks a balanced calcium and taurine plan. Remove skin, bones, and any onion or garlic seasoning, and measure pieces in ounces (grams).",
+    "carrots-dogs": "Yes, Plain raw sticks or cooked coins are a low-calorie treat for most dogs. Cut rounds for dogs who gulp food, and keep the portion to a few pieces rather than a full cup (about 180 g). Plain carrot does not need decontamination.",
+    "carrots-small-pets": "Yes, as a thin slice a few times a week for a rabbit or guinea pig, not as the main food. Unlimited timothy hay remains the diet, and a single thin slice is not an emergency.",
+    "green-beans-dogs": "Yes, A small handful of plain cut green beans is a low-calorie treat for dogs. Use fresh, frozen, or unsalted canned beans, and skip casseroles. Call if the beans were cooked with onion, garlic, or a sugar-free sauce.",
+    "salmon-dogs": "Yes, if it is a small portion of boneless salmon cooked all the way through, without seasoning. Do not feed raw salmon. Remove very fatty skin, and call a clinic if the fish was raw, bony, or followed by weakness or fever.",
+    "salmon-cats": "Yes, as a teaspoon or two (about 5 to 10 g) of boneless cooked salmon used as a topper, not as the daily diet. Raw fish is an incomplete menu and can carry parasites. Bones and onion sauce are unsafe.",
+    "timothy-hay-small-pets": "Yes, Adult rabbits and guinea pigs should have unlimited fresh timothy hay, not a measured cup. Alfalfa hay is for growing or nursing animals, not the default adult diet. A rabbit or guinea pig who stops eating hay needs a same-day exotic veterinarian."
+  },
+  "symptomSnippets": {
+    "dogs/head-shaking-ear-scratching": "Occasional head shaking in a bright, eating dog is often ear irritation from allergy, water, or infection. A head tilt, a swollen ear flap, bleeding, or a dog who cannot settle needs a same-day exam. Do not put anything into the ear canal.",
+    "dogs/vomiting-yellow-bile": "Yellow bile often means an empty stomach or gut irritation, and one episode in a bright dog can be watched for a few hours. Repeated vomiting, blood, a swollen belly, or a puppy needs a clinic the same day.",
+    "dogs/lethargy": "A dog who is quieter but still drinking and walking can be assessed the same day. Collapse, pale gums, or a dog who will not rise is an emergency within 60 minutes. Quieter behavior is a sign, not a diagnosis.",
+    "dogs/limping": "A limp means the dog is protecting a painful leg, paw, joint, or back. A dog who still bears a little weight and is otherwise bright can be seen within 12 to 24 hours. A dangling limb, crying, or sudden hind-leg weakness should not wait.",
+    "dogs/collapse-or-seizure": "Collapse or a seizure is a Code Red emergency, and the dog needs a clinic within 60 minutes. Keep hands away from the mouth, time the episode, and do not give human medicine. One short seizure still needs an exam the same day.",
+    "cats/straining-in-litter-box": "A cat straining in the litter box may be blocked, especially a male cat, and that can become fatal within a day. Little or no urine is an emergency within 60 minutes, not constipation to watch overnight.",
+    "cats/drinking-more-water": "Drinking more water can signal kidney disease, diabetes, or thyroid disease, and it is not a habit to ignore. A cat who is still eating can be booked within 12 to 24 hours. Vomiting, collapse, or straining to urinate should not wait.",
+    "cats/occasional-sneezing": "An occasional sneeze in a bright, eating cat is often mild airway irritation. Thick discharge, mouth breathing, or a cat who stops eating needs a veterinarian. Open-mouth breathing in a cat is an emergency, not a simple sneeze.",
+    "cats/hiding-and-not-eating": "Hiding and skipping meals means a cat feels unwell, and cats hide serious disease well. One missed meal with normal litter-box habits can be watched for a few hours. A male cat who strains, or a cat who will not move, needs a clinic now.",
+    "birds/tail-bobbing": "Tail bobbing means each breath takes extra effort, and it is not a mood or a routine molt. Keep the bird warm and quiet in a dim carrier. Contact an avian veterinarian within 60 minutes, because handling stress can make breathing worse.",
+    "birds/fluffed-and-quiet": "A bird who stays fluffed and quiet is spending energy on staying warm or on illness. Brief fluffing after a nap can be normal. Fluffing with a tail bob, closed eyes, or a missed meal needs an avian veterinarian the same day.",
+    "birds/routine-molt": "A routine molt is a gradual loss of old feathers while new pin feathers grow in, and the bird should still eat, play, and breathe quietly. Bald patches, bleeding pins, or a tail bob are not a normal molt. Those changes need an avian exam.",
+    "small-pets/teeth-grinding-hunching": "Loud teeth grinding with a hunched posture in a rabbit usually means pain, often from the gut or the teeth. Soft occasional grinding while being petted is different. A hunched rabbit who stops eating needs an exotic veterinarian within 60 minutes.",
+    "small-pets/fewer-droppings": "Fewer or smaller droppings mean a rabbit or guinea pig is eating less, and the gut can slow within hours. More than about 12 hours without pellets is an emergency. Offer hay, and call an exotic veterinarian the same day rather than waiting overnight.",
+    "small-pets/mild-shedding": "Mild seasonal shedding in a rabbit or other small pet can be normal if appetite and droppings stay the same. Bald patches, itching, or a pet who stops eating are not a simple shed. Those changes need an exotic-pet exam."
+  },
+  "symptomLedes": {
+    "dogs/vomiting-yellow-bile": "Yellow bile often means an empty stomach or gut irritation, and one episode in a bright dog can be watched briefly. Repeated vomiting, blood, a puppy, or a tight abdomen needs a clinic the same day. This page sorts those paths without diagnosing your dog."
+  },
+  "emergencySnippets": {
+    "chocolate-toxicity": "Chocolate is an emergency because dogs clear theobromine and caffeine slowly. Dark chocolate, baking chocolate, and cocoa powder are more dangerous than milk chocolate, and a small dog can be poisoned by less. Call with the wrapper, the amount, and the weight in pounds (kilograms).",
+    "bloat-gdv": "Bloat is a gas-filled stomach, and GDV means the stomach has twisted and cut off blood flow. Unproductive retching with a swelling abdomen is an emergency within 60 minutes in deep-chested dogs. Go to a hospital, and do not wait to see if it passes.",
+    "heatstroke": "Heatstroke means the dog can no longer control body temperature after a hot car, hard exercise, or no shade. Short-nosed breeds overheat faster. Cool the dog on the way with water, and still see a veterinarian even if they look brighter afterward.",
+    "feline-urethral-blockage": "A blocked urethra means urine cannot leave the bladder, most often in male cats, and it can cause a fatal heart-rhythm change. Straining in the box is often mistaken for constipation. Treat little or no urine as an emergency within 60 minutes.",
+    "lily-toxicity": "True lilies and daylilies can cause kidney failure in cats. Pollen, leaves, flowers, and vase water all count, and a large bite is not required. Call a poison hotline and an emergency clinic as soon as you know there was contact.",
+    "avian-respiratory-distress": "Open-mouth breathing, a tail bob, or a voice change means a bird needs oxygen and an avian veterinarian within 60 minutes. Birds hide illness until breathing takes extra work. Keep the carrier dim, and keep handling to the minimum the trip requires.",
+    "egg-binding": "Egg binding means an egg is stuck, often in budgies, cockatiels, lovebirds, or finches. A bird who is fluffed, straining, and standing wide-legged can decline quickly. Warmth and a quiet carrier help on the way, and only a veterinarian should try to remove the egg.",
+    "rabbit-gi-stasis": "A rabbit who stops eating or passes few droppings can develop gastrointestinal stasis, and more than 12 hours is an emergency. Pain, dental disease, and low-fiber diets are common triggers. Call when appetite drops, and do not wait a day if the rabbit is hunched.",
+    "ferret-hypoglycemia": "Middle-aged and older ferrets can develop insulinoma, which drops blood sugar and causes weakness, drooling, staring, or collapse. A conscious ferret who can swallow may get a little sugar on the gums on the way. A seizuring ferret still needs an emergency clinic."
+  },
+  "medicationSnippets": {
+    "diphenhydramine": "Diphenhydramine is sometimes used for allergic signs only after a veterinarian chooses it for that pet. This page does not give a milligram dose from the weight in pounds (kilograms). Human combination products with decongestants or xylitol are a different and more dangerous drug.",
+    "famotidine": "Famotidine may reduce stomach acid when a veterinarian recommends it for that pet. A human tablet strength is not a pet dose, and kidney function changes the plan. Do not use it to delay care for repeated vomiting or a pet who will not eat.",
+    "meloxicam": "Meloxicam is a prescription anti-inflammatory with a narrow margin, written for one animal's weight that day. A dog dose given to a cat, or an extra cat dose, can injure the kidneys. Do not copy a dose from another pet.",
+    "gabapentin": "Gabapentin is a prescription drug used for pain or calming only when a veterinarian has prescribed it for that pet. Human liquid can contain xylitol, which is dangerous to dogs. This page does not publish a home milligram chart.",
+    "carprofen": "Carprofen is a prescription anti-inflammatory for dogs, dosed from that dog's weight and the product label. It is not a human painkiller and it is not a cat medicine. Extra doses, or combining it with another anti-inflammatory, can cause ulcers or kidney injury.",
+    "ibuprofen": "No, Do not give ibuprofen, including Advil, Motrin, or Nurofen, to dogs or cats. One human tablet can start stomach ulcers and kidney injury, and cats are at risk from even less. Call a poison hotline if any amount was swallowed.",
+    "acetaminophen": "No, Do not give acetaminophen, including Tylenol or paracetamol, to cats or dogs. Cats can develop life-threatening blood and liver injury from a single human tablet. Call a poison hotline the same hour and bring the bottle."
+  }
+}

@@ -1,0 +1,91 @@
+[
+  {
+    "id": "diphenhydramine",
+    "slug": "diphenhydramine",
+    "name": "Diphenhydramine",
+    "commonBrands": ["Benadryl"],
+    "prescriptionStatus": "OTC_VET_APPROVED",
+    "primaryUses": ["Allergic reactions directed by a veterinarian", "Mild environmental itch while a clinic plan is arranged", "Pre-visit calming only when a veterinarian has chosen it"],
+    "weightDosageGuidelineNote": "A veterinarian calculates any dose from the pet's current weight in kilograms, the species, and the tablet strength. This page does not publish a milligram-per-kilogram figure to give at home. Human combination products that add decongestants, painkillers, or xylitol are not diphenhydramine and can be lethal.",
+    "toxicDoseThreshold": "Several times a veterinary dose can cause severe sedation or excitement and heart-rhythm changes. A decongestant combination product can be toxic at a single human tablet.",
+    "overdoseSymptoms": [
+      "Profound sedation or agitation",
+      "Staggering, tremors, or a seizure",
+      "A fast or irregular heart rate",
+      "Pale, blue, or yellow gums, or collapse"
+    ],
+    "emergencyProtocol": "The clinic identifies the exact product, checks heart rate and temperature, and may decontaminate if the ingestion was recent. Care is supportive. Do not induce vomiting unless the team tells you to."
+  },
+  {
+    "id": "famotidine",
+    "slug": "famotidine",
+    "name": "Famotidine",
+    "commonBrands": ["Pepcid"],
+    "prescriptionStatus": "OTC_VET_APPROVED",
+    "primaryUses": ["Stomach-acid reduction when a veterinarian recommends it", "Short-term support for nausea plans made by a clinic"],
+    "weightDosageGuidelineNote": "Famotidine is dosed from body weight and kidney function. A human tablet strength is not a pet dose. This database does not give a home milligram chart. Do not use it to delay care for a pet who is vomiting repeatedly or not eating.",
+    "toxicDoseThreshold": "Large overdoses are uncommon in household reports, but an already dehydrated or kidney-compromised pet can be harmed by an unplanned course.",
+    "overdoseSymptoms": ["Lethargy", "Vomiting", "A slow heart rate in significant overdose"],
+    "emergencyProtocol": "The veterinarian confirms the product, checks hydration, and decides whether monitoring is enough. Acid reducers do not treat bloat, a blockage, or a toxin."
+  },
+  {
+    "id": "meloxicam",
+    "slug": "meloxicam",
+    "name": "Meloxicam",
+    "commonBrands": ["Metacam", "Loxicom", "Meloxidyl"],
+    "prescriptionStatus": "PRESCRIPTION_ONLY",
+    "primaryUses": ["Pain and inflammation in dogs under a veterinary prescription", "A single labeled cat dose in some countries, only from the prescribing veterinarian"],
+    "weightDosageGuidelineNote": "Meloxicam is a narrow-margin drug. The prescription label is written for that animal's weight that day. A dog dose given to a cat, or a second dose of an oral cat product, can cause kidney failure. Do not copy a dose from another pet or from a human painkiller chart.",
+    "toxicDoseThreshold": "Repeating a cat dose, or giving any dog oral solution to a cat, is an overdose emergency. Dogs can develop ulcers or kidney injury from extra doses or from stacking with another anti-inflammatory.",
+    "overdoseSymptoms": ["Vomiting, sometimes with blood", "Black stool", "Increased thirst", "Weakness or collapse"],
+    "emergencyProtocol": "The emergency team stops the drug, starts fluids, protects the stomach, and checks kidney values and blood pressure. Bring the bottle and the time of the last dose."
+  },
+  {
+    "id": "gabapentin",
+    "slug": "gabapentin",
+    "name": "Gabapentin",
+    "commonBrands": ["Neurontin"],
+    "prescriptionStatus": "PRESCRIPTION_ONLY",
+    "primaryUses": ["Nerve pain and chronic pain plans", "Seizure add-on therapy", "Pre-visit anxiety when a veterinarian prescribes it"],
+    "weightDosageGuidelineNote": "The dose depends on weight, species, kidney function, and whether the drug is for pain or seizures. Human capsules are sometimes used, but only at a strength the veterinarian calculated. Some human liquid gabapentin contains xylitol and must not be substituted. This page does not list a milligram dose.",
+    "toxicDoseThreshold": "Extra doses cause heavy sedation. Stopping a seizure prescription suddenly can trigger seizures. A xylitol-containing liquid is a separate poisoning.",
+    "overdoseSymptoms": ["Marked sleepiness", "Wobbly walking", "Low body temperature", "Seizures if a long seizure course is stopped abruptly"],
+    "emergencyProtocol": "The clinic confirms the formulation, supports breathing and temperature if sedation is deep, and restarts a seizure plan if doses were missed. Bring the bottle so xylitol can be ruled out."
+  },
+  {
+    "id": "carprofen",
+    "slug": "carprofen",
+    "name": "Carprofen",
+    "commonBrands": ["Rimadyl", "Novox", "Quellin"],
+    "prescriptionStatus": "PRESCRIPTION_ONLY",
+    "primaryUses": ["Osteoarthritis pain in dogs", "Post-operative pain in dogs when prescribed"],
+    "weightDosageGuidelineNote": "Carprofen is labeled for dogs and is dosed from the dog's current weight on a veterinary prescription. It is not a cat drug and not a substitute for ibuprofen. This page does not publish the milligram-per-kilogram dose. Never give a second anti-inflammatory on the same day.",
+    "toxicDoseThreshold": "An extra dose, a double-up with another NSAID or a steroid, or any dose in a cat can cause stomach ulcers, liver injury, or kidney failure.",
+    "overdoseSymptoms": ["Vomiting or black stool", "Refusing food", "Yellow gums", "Increased thirst and urination"],
+    "emergencyProtocol": "The hospital stops the drug, starts intravenous fluids, uses gastrointestinal protectants, and rechecks liver and kidney tests. Bring the chewable tablets so the team can count what is missing."
+  },
+  {
+    "id": "ibuprofen",
+    "slug": "ibuprofen",
+    "name": "Ibuprofen",
+    "commonBrands": ["Advil", "Motrin", "Nurofen"],
+    "prescriptionStatus": "LETHAL_TOXIN_DO_NOT_GIVE",
+    "primaryUses": ["None in dogs or cats. Human ibuprofen is not a pet pain treatment."],
+    "weightDosageGuidelineNote": "Do not calculate a pet dose from a human tablet. Dogs and cats lack a safe household ibuprofen dose. One human tablet can start stomach ulcers and kidney injury, and cats are at risk from even smaller amounts. Use only a pain medicine dispensed for that animal.",
+    "toxicDoseThreshold": "Gastrointestinal ulceration can begin near a single human tablet in a small dog. Higher amounts add kidney failure and neurologic signs. Any amount in a cat is an emergency. Do not stay home to do the arithmetic.",
+    "overdoseSymptoms": ["Vomiting, with or without blood", "Black, tarry stool", "Abdominal pain", "Weakness, stumbling, or seizures at higher exposures"],
+    "emergencyProtocol": "The emergency vet may decontaminate if the ingestion was recent, then give intravenous fluids, gastrointestinal protectants, and kidney monitoring. Severe cases need blood transfusions or longer hospitalization. Call a poison hotline on the way."
+  },
+  {
+    "id": "acetaminophen",
+    "slug": "acetaminophen",
+    "name": "Acetaminophen",
+    "commonBrands": ["Tylenol", "Paracetamol", "Panadol"],
+    "prescriptionStatus": "LETHAL_TOXIN_DO_NOT_GIVE",
+    "primaryUses": ["None for home use in pets. A veterinarian may use a carefully chosen dog protocol in hospital. It is not a medicine to give from the bathroom cabinet."],
+    "weightDosageGuidelineNote": "Never dose a dog or cat from a human acetaminophen label. Cats cannot safely process the drug and can develop fatal methemoglobinemia. Dogs can develop severe liver injury. This page intentionally omits a milligram dose.",
+    "toxicDoseThreshold": "Any suspected amount in a cat is an emergency, including a piece of a tablet or a combined cold medicine. In dogs, a single extra-strength human tablet can be enough to injure the liver of a small dog. Call before signs appear.",
+    "overdoseSymptoms": ["Brown or blue gums", "Swollen face or paws", "Labored breathing", "Vomiting, then jaundice as the liver fails"],
+    "emergencyProtocol": "The clinic starts oxygen and intravenous fluids and uses an antidote protocol, often including N-acetylcysteine, plus treatment for methemoglobinemia in cats. Bring the bottle, the strength in milligrams, and the time of ingestion."
+  }
+]

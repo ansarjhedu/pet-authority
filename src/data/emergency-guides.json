@@ -1,0 +1,261 @@
+[
+  {
+    "id": "dog-chocolate-toxicity",
+    "slug": "chocolate-toxicity",
+    "title": "Chocolate Toxicity & Ingestion",
+    "species": "dogs",
+    "urgency": "CRITICAL_IMMEDIATE",
+    "actionWithinMinutes": 15,
+    "emergencyOverview": "Dark chocolate, baking chocolate, and cocoa powder can poison a dog because theobromine and caffeine clear slowly. A smaller dog reaches a dangerous dose from less chocolate than a large dog. Call a poison hotline or emergency clinic within 15 minutes with the wrapper, the amount in ounces (grams), and the weight in pounds (kilograms).",
+    "whatToDoSteps": [
+      "Move the dog away from remaining chocolate, wrappers, cocoa powder, and any sugar-free pieces.",
+      "Photograph the label and note the missing amount in ounces (grams), the weight in pounds (kilograms), and the time eaten.",
+      "Call a poison hotline or emergency hospital, then transport the dog in a crate with no food, water, or home medicines."
+    ],
+    "whatNotToDoWarnings": [
+      "Do not induce vomiting unless a veterinarian or poison specialist tells you to.",
+      "Do not give salt, milk, oil, or hydrogen peroxide as a home remedy.",
+      "Do not offer human painkillers, which can cause a second poisoning.",
+      "Do not wait for tremors or a seizure before you call."
+    ],
+    "clinicalSigns": [
+      "Vomiting or a restless, pacing dog",
+      "Panting, a fast heart rate, or tremors",
+      "Diarrhea, increased thirst, or urination",
+      "Collapse or a seizure in severe cases"
+    ],
+    "estimatedVetProcedures": "The clinic may examine the dog, start heart monitoring, and decide whether decontamination is still useful. Care often includes activated charcoal, intravenous fluids, and medicine to control tremors or seizures if they appear. Severe cases stay in hospital until the heart rhythm is stable."
+  },
+  {
+    "id": "dog-bloat-gdv",
+    "slug": "bloat-gdv",
+    "title": "Bloat (GDV - Gastric Dilation-Volvulus)",
+    "species": "dogs",
+    "urgency": "CRITICAL_IMMEDIATE",
+    "actionWithinMinutes": 15,
+    "emergencyOverview": "Bloat is a gas-filled stomach. In GDV the stomach also twists, which traps gas and cuts off blood flow. Deep-chested dogs are at higher risk, but any dog with unproductive retching and a swelling abdomen needs an emergency hospital now. This condition can become fatal within an hour.",
+    "whatToDoSteps": [
+      "Call the nearest 24/7 emergency hospital and say you are coming with suspected bloat.",
+      "Leave immediately. Do not wait to see if the swelling goes down.",
+      "Keep the dog calm in the car and avoid pressure on the belly.",
+      "Tell the team when the retching started and whether the dog can stand.",
+      "If the dog collapses, carry them in rather than trying treatment at home."
+    ],
+    "whatNotToDoWarnings": [
+      "Do not give food, water, antacids, or simethicone.",
+      "Do not try to pass a tube, massage the stomach, or induce vomiting.",
+      "Do not wait overnight because the dog seemed hungry earlier.",
+      "Do not give human painkillers."
+    ],
+    "clinicalSigns": [
+      "Repeated retching with little or no vomit",
+      "A tight, swollen, or drum-like abdomen",
+      "Restlessness, stretching, drooling, or looking at the belly",
+      "Pale gums, weakness, or collapse"
+    ],
+    "estimatedVetProcedures": "The team treats shock first, then confirms the twist with an X-ray when the dog is stable enough. They decompress the stomach and usually take the dog to surgery to untwist it and attach the stomach so it is less likely to twist again. Intravenous fluids and pain control continue through recovery."
+  },
+  {
+    "id": "dog-heatstroke",
+    "slug": "heatstroke",
+    "title": "Heatstroke & Hyperthermia",
+    "species": "dogs",
+    "urgency": "CRITICAL_IMMEDIATE",
+    "actionWithinMinutes": 15,
+    "emergencyOverview": "Heatstroke is a body temperature that the dog can no longer control. It follows confinement in a car, heavy exercise in heat, or a short-nosed dog left without shade. Cooling on the way to the clinic matters, and the dog still needs a veterinarian even if they seem brighter after cooling.",
+    "whatToDoSteps": [
+      "Move the dog to shade or air conditioning and stop all exercise.",
+      "Pour lukewarm or cool water over the belly, neck, armpits, and paws. Use a fan if you have one.",
+      "Offer a small amount of water only if the dog is standing and able to swallow.",
+      "Call an emergency clinic and leave while you continue cooling in the car.",
+      "Tell the clinic the highest temperature you measured, if you have a rectal thermometer."
+    ],
+    "whatNotToDoWarnings": [
+      "Do not use ice water, ice packs on the whole body, or an ice bath.",
+      "Do not cover the dog with a wet towel that traps heat.",
+      "Do not force water into the mouth of a dog that is unconscious or vomiting.",
+      "Do not assume the crisis is over because panting has slowed."
+    ],
+    "clinicalSigns": [
+      "Heavy panting, thick saliva, or a wide-eyed stare",
+      "Brick-red, purple, or pale gums",
+      "Vomiting, diarrhea, wobbling, or collapse",
+      "Seizures or bleeding from the gums in severe cases"
+    ],
+    "estimatedVetProcedures": "The clinic checks temperature, blood pressure, and organ values, then cools the dog in a controlled way and starts intravenous fluids. They watch for clotting problems, kidney injury, and brain swelling over the following hours. Many dogs are hospitalized even after their temperature returns to normal."
+  },
+  {
+    "id": "cat-urethral-blockage",
+    "slug": "feline-urethral-blockage",
+    "title": "Feline Urethral Blockage (Male Cat Straining)",
+    "species": "cats",
+    "urgency": "CRITICAL_IMMEDIATE",
+    "actionWithinMinutes": 30,
+    "emergencyOverview": "A blocked urethra means urine cannot leave the bladder. It is most common in male cats and can cause a fatal heart-rhythm change within a day. Straining in the litter box is often mistaken for constipation. Treat any male cat who visits the box often and produces little or no urine as an emergency.",
+    "whatToDoSteps": [
+      "Look for urine clumps. No new urine, or only drops, is an emergency.",
+      "Call an emergency clinic and say a male cat may be blocked.",
+      "Place the cat in a carrier. Keep the trip quiet.",
+      "Note when he last passed a normal amount of urine and whether he is vomiting.",
+      "Go in even if he is still walking. Do not wait for collapse."
+    ],
+    "whatNotToDoWarnings": [
+      "Do not squeeze the bladder.",
+      "Do not give human painkillers such as ibuprofen or acetaminophen.",
+      "Do not start a laxative or hairball paste while he is straining.",
+      "Do not wait until morning because he ate yesterday."
+    ],
+    "clinicalSigns": [
+      "Repeated trips to the litter box with little or no urine",
+      "Crying, licking the penis, or a gritty plug at the tip",
+      "A firm, painful belly",
+      "Vomiting, hiding, or sudden weakness"
+    ],
+    "estimatedVetProcedures": "The veterinarian feels the bladder, checks blood electrolytes, and places a urinary catheter under sedation or anesthesia. Intravenous fluids correct potassium and dehydration, and pain medicine is given in hospital. Many cats stay 1 to 3 days while urine flow and kidney values are watched."
+  },
+  {
+    "id": "cat-lily-toxicity",
+    "slug": "lily-toxicity",
+    "title": "Lily Toxicity (Lilium/Hemerocallis)",
+    "species": "cats",
+    "urgency": "CRITICAL_IMMEDIATE",
+    "actionWithinMinutes": 30,
+    "emergencyOverview": "True lilies (Lilium species, including Easter and Asiatic lilies) and daylilies (Hemerocallis) can cause kidney failure in cats. Pollen, leaves, flowers, and vase water all count. A cat does not need to eat a large piece. Call a poison hotline and an emergency clinic as soon as you know there was contact.",
+    "whatToDoSteps": [
+      "Remove the cat from the plant and wash pollen off the coat with a damp cloth if they allow it.",
+      "Call a poison hotline or emergency clinic with the plant's name or a photo.",
+      "Keep a leaf or the flower-shop label to show the veterinarian.",
+      "Note the time of contact and whether the cat is vomiting.",
+      "Leave for the clinic if advised. Early fluid treatment protects the kidneys."
+    ],
+    "whatNotToDoWarnings": [
+      "Do not wait for vomiting or for the cat to stop eating.",
+      "Do not induce vomiting at home.",
+      "Do not offer milk or human medicines.",
+      "Do not assume a supermarket bouquet is safe. Many mixed bunches contain lilies."
+    ],
+    "clinicalSigns": [
+      "Drooling, vomiting, or a sudden loss of appetite within hours",
+      "Lethargy or hiding",
+      "Increased or decreased urination over the next 1 to 3 days",
+      "Weakness as kidney values rise"
+    ],
+    "estimatedVetProcedures": "If the exposure was recent, the clinic may decontaminate the cat and start intravenous fluids, often for 48 to 72 hours. Blood and urine tests track the kidneys. Cats who already have kidney injury may need longer hospitalization. There is no safe home antidote."
+  },
+  {
+    "id": "bird-respiratory-distress",
+    "slug": "avian-respiratory-distress",
+    "title": "Avian Open-Mouth Breathing & Respiratory Distress",
+    "species": "birds",
+    "urgency": "CRITICAL_IMMEDIATE",
+    "actionWithinMinutes": 15,
+    "emergencyOverview": "Birds hide illness until breathing takes extra work. Open-mouth breathing, a tail bob, or a voice change means the bird needs oxygen and an avian veterinarian. Stress from handling can make a dyspneic bird worse, so keep the carrier dim and the trip short.",
+    "whatToDoSteps": [
+      "Move the bird to a small carrier lined with a towel. Keep them upright.",
+      "Place the carrier in a warm, quiet room away from smoke, perfume, and cooking fumes.",
+      "Call an avian or emergency clinic and say the bird is open-mouth breathing.",
+      "Limit handling to what is required to transport them.",
+      "Bring the usual food label and note any new fumes, non-stick pans, or aerosols."
+    ],
+    "whatNotToDoWarnings": [
+      "Do not squeeze the chest or hold the bird on their back.",
+      "Do not use vapor rubs, essential oils, or medicated drops.",
+      "Do not offer water to a bird who is gasping.",
+      "Do not wait to see if the tail bob stops overnight."
+    ],
+    "clinicalSigns": [
+      "Open beak breathing or a rhythmic tail bob",
+      "A voice that is weak, squeaky, or absent",
+      "Sitting fluffed on the cage floor",
+      "Blue or pale skin if you can see it, or sudden weakness"
+    ],
+    "estimatedVetProcedures": "The clinic places the bird in oxygen and warmth before a full exam. Once breathing is safer, they may take images, test for infection, or look for a foreign body or reproductive disease. Treatment depends on the cause and often includes fluids and hospital oxygen rather than a single home medicine."
+  },
+  {
+    "id": "bird-egg-binding",
+    "slug": "egg-binding",
+    "title": "Egg Binding in Small Birds",
+    "species": "birds",
+    "urgency": "CRITICAL_IMMEDIATE",
+    "actionWithinMinutes": 60,
+    "emergencyOverview": "Egg binding means an egg is stuck in the reproductive tract. Budgies, cockatiels, lovebirds, and finches are often affected. A bird who is straining, fluffed, and standing wide-legged can decline the same day. Warmth and a quiet carrier help on the way. Removing the egg is a veterinary procedure.",
+    "whatToDoSteps": [
+      "Move the bird to a small, padded carrier in a warm room, about 27–30°C (80–86°F) if you can do that safely.",
+      "Dim the lights and keep other pets away.",
+      "Call an avian veterinarian and describe straining, a swollen vent, or a bird on the cage floor.",
+      "Offer the usual food only if the bird is perching and breathing comfortably.",
+      "Leave the same day. Go immediately if the bird is open-mouth breathing."
+    ],
+    "whatNotToDoWarnings": [
+      "Do not pull the egg or probe the vent.",
+      "Do not apply oil deep inside the cloaca.",
+      "Do not give calcium, human painkillers, or another pet's medicine unless a veterinarian directs it.",
+      "Do not keep the bird in a hot car or under a heat lamp that you cannot monitor."
+    ],
+    "clinicalSigns": [
+      "Repeated straining or a wide-legged stance",
+      "A swollen vent or an egg you can see",
+      "Fluffed feathers, tail bobbing, or sitting on the floor",
+      "Weakness or open-mouth breathing"
+    ],
+    "estimatedVetProcedures": "The veterinarian supports heat, fluids, and pain control, then confirms the egg with an exam or imaging. They may lubricate and assist passage, or remove the egg under anesthesia if it will not move. Blood calcium and infection are checked because a stuck egg is often part of a wider reproductive problem."
+  },
+  {
+    "id": "rabbit-gi-stasis",
+    "slug": "rabbit-gi-stasis",
+    "title": "Rabbit GI Stasis (Anorexia > 12 Hours)",
+    "species": "small-pets",
+    "urgency": "URGENT",
+    "actionWithinMinutes": 60,
+    "emergencyOverview": "Rabbits must keep eating and passing droppings. A rabbit who has not eaten, or who has passed few or no fecal pellets, for more than 12 hours can develop gastrointestinal stasis. Pain, dental disease, and a low-fiber diet are common triggers. Do not wait a full day if they are hunched or grinding their teeth.",
+    "whatToDoSteps": [
+      "Check the litter area for the usual round droppings versus none, tiny pellets, or diarrhea.",
+      "Offer hay and water. Note whether they take any.",
+      "Call a rabbit-savvy veterinarian the same day, sooner if they are painful or not moving.",
+      "Keep them warm and quiet in a familiar carrier for the trip.",
+      "Bring a sample of any abnormal droppings and the usual pellet label."
+    ],
+    "whatNotToDoWarnings": [
+      "Do not force-feed syringe food unless a rabbit veterinarian has already taught you the method and the rabbit can swallow.",
+      "Do not give cat, dog, or human pain medicine.",
+      "Do not offer large amounts of fruit, gas drops from another species, or bread.",
+      "Do not wait overnight because they still look awake."
+    ],
+    "clinicalSigns": [
+      "Refusing hay, pellets, or favorite greens",
+      "Fewer, smaller, or absent fecal pellets",
+      "A hunched posture or teeth grinding",
+      "A gas-filled belly, hiding, or sudden stillness"
+    ],
+    "estimatedVetProcedures": "The clinic checks hydration, temperature, and pain, and often takes abdominal images to look for gas or an obstruction. Treatment usually includes fluids, prescription pain relief, and gut-motility medicine chosen by the veterinarian. Dental disease is investigated if the rabbit cannot chew hay."
+  },
+  {
+    "id": "ferret-hypoglycemia",
+    "slug": "ferret-hypoglycemia",
+    "title": "Ferret Hypoglycemia / Insulinoma Collapse",
+    "species": "small-pets",
+    "urgency": "CRITICAL_IMMEDIATE",
+    "actionWithinMinutes": 15,
+    "emergencyOverview": "Middle-aged and older ferrets can develop insulinoma, a pancreatic tumor that drops blood sugar. Weakness, staring, drooling, or collapse may follow a missed meal. A conscious ferret who can swallow can get a small amount of sugar on the gums on the way to the clinic. A ferret who is seizuring still needs emergency care.",
+    "whatToDoSteps": [
+      "If the ferret is awake and can swallow, rub a pea-sized amount of honey or corn syrup on the gums.",
+      "Do not pour liquid into the mouth.",
+      "Offer a normal meal once they are alert, then leave for a veterinarian.",
+      "Call ahead and say the ferret collapsed or seemed drunk and weak.",
+      "Keep them warm in a carrier and note how long the episode lasted."
+    ],
+    "whatNotToDoWarnings": [
+      "Do not put honey, water, or syrup into the mouth of a ferret who is unconscious or seizuring.",
+      "Do not give insulin, human diabetes tablets, or another pet's medicine.",
+      "Do not assume one sweet treat replaces a veterinary blood-sugar check.",
+      "Do not withhold food to 'rest' the ferret."
+    ],
+    "clinicalSigns": [
+      "Hind-leg weakness, staring, or pawing at the mouth",
+      "Drooling or nausea",
+      "Collapse that improves after sugar, then returns",
+      "A seizure or unresponsiveness"
+    ],
+    "estimatedVetProcedures": "The clinic measures blood glucose and supports the ferret with dextrose and fluids if the sugar is low. They look for other causes of collapse, including heart disease and toxin exposure. Confirmed insulinoma is managed with diet changes and prescription medicine, and some ferrets are referred for surgery."
+  }
+]

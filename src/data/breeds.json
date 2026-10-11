@@ -1,0 +1,1150 @@
+[
+  {
+    "id": "french-bulldog",
+    "slug": "french-bulldog",
+    "name": "French Bulldog",
+    "species": "dogs",
+    "tagline": "A compact companion with a short airway that overheats and tires faster than the face suggests.",
+    "weightLbs": { "min": 16, "max": 28 },
+    "weightKg": { "min": 7.3, "max": 12.7 },
+    "lifespan": "10–12 years",
+    "size": "small",
+    "temperament": ["Affectionate", "Playful", "Adaptable"],
+    "energyLevel": 2,
+    "groomingDemand": 2,
+    "hypoallergenic": false,
+    "apartmentFriendly": true,
+    "goodWithKids": true,
+    "healthRisks": [
+      {
+        "condition": "Brachycephalic airway syndrome",
+        "warningSign": "Noisy breathing, collapse after play, or blue-tinged gums",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Heat intolerance",
+        "warningSign": "Heavy panting that does not settle in shade",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Spinal disc disease",
+        "warningSign": "Crying, a hunched back, or sudden weakness in the hind legs",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Skin-fold dermatitis",
+        "warningSign": "Red, moist, or smelly folds on the face or tail pocket",
+        "severity": "Common"
+      }
+    ],
+    "dailyCalorieBaseline": 630,
+    "dietaryNotes": "Use a complete diet sized for a small adult, and keep the body lean. Extra weight makes breathing and spinal disease harder to manage.",
+    "exerciseMinutesPerDay": 25,
+    "annualCostUsd": 2500,
+    "annualCostGbp": 2000,
+    "faqs": [
+      {
+        "question": "Can a French Bulldog live in an apartment?",
+        "answer": "Yes, if the home stays cool and walks stay short. They are not outdoor athletes, and a hot hallway or a closed car is dangerous."
+      },
+      {
+        "question": "When is French Bulldog breathing an emergency?",
+        "answer": "Open-mouth gasping, a tongue that looks blue or purple, or collapse after mild play needs an emergency clinic the same hour. Do not wait for the evening to cool."
+      }
+    ]
+  },
+  {
+    "id": "labrador-retriever",
+    "slug": "labrador-retriever",
+    "name": "Labrador Retriever",
+    "species": "dogs",
+    "tagline": "A sturdy retrieving breed whose appetite often outruns the joints.",
+    "weightLbs": { "min": 55, "max": 80 },
+    "weightKg": { "min": 25, "max": 36 },
+    "lifespan": "11–13 years",
+    "size": "large",
+    "temperament": ["Outgoing", "Trainable", "Food-motivated"],
+    "energyLevel": 5,
+    "groomingDemand": 2,
+    "hypoallergenic": false,
+    "apartmentFriendly": false,
+    "goodWithKids": true,
+    "healthRisks": [
+      {
+        "condition": "Obesity",
+        "warningSign": "Ribs that are hard to feel and a waist that has disappeared",
+        "severity": "Common"
+      },
+      {
+        "condition": "Hip and elbow dysplasia",
+        "warningSign": "Stiffness after rest or a bunny-hopping run",
+        "severity": "Common"
+      },
+      {
+        "condition": "Ear infections",
+        "warningSign": "Head shaking, odor, or redness in the canal",
+        "severity": "Common"
+      },
+      {
+        "condition": "Exercise-induced collapse",
+        "warningSign": "Wobbly hind legs during hard fetch that improve with rest",
+        "severity": "Urgent"
+      }
+    ],
+    "dailyCalorieBaseline": 1400,
+    "dietaryNotes": "Measure meals. Labs will eat past fullness, and a lean adult protects hips and elbows better than a glossy overweight coat.",
+    "exerciseMinutesPerDay": 60,
+    "annualCostUsd": 1800,
+    "annualCostGbp": 1400,
+    "faqs": [
+      {
+        "question": "How much exercise does an adult Labrador need?",
+        "answer": "Plan on about an hour a day of walks, swimming, or training, split so the dog can cool down. Puppies need shorter sessions so growing joints are not overloaded."
+      },
+      {
+        "question": "Why do Labradors gain weight so easily?",
+        "answer": "Many have a strong food drive and will finish another dog's bowl. Weigh the food, use the calorie calculator, and recheck body condition every month."
+      }
+    ]
+  },
+  {
+    "id": "golden-retriever",
+    "slug": "golden-retriever",
+    "name": "Golden Retriever",
+    "species": "dogs",
+    "tagline": "The Golden Retriever is a friendly sporting dog, gentle and eager to please. Most live about 10 to 12 years. They suit active families who can give about 60 minutes of daily exercise and regular brushing, not long days alone.",
+    "weightLbs": { "min": 55, "max": 75 },
+    "weightKg": { "min": 25, "max": 34 },
+    "lifespan": "10–12 years",
+    "size": "large",
+    "temperament": ["Gentle", "Eager to please", "Sociable"],
+    "energyLevel": 4,
+    "groomingDemand": 4,
+    "hypoallergenic": false,
+    "apartmentFriendly": false,
+    "goodWithKids": true,
+    "healthRisks": [
+      {
+        "condition": "Hip dysplasia",
+        "warningSign": "Reluctance to jump or a swaying hind end",
+        "severity": "Common"
+      },
+      {
+        "condition": "Cancer predisposition",
+        "warningSign": "A new lump, unexplained weight loss, or a swollen belly",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Ear infections",
+        "warningSign": "Scratching, head shaking, or a sweet smell from the ear",
+        "severity": "Common"
+      },
+      {
+        "condition": "Gastric dilatation-volvulus (bloat)",
+        "warningSign": "Unproductive retching or a swelling abdomen",
+        "severity": "Urgent"
+      }
+    ],
+    "dailyCalorieBaseline": 1350,
+    "dietaryNotes": "Feed two measured meals of a complete diet, about 1,350 kcal per day for a typical neutered adult, and keep a visible waist. Coat quality comes from that diet plus brushing, not from extra treats, and a veterinarian should set the portion from the dog's weight in pounds (kilograms).",
+    "exerciseMinutesPerDay": 60,
+    "annualCostUsd": 2000,
+    "annualCostGbp": 1600,
+    "faqs": [
+      {
+        "question": "Are Golden Retrievers good for first-time owners?",
+        "answer": "Yes, for many first homes, because they are eager to please and socially forgiving. They still need about 60 minutes of daily exercise, steady training, and a budget for grooming and veterinary care. A quiet apartment with long workdays is a poor match."
+      },
+      {
+        "question": "How long can a Golden Retriever be left alone?",
+        "answer": "Most adult Goldens cope with about 4 hours alone if they are exercised first and have water. Puppies and anxious dogs need shorter gaps and a midday visit. Longer days often show up as barking, chewing, or housetraining lapses, so plan a walker."
+      },
+      {
+        "question": "Do Golden Retrievers shed a lot?",
+        "answer": "Yes, they have a dense double coat that sheds all year and blows the undercoat in spring and autumn. Plan several brushing sessions each week, and a daily rake during those blowouts, or hair will mat behind the ears and in the feathering."
+      },
+      {
+        "question": "What is the average lifespan of a Golden Retriever?",
+        "answer": "A typical Golden Retriever lives about 10 to 12 years when they stay lean and see a veterinarian regularly. Cancer and orthopedic disease are the problems that most often shorten a life. This is a breed range, not a promise for one dog."
+      },
+      {
+        "question": "Are Golden Retrievers prone to cancer?",
+        "answer": "Yes, more than many other breeds, including lymphoma, hemangiosarcoma, and mast cell tumors. A new lump, pale gums, sudden weakness, or a swelling belly needs a veterinarian, and collapse is an emergency. Finding a lump early does not by itself prove cancer."
+      }
+    ]
+  },
+  {
+    "id": "german-shepherd",
+    "slug": "german-shepherd",
+    "name": "German Shepherd",
+    "species": "dogs",
+    "tagline": "A working breed that needs a job, a lean body, and an owner who notices hind-leg changes early.",
+    "weightLbs": { "min": 50, "max": 90 },
+    "weightKg": { "min": 22.7, "max": 40.8 },
+    "lifespan": "9–13 years",
+    "size": "large",
+    "temperament": ["Loyal", "Alert", "Trainable"],
+    "energyLevel": 5,
+    "groomingDemand": 3,
+    "hypoallergenic": false,
+    "apartmentFriendly": false,
+    "goodWithKids": true,
+    "healthRisks": [
+      {
+        "condition": "Hip dysplasia",
+        "warningSign": "Difficulty rising or a short stride behind",
+        "severity": "Common"
+      },
+      {
+        "condition": "Degenerative myelopathy",
+        "warningSign": "Scraping nails or swaying hind legs that worsen over weeks",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Bloat (GDV)",
+        "warningSign": "Unproductive retching and a swelling abdomen",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Skin allergy",
+        "warningSign": "Constant chewing of the feet or belly",
+        "severity": "Common"
+      }
+    ],
+    "dailyCalorieBaseline": 1500,
+    "dietaryNotes": "Keep this breed lean. A heavy Shepherd loads the hips and may raise bloat risk if meals are huge and followed by hard running.",
+    "exerciseMinutesPerDay": 90,
+    "annualCostUsd": 2000,
+    "annualCostGbp": 1600,
+    "faqs": [
+      {
+        "question": "Is a German Shepherd suited to a first-time home?",
+        "answer": "They can be, with daily training and exercise. An under-worked Shepherd often barks, herds children, or destroys household items."
+      },
+      {
+        "question": "What is an emergency in this breed?",
+        "answer": "Unproductive retching with a tight belly is bloat until proven otherwise. Go to an emergency hospital rather than waiting to see if it passes."
+      }
+    ]
+  },
+  {
+    "id": "poodle-standard",
+    "slug": "poodle",
+    "name": "Poodle (Standard)",
+    "species": "dogs",
+    "tagline": "A low-shedding sporting dog whose coat and cleverness both need a schedule.",
+    "weightLbs": { "min": 45, "max": 70 },
+    "weightKg": { "min": 20.4, "max": 31.8 },
+    "lifespan": "12–15 years",
+    "size": "large",
+    "temperament": ["Intelligent", "Active", "People-focused"],
+    "energyLevel": 4,
+    "groomingDemand": 5,
+    "hypoallergenic": true,
+    "apartmentFriendly": true,
+    "goodWithKids": true,
+    "healthRisks": [
+      {
+        "condition": "Addison's disease",
+        "warningSign": "Waxing weakness, vomiting, or collapse during stress",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Hip dysplasia",
+        "warningSign": "Stiffness after exercise",
+        "severity": "Common"
+      },
+      {
+        "condition": "Ear infections",
+        "warningSign": "Odor or head shaking under heavy ear hair",
+        "severity": "Common"
+      },
+      {
+        "condition": "Progressive retinal atrophy",
+        "warningSign": "Hesitation in dim light that slowly worsens",
+        "severity": "Common"
+      }
+    ],
+    "dailyCalorieBaseline": 1250,
+    "dietaryNotes": "Feed a measured adult diet and book grooming before the coat mats to the skin. Matted hair can hide ear and skin disease.",
+    "exerciseMinutesPerDay": 60,
+    "annualCostUsd": 2200,
+    "annualCostGbp": 1800,
+    "faqs": [
+      {
+        "question": "Are Standard Poodles hypoallergenic?",
+        "answer": "They shed little hair, so many allergic people tolerate them better. No dog is allergen-free. Saliva and dander still circulate in the home."
+      },
+      {
+        "question": "How often should a Standard Poodle be groomed?",
+        "answer": "Plan a full clip every 4–8 weeks plus brushing several times a week. Skipping months lets mats pull on the skin."
+      }
+    ]
+  },
+  {
+    "id": "dachshund",
+    "slug": "dachshund",
+    "name": "Dachshund",
+    "species": "dogs",
+    "tagline": "A long-backed hound whose spine is the health limit on jumping, weight, and rough play.",
+    "weightLbs": { "min": 16, "max": 32 },
+    "weightKg": { "min": 7.3, "max": 14.5 },
+    "lifespan": "12–16 years",
+    "size": "small",
+    "temperament": ["Bold", "Curious", "Vocal"],
+    "energyLevel": 3,
+    "groomingDemand": 2,
+    "hypoallergenic": false,
+    "apartmentFriendly": true,
+    "goodWithKids": false,
+    "healthRisks": [
+      {
+        "condition": "Intervertebral disc disease",
+        "warningSign": "Yelping, a hunched back, or dragging the hind feet",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Obesity",
+        "warningSign": "A sausage shape with no tuck behind the ribs",
+        "severity": "Common"
+      },
+      {
+        "condition": "Dental disease",
+        "warningSign": "Bad breath or dropping food",
+        "severity": "Common"
+      },
+      {
+        "condition": "Patellar luxation",
+        "warningSign": "A skip in the stride that comes and goes",
+        "severity": "Common"
+      }
+    ],
+    "dailyCalorieBaseline": 600,
+    "dietaryNotes": "Keep standard Dachshunds lean. Every extra pound loads the discs. Use ramps instead of letting them jump off sofas.",
+    "exerciseMinutesPerDay": 30,
+    "annualCostUsd": 1600,
+    "annualCostGbp": 1300,
+    "faqs": [
+      {
+        "question": "Are Dachshunds good with young children?",
+        "answer": "They are better with older children who will not lift them by the chest or let them leap from furniture. A dropped Dachshund can injure a disc."
+      },
+      {
+        "question": "What back pain cannot wait?",
+        "answer": "Crying when picked up, a wobbling hind end, or loss of bladder control is an emergency. Crate the dog and go to a clinic. Do not give human pain medicine."
+      }
+    ]
+  },
+  {
+    "id": "australian-shepherd",
+    "slug": "australian-shepherd",
+    "name": "Australian Shepherd",
+    "species": "dogs",
+    "tagline": "A herding dog that unravels without work, and some lines carry a drug-sensitivity gene.",
+    "weightLbs": { "min": 40, "max": 65 },
+    "weightKg": { "min": 18, "max": 29.5 },
+    "lifespan": "12–15 years",
+    "size": "medium",
+    "temperament": ["Driven", "Loyal", "Watchful"],
+    "energyLevel": 5,
+    "groomingDemand": 3,
+    "hypoallergenic": false,
+    "apartmentFriendly": false,
+    "goodWithKids": true,
+    "healthRisks": [
+      {
+        "condition": "MDR1 drug sensitivity",
+        "warningSign": "Profound sedation or neurologic signs after a routine veterinary or parasite drug",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Hip dysplasia",
+        "warningSign": "Reluctance to jump into the car",
+        "severity": "Common"
+      },
+      {
+        "condition": "Epilepsy",
+        "warningSign": "A first seizure, paddling, or a vacant stare",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Eye disease",
+        "warningSign": "Bumping into objects or a cloudy pupil",
+        "severity": "Common"
+      }
+    ],
+    "dailyCalorieBaseline": 1200,
+    "dietaryNotes": "Active adults need more calories than couch days. Adjust the bowl to body condition, not to how much they ask for after training.",
+    "exerciseMinutesPerDay": 90,
+    "annualCostUsd": 1800,
+    "annualCostGbp": 1400,
+    "faqs": [
+      {
+        "question": "Why mention MDR1 before a pharmacy visit?",
+        "answer": "Some Australian Shepherds cannot safely process certain common drugs. Tell every clinic the breed and ask them to check before dispensing. Do not share another pet's medicine."
+      },
+      {
+        "question": "Can an Australian Shepherd live without a yard?",
+        "answer": "Only with a serious daily outlet: runs, scent work, or herding-style training. A bored Aussie often herds children and barks at movement."
+      }
+    ]
+  },
+  {
+    "id": "beagle",
+    "slug": "beagle",
+    "name": "Beagle",
+    "species": "dogs",
+    "tagline": "A scent hound with a loud voice, a strong nose, and a tendency to gain weight.",
+    "weightLbs": { "min": 20, "max": 30 },
+    "weightKg": { "min": 9.1, "max": 13.6 },
+    "lifespan": "10–15 years",
+    "size": "small",
+    "temperament": ["Merry", "Determined", "Sociable"],
+    "energyLevel": 4,
+    "groomingDemand": 2,
+    "hypoallergenic": false,
+    "apartmentFriendly": false,
+    "goodWithKids": true,
+    "healthRisks": [
+      {
+        "condition": "Ear infections",
+        "warningSign": "Head shaking or dark debris in the long ear",
+        "severity": "Common"
+      },
+      {
+        "condition": "Obesity",
+        "warningSign": "A thick neck and ribs you cannot feel",
+        "severity": "Common"
+      },
+      {
+        "condition": "Hypothyroidism",
+        "warningSign": "Weight gain and a dull coat despite a measured diet",
+        "severity": "Common"
+      },
+      {
+        "condition": "Intervertebral disc disease",
+        "warningSign": "Back pain, trembling, or weak hind legs",
+        "severity": "Urgent"
+      }
+    ],
+    "dailyCalorieBaseline": 670,
+    "dietaryNotes": "Beagles forage. Secure bins and measure food. A lean Beagle has fewer back and joint problems later.",
+    "exerciseMinutesPerDay": 60,
+    "annualCostUsd": 1500,
+    "annualCostGbp": 1200,
+    "faqs": [
+      {
+        "question": "Will a Beagle settle in an apartment?",
+        "answer": "They can be physically small enough, but the bay carries. Most do better with a house, a routine, and a long daily sniff walk."
+      },
+      {
+        "question": "Why does my Beagle ignore recall outdoors?",
+        "answer": "The nose overrides the cue when a trail is fresh. Use a long line near roads. This is scent-hound behavior, not stubbornness you can punish away."
+      }
+    ]
+  },
+  {
+    "id": "maine-coon",
+    "slug": "maine-coon",
+    "name": "Maine Coon",
+    "species": "cats",
+    "tagline": "A large, social cat whose heart and hips deserve screening as they mature.",
+    "weightLbs": { "min": 10, "max": 20 },
+    "weightKg": { "min": 4.5, "max": 9 },
+    "lifespan": "12–15 years",
+    "size": "large",
+    "temperament": ["Gentle", "Talkative", "People-oriented"],
+    "energyLevel": 3,
+    "groomingDemand": 4,
+    "hypoallergenic": false,
+    "apartmentFriendly": true,
+    "goodWithKids": true,
+    "healthRisks": [
+      {
+        "condition": "Hypertrophic cardiomyopathy",
+        "warningSign": "Open-mouth breathing, sudden hind-leg weakness, or collapse",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Hip dysplasia",
+        "warningSign": "Reluctance to jump onto a familiar perch",
+        "severity": "Common"
+      },
+      {
+        "condition": "Obesity",
+        "warningSign": "A swinging belly and no waist behind the ribs",
+        "severity": "Common"
+      }
+    ],
+    "dailyCalorieBaseline": 380,
+    "dietaryNotes": "Large does not mean unlimited food. Feed to a waist you can see from above, and brush the belly and britches so mats do not form.",
+    "exerciseMinutesPerDay": 20,
+    "annualCostUsd": 1200,
+    "annualCostGbp": 950,
+    "faqs": [
+      {
+        "question": "How big should a Maine Coon be?",
+        "answer": "Many adults land between about 10 and 20 pounds, with males often heavier. A veterinarian should confirm the cat is muscular rather than overweight."
+      },
+      {
+        "question": "What heart sign cannot wait?",
+        "answer": "Open-mouth breathing at rest, or sudden inability to use the hind legs, is an emergency. Maine Coons are predisposed to hypertrophic cardiomyopathy."
+      }
+    ]
+  },
+  {
+    "id": "ragdoll",
+    "slug": "ragdoll",
+    "name": "Ragdoll",
+    "species": "cats",
+    "tagline": "The Ragdoll is a calm, affectionate, large cat that usually stays quiet indoors. Most live about 12 to 17 years. They suit apartments and gentle families who will play for about 15 minutes a day and watch the litter box.",
+    "weightLbs": { "min": 10, "max": 20 },
+    "weightKg": { "min": 4.5, "max": 9 },
+    "lifespan": "12–17 years",
+    "size": "large",
+    "temperament": ["Placid", "Affectionate", "Quiet"],
+    "energyLevel": 2,
+    "groomingDemand": 3,
+    "hypoallergenic": false,
+    "apartmentFriendly": true,
+    "goodWithKids": true,
+    "healthRisks": [
+      {
+        "condition": "Hypertrophic cardiomyopathy",
+        "warningSign": "Fainting, sudden hind-leg weakness, or panting at rest",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Bladder stones or urinary blockage",
+        "warningSign": "Straining in the box with little or no urine, especially in males",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Obesity",
+        "warningSign": "Skipping play and thickening through the chest",
+        "severity": "Common"
+      },
+      {
+        "condition": "Periodontal disease",
+        "warningSign": "Red gums, drooling, or dropping food",
+        "severity": "Common"
+      }
+    ],
+    "dailyCalorieBaseline": 350,
+    "dietaryNotes": "Feed two measured meals of a complete cat diet, about 350 kcal per day for a typical neutered adult, and keep a waist you can feel. Wet food can supply part of that total and some of the day's water. A veterinarian should set the portion from the cat's weight in pounds (kilograms).",
+    "exerciseMinutesPerDay": 15,
+    "annualCostUsd": 1100,
+    "annualCostGbp": 900,
+    "faqs": [
+      {
+        "question": "Are Ragdolls good for first-time owners?",
+        "answer": "Yes, for many first homes, because they are placid, affectionate, and usually quiet. They still need daily play, a measured diet near 350 kcal, and a plan for heart screening. An outdoor or hands-off household is a poor match for this cat."
+      },
+      {
+        "question": "How long can a Ragdoll be left alone?",
+        "answer": "Most adult Ragdolls cope with a workday of about 8 hours if they have water, a clean box, and play before you leave. They are social and should not be left for days. A midday check helps kittens and any cat who hides."
+      },
+      {
+        "question": "Do Ragdolls shed a lot?",
+        "answer": "They shed moderately, about 3 of 5, with a silkier semi-long coat that blows a little more in spring and autumn. Brush several times a week so loose hair does not become mats or hairballs. They are not a non-shedding cat."
+      },
+      {
+        "question": "What is the average lifespan of a Ragdoll?",
+        "answer": "A typical Ragdoll lives about 12 to 17 years when they stay lean and see a veterinarian regularly. Heart disease and urinary blockage are the problems that most often shorten a life. This is a breed range, not a promise for one cat."
+      },
+      {
+        "question": "Are Ragdolls prone to heart disease?",
+        "answer": "Yes, some Ragdoll lines carry a mutation linked to hypertrophic cardiomyopathy, a thickened heart muscle. Fast breathing at rest, fainting, or sudden hind-leg weakness is an emergency. A normal kitten exam does not rule heart disease out later in life."
+      }
+    ]
+  },
+  {
+    "id": "british-shorthair",
+    "slug": "british-shorthair",
+    "name": "British Shorthair",
+    "species": "cats",
+    "tagline": "A dense-coated, steady cat that hides illness and gains weight quietly.",
+    "weightLbs": { "min": 7, "max": 17 },
+    "weightKg": { "min": 3.2, "max": 7.7 },
+    "lifespan": "12–17 years",
+    "size": "medium",
+    "temperament": ["Calm", "Independent", "Even-tempered"],
+    "energyLevel": 2,
+    "groomingDemand": 2,
+    "hypoallergenic": false,
+    "apartmentFriendly": true,
+    "goodWithKids": true,
+    "healthRisks": [
+      {
+        "condition": "Hypertrophic cardiomyopathy",
+        "warningSign": "Breathing with the mouth open or sudden weakness",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Polycystic kidney disease in some lines",
+        "warningSign": "Increased thirst, weight loss, or a poor coat in a middle-aged cat",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Obesity",
+        "warningSign": "A round body with no waist",
+        "severity": "Common"
+      },
+      {
+        "condition": "Dental disease",
+        "warningSign": "Drooling or chewing on one side",
+        "severity": "Common"
+      }
+    ],
+    "dailyCalorieBaseline": 280,
+    "dietaryNotes": "The plush coat can hide fat. Feel the ribs weekly. A complete cat diet, not a grazing bowl, keeps the waist.",
+    "exerciseMinutesPerDay": 15,
+    "annualCostUsd": 1000,
+    "annualCostGbp": 800,
+    "faqs": [
+      {
+        "question": "Are British Shorthairs low maintenance?",
+        "answer": "The coat is short, but the breed is quiet about pain. Annual exams and a home check of breathing, appetite, and waist still matter."
+      },
+      {
+        "question": "Is a round face the same as a healthy weight?",
+        "answer": "The head is naturally round. The body should still have a waist behind the ribs. Ask a veterinarian for a body-condition score if you are unsure."
+      }
+    ]
+  },
+  {
+    "id": "siamese",
+    "slug": "siamese",
+    "name": "Siamese",
+    "species": "cats",
+    "tagline": "A lean, vocal cat that bonds tightly and shows dental and airway disease early if you listen.",
+    "weightLbs": { "min": 6, "max": 14 },
+    "weightKg": { "min": 2.7, "max": 6.4 },
+    "lifespan": "12–20 years",
+    "size": "medium",
+    "temperament": ["Vocal", "Social", "Active"],
+    "energyLevel": 5,
+    "groomingDemand": 1,
+    "hypoallergenic": false,
+    "apartmentFriendly": true,
+    "goodWithKids": true,
+    "healthRisks": [
+      {
+        "condition": "Asthma or chronic airway disease",
+        "warningSign": "Coughing, wheezing, or open-mouth breathing",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Dental and gum disease",
+        "warningSign": "Red gums, drooling, or dropping kibble",
+        "severity": "Common"
+      },
+      {
+        "condition": "Amyloidosis in some families",
+        "warningSign": "Sudden weakness or a swollen abdomen in a young adult",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Progressive retinal atrophy",
+        "warningSign": "Night hesitancy or widely dilated pupils",
+        "severity": "Common"
+      }
+    ],
+    "dailyCalorieBaseline": 280,
+    "dietaryNotes": "Siamese cats are often lean. A sudden drop in appetite is more worrying than a fussy meal. Keep dental care on the yearly plan.",
+    "exerciseMinutesPerDay": 30,
+    "annualCostUsd": 1000,
+    "annualCostGbp": 800,
+    "faqs": [
+      {
+        "question": "Why is my Siamese so loud?",
+        "answer": "The breed is bred to talk. A new, strained cry with hiding or not eating is different from conversation and should be checked."
+      },
+      {
+        "question": "Is open-mouth breathing ever normal?",
+        "answer": "A brief pant when terrified can happen. Breathing with the mouth open at rest is an emergency in cats, including Siamese with airway disease."
+      }
+    ]
+  },
+  {
+    "id": "domestic-shorthair",
+    "slug": "domestic-shorthair",
+    "name": "Domestic Shorthair",
+    "species": "cats",
+    "tagline": "The mixed-breed house cat: sturdy, variable, and still at risk for teeth, weight, and urinary blockage.",
+    "weightLbs": { "min": 8, "max": 12 },
+    "weightKg": { "min": 3.6, "max": 5.4 },
+    "lifespan": "12–18 years",
+    "size": "medium",
+    "temperament": ["Adaptable", "Individual", "Companionable"],
+    "energyLevel": 3,
+    "groomingDemand": 2,
+    "hypoallergenic": false,
+    "apartmentFriendly": true,
+    "goodWithKids": true,
+    "healthRisks": [
+      {
+        "condition": "Urethral obstruction in males",
+        "warningSign": "Straining with little or no urine",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Dental disease",
+        "warningSign": "Bad breath or pawing at the mouth",
+        "severity": "Common"
+      },
+      {
+        "condition": "Obesity",
+        "warningSign": "No waist and a reluctance to jump",
+        "severity": "Common"
+      },
+      {
+        "condition": "Hyperthyroidism in older cats",
+        "warningSign": "Weight loss despite a strong appetite",
+        "severity": "Common"
+      }
+    ],
+    "dailyCalorieBaseline": 260,
+    "dietaryNotes": "Mixed-breed cats vary. Start from a lean adult portion and change it when the waist changes, not when the bowl looks empty.",
+    "exerciseMinutesPerDay": 20,
+    "annualCostUsd": 800,
+    "annualCostGbp": 650,
+    "faqs": [
+      {
+        "question": "Is a Domestic Shorthair a breed?",
+        "answer": "It is a mixed-ancestry cat with a short coat, not a closed pedigree. Temperament and size vary more than in a single breed."
+      },
+      {
+        "question": "What emergency is easy to miss?",
+        "answer": "A male cat crying in the litter box may be blocked, not constipated. No urine is a same-hour emergency."
+      }
+    ]
+  },
+  {
+    "id": "cockatiel",
+    "slug": "cockatiel",
+    "name": "Cockatiel",
+    "species": "birds",
+    "tagline": "A small cockatoo relative that hides illness until breathing or egg-laying becomes obvious.",
+    "weightLbs": { "min": 0.17, "max": 0.28 },
+    "weightKg": { "min": 0.08, "max": 0.12 },
+    "lifespan": "15–25 years",
+    "size": "small",
+    "temperament": ["Whistling", "Social", "Gentle"],
+    "energyLevel": 3,
+    "groomingDemand": 2,
+    "hypoallergenic": false,
+    "apartmentFriendly": true,
+    "goodWithKids": true,
+    "healthRisks": [
+      {
+        "condition": "Egg binding",
+        "warningSign": "Straining, a wide stance, or sitting fluffed on the cage floor",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Respiratory distress from fumes",
+        "warningSign": "Open-mouth breathing or a tail bob after cooking fumes or aerosols",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Fatty liver from a seed-only diet",
+        "warningSign": "A overgrown beak, obesity, or sudden weakness",
+        "severity": "Common"
+      }
+    ],
+    "dailyCalorieBaseline": 40,
+    "dietaryNotes": "Pellets, vegetables, and a measured seed portion beat an all-seed cup. Never use non-stick cookware fumes, scented candles, or aerosol sprays near the cage.",
+    "exerciseMinutesPerDay": 60,
+    "annualCostUsd": 600,
+    "annualCostGbp": 500,
+    "faqs": [
+      {
+        "question": "Are cockatiels good apartment birds?",
+        "answer": "Yes, if they get out-of-cage time and the air stays free of fumes. Whistling is normal. Open-mouth breathing is not."
+      },
+      {
+        "question": "How long do cockatiels live?",
+        "answer": "Well-kept birds often live 15–25 years. That is a long commitment compared with many small mammals."
+      }
+    ]
+  },
+  {
+    "id": "budgerigar",
+    "slug": "budgerigar",
+    "name": "Budgerigar (Parakeet)",
+    "species": "birds",
+    "tagline": "A tiny flock parrot that needs grams on a scale more than another millet spray.",
+    "weightLbs": { "min": 0.07, "max": 0.09 },
+    "weightKg": { "min": 0.03, "max": 0.04 },
+    "lifespan": "7–15 years",
+    "size": "toy",
+    "temperament": ["Busy", "Social", "Cheerful"],
+    "energyLevel": 4,
+    "groomingDemand": 1,
+    "hypoallergenic": false,
+    "apartmentFriendly": true,
+    "goodWithKids": true,
+    "healthRisks": [
+      {
+        "condition": "Respiratory disease",
+        "warningSign": "Tail bobbing, a voice change, or open-beak breathing",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Egg binding",
+        "warningSign": "A hen straining or too weak to perch",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Iodine deficiency and thyroid enlargement",
+        "warningSign": "A squeak, regurgitation, or a click when breathing on an all-seed diet",
+        "severity": "Common"
+      },
+      {
+        "condition": "Tumors in older birds",
+        "warningSign": "A new lump or a sudden inability to fly level",
+        "severity": "Common"
+      }
+    ],
+    "dailyCalorieBaseline": 20,
+    "dietaryNotes": "A pellet and vegetable base with limited seed is safer than millet all day. Weigh the bird weekly in grams. A drop is an early illness sign.",
+    "exerciseMinutesPerDay": 60,
+    "annualCostUsd": 400,
+    "annualCostGbp": 320,
+    "faqs": [
+      {
+        "question": "Is a budgie a good child's pet?",
+        "answer": "They can be, with adult supervision. Small birds are injured by squeezing, ceiling fans, and non-stick fumes. Teach quiet handling."
+      },
+      {
+        "question": "What does tail bobbing mean?",
+        "answer": "A tail that pumps with every breath means the bird is working too hard to breathe. That is an avian emergency, even if the bird still looks bright."
+      }
+    ]
+  },
+  {
+    "id": "green-cheeked-conure",
+    "slug": "green-cheeked-conure",
+    "name": "Green-Cheeked Conure",
+    "species": "birds",
+    "tagline": "A clownish small parrot with a big bite, a long life, and a sensitive airway.",
+    "weightLbs": { "min": 0.13, "max": 0.18 },
+    "weightKg": { "min": 0.06, "max": 0.08 },
+    "lifespan": "15–25 years",
+    "size": "small",
+    "temperament": ["Playful", "Cuddly", "Mischievous"],
+    "energyLevel": 4,
+    "groomingDemand": 2,
+    "hypoallergenic": false,
+    "apartmentFriendly": true,
+    "goodWithKids": true,
+    "healthRisks": [
+      {
+        "condition": "Egg binding",
+        "warningSign": "Straining or fluffed weakness in a female",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Respiratory irritation",
+        "warningSign": "Tail bob or open-mouth breathing after fumes or dust",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Metal toxicity",
+        "warningSign": "Sudden weakness, seizures, or red urine after chewing metal",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Feather-destructive behavior",
+        "warningSign": "Broken or missing chest feathers without a molt pattern",
+        "severity": "Common"
+      }
+    ],
+    "dailyCalorieBaseline": 50,
+    "dietaryNotes": "Offer pellets, vegetables, and foraging toys. Seed-only cups and unsupervised metal chewing are the two common husbandry injuries.",
+    "exerciseMinutesPerDay": 90,
+    "annualCostUsd": 700,
+    "annualCostGbp": 550,
+    "faqs": [
+      {
+        "question": "Are green-cheeked conures loud?",
+        "answer": "They are quieter than many larger parrots, but they still call. Apartment living works when neighbors can tolerate flock noise and the bird gets daily time out."
+      },
+      {
+        "question": "Why is metal chewing dangerous?",
+        "answer": "Galvanized wire, jewelry, and some bells can contain zinc or lead. Weakness or seizures after chewing metal needs an avian emergency visit."
+      }
+    ]
+  },
+  {
+    "id": "african-grey",
+    "slug": "african-grey",
+    "name": "African Grey",
+    "species": "birds",
+    "tagline": "A long-lived parrot whose calcium balance, air sacs, and boredom are clinical issues, not quirks.",
+    "weightLbs": { "min": 0.9, "max": 1.4 },
+    "weightKg": { "min": 0.4, "max": 0.65 },
+    "lifespan": "40–60 years",
+    "size": "medium",
+    "temperament": ["Intelligent", "Sensitive", "Bonded"],
+    "energyLevel": 3,
+    "groomingDemand": 2,
+    "hypoallergenic": false,
+    "apartmentFriendly": true,
+    "goodWithKids": false,
+    "healthRisks": [
+      {
+        "condition": "Hypocalcemia",
+        "warningSign": "Seizures, falling off the perch, or weakness",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Aspergillosis",
+        "warningSign": "A voice change, tail bob, or exercise intolerance",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Atherosclerosis",
+        "warningSign": "Sudden weakness, falling, or exercise collapse in a middle-aged bird",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Feather-destructive behavior",
+        "warningSign": "Chewed chest or flank feathers with normal wing molt",
+        "severity": "Common"
+      }
+    ],
+    "dailyCalorieBaseline": 90,
+    "dietaryNotes": "A pellet, vegetable, and controlled-nut diet supports calcium better than a seed mix. Foraging time is part of feeding, not an extra.",
+    "exerciseMinutesPerDay": 120,
+    "annualCostUsd": 1200,
+    "annualCostGbp": 950,
+    "faqs": [
+      {
+        "question": "How long is the commitment?",
+        "answer": "African Greys often live 40–60 years. Plan for a bird that may outlive the first owner, and for an avian veterinarian, not only a pet-shop checkup."
+      },
+      {
+        "question": "Are they a family bird for small children?",
+        "answer": "They bond intensely and can bite when startled or jealous. They fit a quiet, consistent adult household better than a busy home with toddlers."
+      }
+    ]
+  },
+  {
+    "id": "guinea-pig-american",
+    "slug": "guinea-pig",
+    "name": "Guinea Pig (American)",
+    "species": "small-pets",
+    "tagline": "A herd animal that needs hay all day, vitamin C every day, and a friend of its own species.",
+    "weightLbs": { "min": 1.5, "max": 2.6 },
+    "weightKg": { "min": 0.7, "max": 1.2 },
+    "lifespan": "5–8 years",
+    "size": "small",
+    "temperament": ["Social", "Vocal", "Gentle"],
+    "energyLevel": 3,
+    "groomingDemand": 2,
+    "hypoallergenic": false,
+    "apartmentFriendly": true,
+    "goodWithKids": true,
+    "healthRisks": [
+      {
+        "condition": "Vitamin C deficiency (scurvy)",
+        "warningSign": "A rough coat, painful joints, or bleeding gums",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Dental malocclusion",
+        "warningSign": "Dropping food, drooling, or losing weight while hay is available",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Respiratory infection",
+        "warningSign": "Clicking breaths, discharge, or sitting still and fluffed",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Bladder stones",
+        "warningSign": "Blood in the urine, crying while passing urine, or straining",
+        "severity": "Urgent"
+      }
+    ],
+    "dailyCalorieBaseline": 80,
+    "dietaryNotes": "Unlimited grass hay is the diet. Pellets are a measured supplement, and vitamin C must come from proper pellets, vegetables, or a veterinary plan. Do not use rabbit pellets as the sole food.",
+    "exerciseMinutesPerDay": 60,
+    "annualCostUsd": 700,
+    "annualCostGbp": 550,
+    "faqs": [
+      {
+        "question": "Can a guinea pig live alone?",
+        "answer": "They are herd animals. A compatible companion of the same species, with enough hide space, is the welfare baseline. Human visits do not replace another guinea pig."
+      },
+      {
+        "question": "Why is vitamin C mentioned every time?",
+        "answer": "Guinea pigs cannot make their own vitamin C. A diet without a reliable source leads to scurvy, which is painful and can become an emergency."
+      }
+    ]
+  },
+  {
+    "id": "holland-lop",
+    "slug": "holland-lop",
+    "name": "Holland Lop Rabbit",
+    "species": "small-pets",
+    "tagline": "A small lop whose teeth, gut, and ears fail quietly if hay and floor space are skipped.",
+    "weightLbs": { "min": 2, "max": 4 },
+    "weightKg": { "min": 0.9, "max": 1.8 },
+    "lifespan": "7–10 years",
+    "size": "small",
+    "temperament": ["Curious", "Gentle", "Routine-loving"],
+    "energyLevel": 3,
+    "groomingDemand": 3,
+    "hypoallergenic": false,
+    "apartmentFriendly": true,
+    "goodWithKids": true,
+    "healthRisks": [
+      {
+        "condition": "Dental disease",
+        "warningSign": "Drooling, a wet chin, or refusing hay",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Gastrointestinal stasis",
+        "warningSign": "No droppings, hunching, or teeth grinding",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Ear disease under heavy lop ears",
+        "warningSign": "Head shaking, odor, or scratching at the ear base",
+        "severity": "Common"
+      },
+      {
+        "condition": "Heat stress",
+        "warningSign": "Lethargy, wet nose breathing, or collapse in a warm room",
+        "severity": "Urgent"
+      }
+    ],
+    "dailyCalorieBaseline": 130,
+    "dietaryNotes": "Unlimited hay, a small measured pellet portion, and leafy greens. Treats and muesli mixes are a common cause of dental disease and obesity. Do not force-feed unless a rabbit veterinarian has shown you how.",
+    "exerciseMinutesPerDay": 180,
+    "annualCostUsd": 900,
+    "annualCostGbp": 700,
+    "faqs": [
+      {
+        "question": "Is a cage enough exercise?",
+        "answer": "No. Holland Lops need several hours a day in a safe pen. A hutch without floor time leads to weak bone, obesity, and gut slowdown."
+      },
+      {
+        "question": "When is a quiet rabbit an emergency?",
+        "answer": "No fecal pellets, loud tooth grinding, or a hunched posture means pain or gut stasis. Call a rabbit-savvy veterinarian the same day, sooner if they stop eating."
+      }
+    ]
+  },
+  {
+    "id": "syrian-hamster",
+    "slug": "syrian-hamster",
+    "name": "Syrian Hamster",
+    "species": "small-pets",
+    "tagline": "A solitary, nocturnal rodent with a short life and several problems that look small until they are not.",
+    "weightLbs": { "min": 0.22, "max": 0.4 },
+    "weightKg": { "min": 0.1, "max": 0.18 },
+    "lifespan": "2–3 years",
+    "size": "toy",
+    "temperament": ["Solitary", "Nocturnal", "Curious"],
+    "energyLevel": 3,
+    "groomingDemand": 1,
+    "hypoallergenic": false,
+    "apartmentFriendly": true,
+    "goodWithKids": false,
+    "healthRisks": [
+      {
+        "condition": "Wet tail and severe diarrhea",
+        "warningSign": "Watery stool, a wet tail base, or a hunched, inactive hamster",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Cheek-pouch impaction",
+        "warningSign": "One swollen cheek that does not empty, or pawing at the mouth",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Diabetes in some lines",
+        "warningSign": "Heavy drinking and lots of urine",
+        "severity": "Common"
+      },
+      {
+        "condition": "Tumors in older hamsters",
+        "warningSign": "A fast-growing lump or sudden weight loss",
+        "severity": "Common"
+      }
+    ],
+    "dailyCalorieBaseline": 20,
+    "dietaryNotes": "A measured lab-block or pellet diet plus a little fresh food beats sugary mixes. They must live alone. A wheel and deep bedding are part of care, not extras.",
+    "exerciseMinutesPerDay": 60,
+    "annualCostUsd": 300,
+    "annualCostGbp": 250,
+    "faqs": [
+      {
+        "question": "Can two Syrian hamsters share a cage?",
+        "answer": "No, adults fight, often fatally. House one Syrian per enclosure. Dwarf hamster rules are different and do not apply here."
+      },
+      {
+        "question": "Are they a good pet for a young child?",
+        "answer": "They are nocturnal, easily injured, and may bite when woken. They suit an older child who can handle them in the evening with an adult nearby."
+      }
+    ]
+  },
+  {
+    "id": "ferret",
+    "slug": "ferret",
+    "name": "Ferret",
+    "species": "small-pets",
+    "tagline": "A high-energy carnivore that collapses from low blood sugar more often than owners expect.",
+    "weightLbs": { "min": 1.5, "max": 4.5 },
+    "weightKg": { "min": 0.7, "max": 2 },
+    "lifespan": "6–10 years",
+    "size": "small",
+    "temperament": ["Playful", "Inquisitive", "Social"],
+    "energyLevel": 5,
+    "groomingDemand": 2,
+    "hypoallergenic": false,
+    "apartmentFriendly": true,
+    "goodWithKids": false,
+    "healthRisks": [
+      {
+        "condition": "Insulinoma",
+        "warningSign": "Hind-leg weakness, drooling, staring, or collapse",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Foreign-body obstruction",
+        "warningSign": "Vomiting, teeth grinding, or refusing food after chewing foam or rubber",
+        "severity": "Urgent"
+      },
+      {
+        "condition": "Adrenal disease",
+        "warningSign": "Symmetrical hair loss, itch, or a swollen vulva",
+        "severity": "Common"
+      },
+      {
+        "condition": "Lymphoma",
+        "warningSign": "Weight loss, enlarged nodes, or labored breathing",
+        "severity": "Urgent"
+      }
+    ],
+    "dailyCalorieBaseline": 250,
+    "dietaryNotes": "Feed a high-protein, animal-based ferret or high-quality cat diet. Carbohydrate-heavy treats are a poor match. Ferret-proof the room: rubber, foam, and ears of headphones are obstruction risks.",
+    "exerciseMinutesPerDay": 120,
+    "annualCostUsd": 1500,
+    "annualCostGbp": 1200,
+    "faqs": [
+      {
+        "question": "What do I do if a ferret collapses?",
+        "answer": "If they are awake and can swallow, rub a small amount of honey on the gums and offer a meal, then go to a veterinarian. Do not pour liquid into the mouth of a ferret who is seizuring."
+      },
+      {
+        "question": "Can ferrets live in an apartment?",
+        "answer": "Yes, with several hours of supervised floor time every day and a room that has been cleared of chew hazards. They are not cage-only pets."
+      }
+    ]
+  }
+]

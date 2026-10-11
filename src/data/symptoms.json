@@ -1,0 +1,393 @@
+[
+  {
+    "id": "dog-ear-scratching",
+    "slug": "head-shaking-ear-scratching",
+    "title": "Head Shaking / Ear Scratching",
+    "species": "dogs",
+    "severityTier": "green",
+    "shortDescription": "Occasional head shaking with a bright, eating dog is often ear irritation. A head tilt, bleeding, or a dog who cannot settle needs a same-day exam.",
+    "homeTriageChecklist": [
+      "Confirm they are eating, drinking, and walking normally.",
+      "Look at the ear flap for redness, swelling, or a bad smell. Do not push anything into the canal.",
+      "Check gum color. Pink and moist is reassuring. Pale, blue, or brick-red gums are an emergency.",
+      "Count resting breaths for 15 seconds and multiply by four. A calm dog is often near 15–30 breaths per minute."
+    ],
+    "seekImmediateCareIf": [
+      "The head is tilted and stays that way, or the dog walks in circles.",
+      "There is blood, a swollen ear flap, or crying when the mouth opens.",
+      "They are lethargic, vomiting, or have pale gums.",
+      "Shaking started after a fight, a fall, or a possible foreign body."
+    ],
+    "commonCauses": [
+      "Ear mites, yeast, or bacterial irritation",
+      "Allergy flare or water left in the ear after swimming",
+      "A grass seed or other foreign body",
+      "Less often, a middle-ear or neurologic problem"
+    ]
+  },
+  {
+    "id": "dog-yellow-bile",
+    "slug": "vomiting-yellow-bile",
+    "title": "Vomiting Yellow Bile",
+    "species": "dogs",
+    "severityTier": "yellow",
+    "shortDescription": "Yellow bile often means an empty stomach or gut irritation. One episode in a bright adult dog can be watched for a few hours if the belly is soft and the gums are pink. Repeated vomiting, blood, a puppy, or a tight abdomen needs a clinic the same day.",
+    "homeTriageChecklist": [
+      "Check gum color and whether pink color returns in under 2 seconds.",
+      "Count resting breaths for 30 seconds and double the number. More than about 40 per minute at rest is an emergency.",
+      "Lift the skin over the shoulders and see if it flattens within about 2 seconds.",
+      "Touch the belly lightly. A tight, drum-like abdomen or unproductive retching is an emergency, not a bile problem to watch."
+    ],
+    "seekImmediateCareIf": [
+      "They retch repeatedly and bring little up, or the belly looks swollen.",
+      "Vomit contains blood, coffee-ground material, or a possible toxin wrapper.",
+      "The dog is collapsed, has white or blue gums, or is having a seizure.",
+      "Vomiting continues more than two or three times, or they cannot keep water down."
+    ],
+    "commonCauses": [
+      "Bilious vomiting from a long gap between meals, or dietary indiscretion",
+      "Intestinal parasites or a bacterial gut infection",
+      "Pancreatitis, kidney disease, or liver disease",
+      "A foreign-body blockage or a toxin such as chocolate, grapes, or xylitol",
+      "Bloat (gastric dilatation-volvulus) or another collapse illness such as Addison's disease"
+    ]
+  },
+  {
+    "id": "dog-lethargy",
+    "slug": "lethargy",
+    "title": "Lethargy",
+    "species": "dogs",
+    "severityTier": "yellow",
+    "shortDescription": "A dog who is quieter than usual but still drinking and walking can be assessed the same day. Collapse, pale gums, or a dog who will not rise is an emergency.",
+    "homeTriageChecklist": [
+      "Compare today's energy with their normal walk and greeting.",
+      "Check gum color and capillary refill by pressing a pink gum. Color should return in about 1–2 seconds.",
+      "Count resting breaths and note coughing or belly effort.",
+      "Record appetite, water intake, urine, and any new medicine or toxin access."
+    ],
+    "seekImmediateCareIf": [
+      "They collapse, cannot stand, or seem confused.",
+      "Gums are pale, blue, yellow, or brick red.",
+      "The belly is swelling, they are straining to urinate, or they had a seizure.",
+      "A short-nosed dog is open-mouth breathing after heat or exercise."
+    ],
+    "commonCauses": [
+      "Pain, fever, or an infection",
+      "Dehydration or an upset stomach",
+      "Anemia, heart disease, or internal bleeding",
+      "Toxin exposure or heatstroke"
+    ]
+  },
+  {
+    "id": "dog-limping",
+    "slug": "limping",
+    "title": "Limping or Not Using a Leg",
+    "species": "dogs",
+    "severityTier": "yellow",
+    "shortDescription": "A mild limp that eases after rest can be checked within 12–24 hours if the dog is otherwise well. A dangling limb, bleeding, or a dog hit by a car needs an emergency hospital.",
+    "homeTriageChecklist": [
+      "Watch whether they put any weight on the leg.",
+      "Look for wounds, swelling, or a limb that hangs at an odd angle. Do not pull on it.",
+      "Check gum color and breathing so you do not miss shock after trauma.",
+      "Note stairs, jumps, or a fight in the last day."
+    ],
+    "seekImmediateCareIf": [
+      "The leg dangles, has an open wound, or they will not put the foot down after trauma.",
+      "There is uncontrolled bleeding or they were hit by a car.",
+      "They are weak, have pale gums, or more than one leg is involved.",
+      "The limp appeared with a swollen belly, trouble breathing, or collapse."
+    ],
+    "commonCauses": [
+      "Sprain, muscle strain, or a broken nail",
+      "A torn ligament or joint disease",
+      "A fracture or dislocation after a fall or car impact",
+      "A bite wound or foreign body in the paw"
+    ]
+  },
+  {
+    "id": "dog-collapse",
+    "slug": "collapse-or-seizure",
+    "title": "Collapse or Seizure",
+    "species": "dogs",
+    "severityTier": "red",
+    "shortDescription": "A dog who falls over, paddles, or cannot be woken needs an emergency clinic now. Keep hands away from the mouth during a seizure and time how long it lasts.",
+    "homeTriageChecklist": [
+      "Move furniture away and dim noise. Do not restrain the body.",
+      "Time the episode and film it if you can do that safely.",
+      "When they are awake, check gum color and breathing rate.",
+      "Look for toxin packaging, heat exposure, or a bloated belly."
+    ],
+    "seekImmediateCareIf": [
+      "This list is the emergency. Leave for a clinic after the first seizure or collapse.",
+      "A seizure lasts more than a couple of minutes or they have more than one.",
+      "They stay unconscious, have pale or blue gums, or cannot walk afterward.",
+      "The episode follows chocolate, xylitol, a fight, or heat."
+    ],
+    "commonCauses": [
+      "Epilepsy or a first-time seizure disorder",
+      "Low blood sugar, toxin, or heatstroke",
+      "Heart rhythm problems or internal bleeding",
+      "Brain disease or severe pain"
+    ]
+  },
+  {
+    "id": "cat-straining",
+    "slug": "straining-in-litter-box",
+    "title": "Straining in Litter Box",
+    "species": "cats",
+    "severityTier": "red",
+    "shortDescription": "A cat who squats often and passes little or no urine may have a urethral blockage, especially if male. That is an emergency, not constipation, until a veterinarian proves otherwise.",
+    "homeTriageChecklist": [
+      "Check the box for urine, not only stool. No urine is the danger sign.",
+      "Note crying, licking under the tail, or vomiting.",
+      "Look at gum color and whether the belly feels tight. Do not press hard.",
+      "Count resting breaths. Open-mouth breathing in a cat is an emergency on its own."
+    ],
+    "seekImmediateCareIf": [
+      "A male cat strains and produces no urine, or only drops.",
+      "They vomit, hide, cry, or have a firm belly.",
+      "Gums are pale or they are too weak to walk.",
+      "You are unsure whether the problem is urine or stool. Go in."
+    ],
+    "commonCauses": [
+      "Urethral obstruction from crystals, mucus, or spasm",
+      "Bladder inflammation that is painful but still letting urine pass",
+      "Constipation, which must be distinguished by a veterinarian",
+      "Urinary infection, less common in young male cats than inflammation"
+    ]
+  },
+  {
+    "id": "cat-increased-thirst",
+    "slug": "drinking-more-water",
+    "title": "Drinking More Water",
+    "species": "cats",
+    "severityTier": "yellow",
+    "shortDescription": "A cat who suddenly empties the water bowl needs a veterinary visit within a day, with a urine check. Collapse, vomiting, or straining to urinate should not wait for that appointment.",
+    "homeTriageChecklist": [
+      "Note how often you refill the bowl compared with last week.",
+      "Watch appetite, weight, vomiting, and litter-box clumps.",
+      "Check gum moisture and whether they are still grooming.",
+      "Confirm they are passing urine. A blocked male cat can look restless around water and still be an emergency."
+    ],
+    "seekImmediateCareIf": [
+      "They strain in the box, vomit repeatedly, or collapse.",
+      "They are a diabetic patient who is weak, or you smell a strong acetone odor.",
+      "Gums are pale or they are open-mouth breathing.",
+      "Thirst follows lily exposure, antifreeze, or another toxin."
+    ],
+    "commonCauses": [
+      "Kidney disease or hyperthyroidism",
+      "Diabetes mellitus",
+      "A diet change or hot weather, if the increase is small and the cat is well",
+      "Urinary disease"
+    ]
+  },
+  {
+    "id": "cat-sneezing",
+    "slug": "occasional-sneezing",
+    "title": "Occasional Sneezing",
+    "species": "cats",
+    "severityTier": "green",
+    "shortDescription": "A few sneezes in a cat who is eating and breathing quietly can be watched. Colored discharge, mouth ulcers, or any increase in breathing effort needs a clinic.",
+    "homeTriageChecklist": [
+      "Confirm they are eating, drinking, and using the box.",
+      "Look for discharge from the eyes or nose. Clear and mild is less urgent than yellow or bloody.",
+      "Watch the chest from the side. Extra belly effort or open-mouth breathing is an emergency.",
+      "Check gum color if they allow a gentle look."
+    ],
+    "seekImmediateCareIf": [
+      "They breathe with the mouth open, aside from a brief pant when stressed.",
+      "They stop eating, have facial swelling, or a nosebleed.",
+      "A kitten is sneezing and becoming quiet or dehydrated.",
+      "Sneezing started after a lily, cleaning product, or smoke exposure."
+    ],
+    "commonCauses": [
+      "A mild viral upper-respiratory irritation",
+      "Dust, litter dust, or a scent in the home",
+      "Dental disease with nasal involvement",
+      "A foreign body or a more serious respiratory infection"
+    ]
+  },
+  {
+    "id": "cat-hiding",
+    "slug": "hiding-and-not-eating",
+    "title": "Hiding and Not Eating",
+    "species": "cats",
+    "severityTier": "yellow",
+    "shortDescription": "A cat who skips more than a meal or hides when they are usually social should see a veterinarian within 12–24 hours. Overweight cats can develop hepatic lipidosis if anorexia continues.",
+    "homeTriageChecklist": [
+      "Note the last full meal and whether water intake changed.",
+      "Check the litter box for urine and stool.",
+      "Look at gum color and breathing effort without dragging them out roughly.",
+      "Scan for lilies, string, or a medicine bottle they could have reached."
+    ],
+    "seekImmediateCareIf": [
+      "They strain to urinate, vomit repeatedly, or have a painful belly.",
+      "Gums are pale or yellow, or they collapse.",
+      "An overweight cat has not eaten for much of a day.",
+      "You saw string, a lily, or a toxin."
+    ],
+    "commonCauses": [
+      "Pain, nausea, or fever",
+      "Dental disease or a foreign body",
+      "Urinary obstruction",
+      "Early liver or kidney illness"
+    ]
+  },
+  {
+    "id": "bird-tail-bob",
+    "slug": "tail-bobbing",
+    "title": "Tail Bobbing (Birds)",
+    "species": "birds",
+    "severityTier": "red",
+    "shortDescription": "A rhythmic tail bob with each breath means the bird is working too hard to breathe. That is an avian emergency, even if they still look alert.",
+    "homeTriageChecklist": [
+      "Watch from a short distance. Count whether the tail moves with every breath.",
+      "Note open-mouth breathing, a voice change, or sitting on the cage floor.",
+      "Check recent fumes: non-stick pans, aerosols, smoke, or strong cleaners.",
+      "Do not catch them repeatedly to inspect the chest. Stress can worsen hypoxia."
+    ],
+    "seekImmediateCareIf": [
+      "The tail bobs at rest, or the beak stays open to breathe.",
+      "They are on the cage floor, fluffed, or too weak to perch.",
+      "There was fume exposure, an injury, or possible egg binding.",
+      "You are unsure. Birds compensate until they suddenly cannot."
+    ],
+    "commonCauses": [
+      "Airway or lung disease, including infection",
+      "Fume exposure, such as overheated non-stick coatings",
+      "Egg binding or a mass pressing on the air sacs",
+      "Heart disease or anemia"
+    ]
+  },
+  {
+    "id": "bird-fluffed",
+    "slug": "fluffed-and-quiet",
+    "title": "Fluffed and Quiet",
+    "species": "birds",
+    "severityTier": "yellow",
+    "shortDescription": "A bird who stays fluffed, quiet, and less interested in food is often ill even without dramatic signs. Arrange an avian visit the same day, and go now if breathing changes.",
+    "homeTriageChecklist": [
+      "Compare droppings today with their normal color and volume.",
+      "Watch breathing for a tail bob or open beak.",
+      "Note the last time they ate millet, pellets, or their usual meal.",
+      "Weigh them if you already have a gram scale and can do it with almost no chase."
+    ],
+    "seekImmediateCareIf": [
+      "They tail-bob, breathe with an open beak, or fall off the perch.",
+      "Droppings are absent, bloody, or mostly water in a weak bird.",
+      "They were exposed to fumes, a ceiling fan injury, or a cat bite.",
+      "A female is straining or standing wide-legged."
+    ],
+    "commonCauses": [
+      "Infection or pain that the bird is hiding",
+      "A diet that is mostly seed, with vitamin deficiency over time",
+      "Reproductive disease or egg binding",
+      "Toxin or heavy-metal exposure"
+    ]
+  },
+  {
+    "id": "bird-molt",
+    "slug": "routine-molt",
+    "title": "Routine Feather Molt",
+    "species": "birds",
+    "severityTier": "green",
+    "shortDescription": "A gradual loss of worn feathers, with pin feathers and a normal appetite, is usually a molt. Bald patches, bleeding, or a fluffed bird on the floor are not a routine molt.",
+    "homeTriageChecklist": [
+      "Confirm they are eating, playing, and perching as usual.",
+      "Look for symmetrical feather loss rather than one plucked bald spot.",
+      "Check droppings and breathing. A tail bob is unrelated to a normal molt.",
+      "Keep baths and humidity available if they already enjoy them. Do not oil the skin."
+    ],
+    "seekImmediateCareIf": [
+      "Feathers are broken and bleeding, or the bird is self-mutilating.",
+      "They are fluffed, losing weight, or not eating.",
+      "Breathing is labored or they sit on the cage floor.",
+      "A cat or dog had contact with the bird."
+    ],
+    "commonCauses": [
+      "A normal seasonal molt",
+      "Feather-destructive behavior or skin irritation",
+      "Infection or liver disease when molt is paired with illness",
+      "Injury from a cage mate or household pet"
+    ]
+  },
+  {
+    "id": "rabbit-teeth-grinding",
+    "slug": "teeth-grinding-hunching",
+    "title": "Teeth Grinding / Hunching (Rabbits)",
+    "species": "small-pets",
+    "severityTier": "red",
+    "shortDescription": "Loud teeth grinding with a hunched posture is a pain signal in rabbits, often from the gut or teeth. It needs a rabbit-savvy veterinarian now, not a wait until tomorrow.",
+    "homeTriageChecklist": [
+      "Look for fecal pellets. None, or very small pellets, raises concern for gut stasis.",
+      "Offer hay and see whether they take a bite. Do not force-feed an animal who cannot swallow.",
+      "Note drooling, a wet chin, or a preference for soft food, which can mean dental pain.",
+      "Check gum color if you can lift a lip gently. Pale gums or collapse means go immediately."
+    ],
+    "seekImmediateCareIf": [
+      "They grind their teeth, hunch, and refuse hay.",
+      "Droppings have stopped or the belly feels gas-filled.",
+      "They are cold, limp, or breathing with effort.",
+      "There is diarrhea, especially in a young rabbit."
+    ],
+    "commonCauses": [
+      "Gastrointestinal stasis and gas pain",
+      "Dental spurs or a tooth root abscess",
+      "A urinary stone or bladder sludge",
+      "A true obstruction, which is a surgical emergency"
+    ]
+  },
+  {
+    "id": "rabbit-fewer-droppings",
+    "slug": "fewer-droppings",
+    "title": "Fewer or Smaller Droppings",
+    "species": "small-pets",
+    "severityTier": "yellow",
+    "shortDescription": "Smaller or fewer fecal pellets mean the gut is slowing. If the rabbit is still eating, call a rabbit veterinarian the same day. No pellets plus pain is an emergency.",
+    "homeTriageChecklist": [
+      "Count pellets in the litter area compared with a normal day.",
+      "Watch hay intake. Hay matters more than pellets or treats.",
+      "Check posture for hunching and listen for loud tooth grinding.",
+      "Note urine and any soft uneaten cecotropes stuck to the fur."
+    ],
+    "seekImmediateCareIf": [
+      "They stop eating entirely or have passed no pellets for about 12 hours.",
+      "They grind their teeth, press the belly to the floor, or feel bloated.",
+      "There is watery diarrhea, collapse, or a low body temperature.",
+      "A young rabbit is quiet and soiling the hind end."
+    ],
+    "commonCauses": [
+      "Early gastrointestinal stasis",
+      "A low-fiber diet or not enough hay",
+      "Pain from teeth, urine, or an injury",
+      "A blockage from carpet, hair, or the wrong food"
+    ]
+  },
+  {
+    "id": "small-pet-shedding",
+    "slug": "mild-shedding",
+    "title": "Mild Seasonal Shedding",
+    "species": "small-pets",
+    "severityTier": "green",
+    "shortDescription": "A light, even shed in a rabbit or guinea pig who is eating hay and passing normal droppings can be groomed at home. Bald skin, scratching until it bleeds, or a hunched pet needs a clinic.",
+    "homeTriageChecklist": [
+      "Confirm hay intake and a normal volume of droppings.",
+      "Brush loose undercoat gently. Stop if the skin is red or the pet struggles to breathe.",
+      "Part the coat and look for bald patches, dandruff, or moving specks.",
+      "Watch posture and appetite so shedding is not the only change you notice."
+    ],
+    "seekImmediateCareIf": [
+      "They stop eating, grind their teeth, or pass fewer droppings.",
+      "Skin is raw, bleeding, or covered in crusts.",
+      "A guinea pig has a limp, labored breathing, or a swollen foot.",
+      "Hair is coming out in clumps after a new medicine or toxin."
+    ],
+    "commonCauses": [
+      "A normal seasonal coat blow",
+      "Barbering by a cage mate",
+      "Mites or a skin infection",
+      "Pain or gut disease that happens to coincide with shedding"
+    ]
+  }
+]

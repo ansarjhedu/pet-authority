@@ -1,0 +1,28 @@
+# Pet Authority — Technical Guidelines
+
+## Framework
+- Next.js 14+ App Router, TypeScript in strict mode, Tailwind CSS, and Lucide React icons.
+- Keep components modular under `src/components/`.
+- Keep shared helpers in `src/lib/utils.ts`. Merge class names with `cn()` from that file.
+
+## Design and niche persona
+High-trust pet care and veterinary authority. The interface should feel clean, calm, and clinically credible.
+- Warm neutrals for surfaces and page chrome.
+- Emerald / forest green as the primary brand color (`#0F5132` or `#047857`) for trust and pet health.
+- Warm amber / terracotta for interactive buttons and callouts.
+- Soft amber for warnings.
+- Alert red for emergency triage only.
+
+## Readability
+- Default body size is 18px on desktop and 16px on mobile.
+- Body line height is `leading-relaxed` (1.75).
+- Text must stay high contrast and meet WCAG AAA. Use deep charcoal (`#1E293B`) on warm off-white surfaces, not pure black on pure white.
+
+## Mediavine compatibility
+- Desktop layouts use a two-column grid: a main content column plus a 300px or 336px sticky sidebar reserved for ads.
+- Body copy uses standard paragraph spacing (`mb-6`). Keep paragraphs to 2–3 sentences so programmatic ad injection has stable hooks.
+- Core Web Vitals come first. Reserve aspect ratios on media and cards so images, embeds, and ad slots cannot cause layout shift. Target zero cumulative layout shift.
+
+## Content measure
+- Keep reading text within 65–75 characters per line (`max-w-reading`).
+- Use the centered `container` preset (`max-w-7xl` with responsive horizontal padding) for page shells, not for long-form measure.

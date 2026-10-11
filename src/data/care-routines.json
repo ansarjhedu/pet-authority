@@ -1,0 +1,175 @@
+[
+  {
+    "id": "dog-vaccination",
+    "slug": "dog-vaccination",
+    "species": "dogs",
+    "category": "vaccination",
+    "title": "Vaccination schedule",
+    "summary": "Core vaccines protect every dog. Non-core vaccines depend on lifestyle and on whether you live in the US, UK, or Australia. A clinic sets the dates; this is the map owners use to ask better questions.",
+    "schedule": [
+      { "when": "6–8 weeks", "action": "Start the core distemper, adenovirus, and parvovirus series. In the US this is often a DA2PP or DHPP combination. In Australia it is the C3 core." },
+      { "when": "Every 3–4 weeks until at least 16 weeks", "action": "Booster the core series. Maternal antibodies can block an early dose, so the final puppy dose should land at or after 16 weeks." },
+      { "when": "12–16 weeks, then as local law requires", "action": "Rabies where it is legally required. The US and many travel rules require it. Mainland Australia does not routinely vaccinate pet dogs against rabies." },
+      { "when": "1 year after the puppy series", "action": "Booster core vaccines. After that, many antigens move to a 3-year interval under AAHA and WSAVA guidance when the product label allows it." },
+      { "when": "Lifestyle, US", "action": "Non-core options include leptospirosis, Bordetella, Lyme, and canine influenza when exposure is real." },
+      { "when": "Lifestyle, UK", "action": "Leptospirosis is commonly included with the core DHP series. Kennel cough is used for boarding and group walks. Rabies is for travel under the pet travel rules, not for every household dog." },
+      { "when": "Lifestyle, Australia", "action": "C4 or C5 adds parainfluenza and Bordetella. Leptospirosis is used in risk areas. Heartworm prevention is a separate plan from vaccines." }
+    ]
+  },
+  {
+    "id": "cat-vaccination",
+    "slug": "cat-vaccination",
+    "species": "cats",
+    "category": "vaccination",
+    "title": "Vaccination schedule",
+    "summary": "Core cat vaccines cover panleukopenia and cat flu viruses. Rabies and feline leukemia depend on the law and on whether the cat goes outside.",
+    "schedule": [
+      { "when": "6–8 weeks", "action": "Start FVRCP (herpesvirus, calicivirus, and panleukopenia). In Australia this core series is often called F3." },
+      { "when": "Every 3–4 weeks until 16 weeks", "action": "Finish the kitten series. The last dose should be at or after 16 weeks." },
+      { "when": "As required by law or travel", "action": "Rabies in the US where local law requires it, and for UK or EU travel. Routine rabies vaccination is not standard on mainland Australia." },
+      { "when": "1 year, then every 1–3 years", "action": "Booster according to the product and the cat's risk. Indoor cats still need core protection because panleukopenia is hardy in the environment." },
+      { "when": "Outdoor or multi-cat homes", "action": "FeLV is the main non-core vaccine for kittens and for cats who go outside or meet unfamiliar cats. Test before vaccinating when status is unknown." },
+      { "when": "UK and Australia extras", "action": "F5-style combinations can add chlamydia in Australia. UK cats going outdoors are commonly offered FeLV. Boarding may ask for an up-to-date flu vaccine." }
+    ]
+  },
+  {
+    "id": "dog-dental",
+    "slug": "dog-dental",
+    "species": "dogs",
+    "category": "dental",
+    "title": "Dental hygiene",
+    "summary": "Periodontal disease is painful and common. Brushing is the home step that changes the outcome. A dental diet does not replace a professional examination.",
+    "schedule": [
+      { "when": "Daily", "action": "Brush with a veterinary toothpaste. Human toothpaste is not safe to swallow." },
+      { "when": "Weekly", "action": "Lift the lips and look for red gums, broken teeth, or a smell that returns the day after brushing." },
+      { "when": "Every wellness visit", "action": "Ask for an oral exam. Bad breath plus drooling or dropping food should not wait for the next annual visit." },
+      { "when": "When the mouth is painful", "action": "A full dental assessment is done under anesthesia with dental radiographs. Scaling on an awake dog does not clean under the gumline." }
+    ]
+  },
+  {
+    "id": "cat-dental",
+    "slug": "cat-dental",
+    "species": "cats",
+    "category": "dental",
+    "title": "Dental hygiene",
+    "summary": "Cats hide tooth pain and may only chew on one side or drop kibble. Tooth resorption is common and is not solved by a treat.",
+    "schedule": [
+      { "when": "Daily if the cat allows", "action": "Use a cat toothbrush or gauze with veterinary toothpaste. Start with a short session and stop before the cat is frightened." },
+      { "when": "Weekly", "action": "Check for red gums, a chipped canine, or pawing at the mouth." },
+      { "when": "Every wellness visit", "action": "The veterinarian should look in the mouth, including cats who resent it. Drooling or a jaw chatter while eating needs an appointment." },
+      { "when": "Resorptive lesions or severe tartar", "action": "Treatment is an anesthetized dental procedure. Do not give human pain tablets while you wait." }
+    ]
+  },
+  {
+    "id": "dog-parasites",
+    "slug": "dog-parasites",
+    "species": "dogs",
+    "category": "parasites",
+    "title": "Parasite prevention",
+    "summary": "Heartworm, fleas, and ticks are prevented with products chosen for the dog's weight and for the country you live in. A missed month is a clinical problem, not a coupon issue.",
+    "schedule": [
+      { "when": "Year-round in the US", "action": "Use a veterinarian-selected heartworm preventive. Many regions also need flea and tick cover every month. Test before starting preventives if doses were missed." },
+      { "when": "UK", "action": "Lungworm and fleas drive most plans. Tick cover matters in areas with endemic disease. Heartworm is a travel concern more than a backyard one." },
+      { "when": "Australia", "action": "Heartworm risk is higher in the north and east. Paralysis ticks on the east coast need a product that actually kills Ixodes holocyclus, which is not every flea tablet." },
+      { "when": "After a swim or a walk in grass", "action": "Check the coat, ears, and between the toes. Remove an attached tick with a tick tool and watch for weakness or wobbliness, especially in Australia." }
+    ]
+  },
+  {
+    "id": "cat-parasites",
+    "slug": "cat-parasites",
+    "species": "cats",
+    "category": "parasites",
+    "title": "Parasite prevention",
+    "summary": "Indoor cats still meet fleas on people's clothing. Dog parasite products are a common poisoning in cats and must not be shared.",
+    "schedule": [
+      { "when": "Monthly, as prescribed", "action": "Use a cat-labeled flea product. Permethrin dog spot-ons can cause tremors and seizures in cats." },
+      { "when": "US heartworm areas", "action": "Indoor and outdoor cats can get heartworm. A feline preventive is a veterinary decision, not a dog tablet split in half." },
+      { "when": "UK and Australia", "action": "Fleas are the usual year-round target. Ticks and heartworm depend on region. Ask before you travel with the cat." },
+      { "when": "Worming", "action": "Roundworms and tapeworms need a product and interval chosen from the cat's hunting habits. A hunting cat needs a tighter plan than a closed indoor cat." }
+    ]
+  },
+  {
+    "id": "dog-grooming",
+    "slug": "dog-grooming",
+    "species": "dogs",
+    "category": "grooming",
+    "title": "Grooming intervals",
+    "summary": "Coat type sets the calendar. Mats are a skin problem, not only a cosmetic one.",
+    "schedule": [
+      { "when": "Several times a week", "action": "Brush double coats and long coats. Standard Poodles and other curly coats need brushing between clips so mats do not reach the skin." },
+      { "when": "Every 4–8 weeks", "action": "Book a full groom for curly or dropped coats. Short smooth coats may only need bathing when dirty." },
+      { "when": "Every 2–4 weeks", "action": "Trim nails. A nail that clicks on the floor is usually too long." },
+      { "when": "After every muddy walk", "action": "Dry the ears of floppy-eared dogs and check skin folds on short-nosed breeds." }
+    ]
+  },
+  {
+    "id": "cat-grooming",
+    "slug": "cat-grooming",
+    "species": "cats",
+    "category": "grooming",
+    "title": "Grooming intervals",
+    "summary": "Most cats groom themselves. Long hair, obesity, and arthritis are the reasons that system fails.",
+    "schedule": [
+      { "when": "Weekly for short hair", "action": "A short brushing removes loose coat and lets you feel for lumps." },
+      { "when": "Several times a week for long hair", "action": "Brush the belly, armpits, and behind the ears. Mats pull on the skin and hide wounds." },
+      { "when": "Every few weeks", "action": "Check nails, especially on older cats who do not wear them down." },
+      { "when": "If grooming stops", "action": "A greasy or matted coat is a medical sign. Book a clinic visit rather than only a bath." }
+    ]
+  },
+  {
+    "id": "dog-exercise",
+    "slug": "dog-exercise",
+    "species": "dogs",
+    "category": "exercise",
+    "title": "Exercise",
+    "summary": "Adult sporting and herding dogs need about an hour or more a day. Short-nosed and long-backed breeds need shorter, cooler sessions. Puppies should not jog for miles.",
+    "schedule": [
+      { "when": "Puppies", "action": "Use short play sessions and avoid repetitive jumping and long runs until growth plates close." },
+      { "when": "Adult high-energy breeds", "action": "Plan roughly 60–90 minutes of walks, training, or swimming, split so the dog can cool down." },
+      { "when": "Adult toy and brachycephalic dogs", "action": "Keep walks short and out of the heat. Noisy breathing after mild play is a reason to stop and call a clinic." },
+      { "when": "Hot weather", "action": "Walk in the cool part of the day. Asphalt and a closed car are emergency risks, not training tools." }
+    ]
+  },
+  {
+    "id": "cat-exercise",
+    "slug": "cat-exercise",
+    "species": "cats",
+    "category": "exercise",
+    "title": "Exercise",
+    "summary": "Cats need short hunts, not a mileage goal. Two play sessions a day protect weight and joints better than a single long weekend chase.",
+    "schedule": [
+      { "when": "Daily", "action": "Offer two sessions of wand play, about 10–15 minutes each, ending with a meal so the hunt has a finish." },
+      { "when": "Indoor homes", "action": "Use vertical space and puzzle feeders. A window is not enough exercise." },
+      { "when": "Kittens", "action": "Multiple short games. Do not use hands as toys." },
+      { "when": "Weight is climbing", "action": "Measure meals and keep the play. Extra weight makes diabetes and arthritis more likely." }
+    ]
+  },
+  {
+    "id": "dog-senior",
+    "slug": "dog-senior",
+    "species": "dogs",
+    "category": "senior",
+    "title": "Senior wellness",
+    "summary": "Large dogs are often senior from about 6–7 years, and smaller dogs closer to 9–10. The last quarter of the expected lifespan is a useful household rule.",
+    "schedule": [
+      { "when": "Every 6 months", "action": "Book a wellness exam with a pain check, weight, and a dental look." },
+      { "when": "Annually, then more often if values change", "action": "Discuss blood and urine screening so kidney, liver, and thyroid shifts are caught before the dog stops eating." },
+      { "when": "At home each month", "action": "Note stairs, stiffness after rest, drinking, and new lumps. A lump that grows needs a visit." },
+      { "when": "Pain or confusion", "action": "Do not start a human painkiller. Ask about a mobility plan and whether the diet should change." }
+    ]
+  },
+  {
+    "id": "cat-senior",
+    "slug": "cat-senior",
+    "species": "cats",
+    "category": "senior",
+    "title": "Senior wellness",
+    "summary": "Many clinicians treat cats as senior from about 11 years and geriatric from about 15. Kidney disease, hyperthyroidism, and dental pain often arrive quietly.",
+    "schedule": [
+      { "when": "Every 6 months after age 11", "action": "Wellness visit with weight, blood pressure when possible, and an oral exam." },
+      { "when": "At least yearly, sooner if thirst changes", "action": "Blood and urine tests aimed at kidneys and thyroid." },
+      { "when": "At home", "action": "Track appetite, water intake, litter clumps, and whether the cat still jumps. Weight loss with a good appetite is a reason to test, not to congratulate the diet." },
+      { "when": "A missed meal", "action": "Call the clinic. Overweight cats can develop hepatic lipidosis after a short fast." }
+    ]
+  }
+]
