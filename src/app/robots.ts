@@ -3,11 +3,18 @@ import { getSiteUrl } from "@/lib/seo/schema";
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
+  rules: [
+    {
       userAgent: "*",
       allow: "/",
       disallow: "/api/",
     },
+    {
+      userAgent: "Mediapartners-Google",
+      allow: "/",
+      disallow: "/api/",
+    },
+  ],
     sitemap: `${getSiteUrl()}/sitemap.xml`,
   };
 }

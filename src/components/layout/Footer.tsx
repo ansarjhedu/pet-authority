@@ -37,6 +37,14 @@ const contacts = [
   },
 ] as const;
 
+const trust = [
+  { label: "About", href: "/about" },
+  { label: "Editorial standards", href: "/editorial-standards" },
+  { label: "Contact", href: "/contact" },
+  { label: "Privacy", href: "/privacy-policy" },
+  { label: "Terms", href: "/terms" },
+] as const;
+
 const regions = ["US", "UK", "AU"] as const;
 
 export function Footer() {
@@ -129,12 +137,15 @@ export function Footer() {
         <div className="mt-8 flex flex-col gap-4 border-t border-white/15 pt-6 text-sm text-emerald-50 sm:flex-row sm:items-center sm:justify-between">
           <p className="mb-0">© 2026 PetAuthority. All rights reserved.</p>
           <nav aria-label="Editorial" className="flex flex-wrap gap-x-4 gap-y-2">
-            <Link href="/editorial-policy" className="font-medium text-white hover:text-brand-accent-100">
-              Editorial Policy
-            </Link>
-            <Link href="/review-board" className="font-medium text-white hover:text-brand-accent-100">
-              Veterinary Review Board
-            </Link>
+            {trust.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="font-medium text-white hover:text-brand-accent-100"
+              >
+                {item.label}
+              </Link>
+            ))}
           </nav>
           <nav aria-label="Region" className="flex items-center gap-1">
             {regions.map((region) => (

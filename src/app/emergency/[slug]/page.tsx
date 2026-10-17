@@ -18,7 +18,8 @@ import {
   urgencyLabel,
 } from "@/lib/clinical/guides";
 import { emergencyBody, emergencyProcedure, emergencySnippet } from "@/lib/editorial/copy";
-import { generateVeterinaryArticleSchema } from "@/lib/seo/schema";
+import { robotsForGuide } from "@/lib/seo/indexing";
+import { generateBreadcrumbSchema, generateVeterinaryArticleSchema } from "@/lib/seo/schema";
 
 type EmergencyGuidePageProps = {
   params: Promise<{ slug: string }>;
@@ -34,11 +35,13 @@ export async function generateMetadata({ params }: EmergencyGuidePageProps): Pro
   const { slug } = await params;
   const guide = getEmergencyGuide(slug);
   if (!guide) {
-    return { title: "Emergency guide" };
+    return { title: "Emergency guide", robots: { index: false, follow: true } };
   }
   return {
     title: guide.title,
     description: guide.emergencyOverview,
+    alternates: { canonical: `/emergency/${guide.slug}` },
+    robots: robotsForGuide(Boolean(getEmergencyLongGuide(guide.slug))),
   };
 }
 
@@ -52,15 +55,25 @@ export default async function EmergencyGuidePage({ params }: EmergencyGuidePageP
 
   return (
     <div className="container py-8 lg:py-12">
+      {longGuide ? (
+        <JsonLd
+          data={generateVeterinaryArticleSchema(
+            {
+              title: longGuide.title,
+              description: guide.emergencyOverview,
+              path: `/emergency/${guide.slug}`,
+              faqs: longGuide.faqs,
+            },
+            "emergency",
+          )}
+        />
+      ) : null}
       <JsonLd
-        data={generateVeterinaryArticleSchema(
-          {
-            title: longGuide?.title ?? guide.title,
-            description: guide.emergencyOverview,
-            path: `/emergency/${guide.slug}`,
-          },
-          "emergency",
-        )}
+        data={generateBreadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Emergency guide", path: "/emergency" },
+          { name: guide.title, path: `/emergency/${guide.slug}` },
+        ])}
       />
       <Breadcrumbs
         items={[

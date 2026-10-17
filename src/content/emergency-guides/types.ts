@@ -11,8 +11,14 @@ export type EmergencySection = Omit<GuideSection, "blocks"> & {
   blocks: EmergencyBlock[];
 };
 
+export type GuideFaq = {
+  question: string;
+  answer: string;
+};
+
 export type EmergencyLongGuide = {
   title: string;
   lede: string;
   sections: EmergencySection[];
+  faqs?: GuideFaq[];
 };

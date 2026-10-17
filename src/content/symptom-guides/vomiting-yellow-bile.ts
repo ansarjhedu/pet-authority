@@ -175,6 +175,8 @@ export const yellowBileGuide: EmergencyLongGuide = {
           items: [
             { href: "/emergency/bloat-gdv", label: "Open the bloat emergency guide" },
             { href: "/emergency/chocolate-toxicity", label: "Open the chocolate emergency guide" },
+            { href: "/nutrition/grapes-raisins-dogs", label: "Grape and raisin toxicity if fruit was eaten" },
+            { href: "/nutrition/xylitol-dogs", label: "Xylitol poisoning if a sugar-free product was eaten" },
           ],
         },
       ],

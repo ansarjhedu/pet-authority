@@ -1,7 +1,7 @@
 import type { EmergencyLongGuide } from "@/content/emergency-guides/types";
 
 export const chocolateToxicityGuide: EmergencyLongGuide = {
-  title: "Emergency Guide: Dark Chocolate Ingestion in Dogs – Action Steps & Triage",
+  title: "Dark Chocolate Poisoning in Dogs",
   lede: "This guide is for a dog in the United States, the United Kingdom, or Australia who may have eaten dark chocolate, baking chocolate, or cocoa. It covers the first 15 minutes, the signs that cannot wait, and what the hospital may do. It does not calculate a safe leftover amount for the dog in front of you.",
   sections: [
     {
@@ -235,6 +235,23 @@ export const chocolateToxicityGuide: EmergencyLongGuide = {
         {
           type: "p",
           text: "Before you leave the hospital, ask which signs mean a return the same night, including new tremors, collapse, or vomiting that will not stop. Keep the dog quiet, offer water only if the clinic allowed it, and skip hard exercise that raises the heart rate. A morning recheck is part of the plan when they discharged the dog overnight.",
+        },
+      ],
+    },
+    {
+      heading: "Related toxin guides",
+      blocks: [
+        {
+          type: "p",
+          text: "Chocolate is often eaten beside another toxin, especially in a snack bag or a holiday dessert. Grapes, xylitol, and human pain tablets are separate emergencies and need their own call. Open the matching guide if that item is also missing.",
+        },
+        {
+          type: "links",
+          items: [
+            { href: "/nutrition/grapes-raisins-dogs", label: "Grape and raisin toxicity in dogs" },
+            { href: "/nutrition/xylitol-dogs", label: "Xylitol poisoning in dogs" },
+            { href: "/medications/ibuprofen", label: "Ibuprofen toxicity in dogs and cats" },
+          ],
         },
       ],
     },

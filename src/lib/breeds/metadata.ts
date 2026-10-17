@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
+import { getBreedGuide } from "@/content/breed-guides";
 import { getBreed } from "@/lib/breeds/directory";
 import { SPECIES_LABEL, SPECIES_PATH, type BreedSpecies } from "@/lib/breeds/types";
+import { robotsForGuide } from "@/lib/seo/indexing";
 
 export function breedProfileMetadata(species: BreedSpecies, slug: string): Metadata {
   const breed = getBreed(species, slug);
   if (!breed) {
-    return { title: "Breed profile" };
+    return { title: "Breed profile", robots: { index: false, follow: true } };
   }
 
   return {
@@ -14,6 +16,7 @@ export function breedProfileMetadata(species: BreedSpecies, slug: string): Metad
     alternates: {
       canonical: `${SPECIES_PATH[species]}/${breed.slug}`,
     },
+    robots: robotsForGuide(Boolean(getBreedGuide(breed.slug))),
   };
 }
 

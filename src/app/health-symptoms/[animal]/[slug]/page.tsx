@@ -16,7 +16,8 @@ import {
   getSymptomGuide,
 } from "@/lib/clinical/guides";
 import { editorialCopy, symptomLede, symptomSnippet } from "@/lib/editorial/copy";
-import { generateVeterinaryArticleSchema } from "@/lib/seo/schema";
+import { robotsForGuide } from "@/lib/seo/indexing";
+import { generateBreadcrumbSchema, generateVeterinaryArticleSchema } from "@/lib/seo/schema";
 
 type SymptomPageProps = {
   params: Promise<{ animal: string; slug: string }>;
@@ -41,11 +42,13 @@ export async function generateMetadata({ params }: SymptomPageProps): Promise<Me
   const { animal, slug } = await params;
   const symptom = getSymptomGuide(animal, slug);
   if (!symptom) {
-    return { title: "Symptom guide" };
+    return { title: "Symptom guide", robots: { index: false, follow: true } };
   }
   return {
     title: `${symptom.title} in ${SPECIES_LABEL[symptom.species]}`,
     description: symptom.shortDescription,
+    alternates: { canonical: `/health-symptoms/${symptom.species}/${symptom.slug}` },
+    robots: robotsForGuide(Boolean(getSymptomLongGuide(symptom.species, symptom.slug))),
   };
 }
 
@@ -59,15 +62,28 @@ export default async function SymptomGuidePage({ params }: SymptomPageProps) {
 
   return (
     <div className="container py-8 lg:py-12">
+      {longGuide ? (
+        <JsonLd
+          data={generateVeterinaryArticleSchema(
+            {
+              title: longGuide.title,
+              description: symptom.shortDescription,
+              path: `/health-symptoms/${symptom.species}/${symptom.slug}`,
+              faqs: longGuide.faqs,
+            },
+            "symptom",
+          )}
+        />
+      ) : null}
       <JsonLd
-        data={generateVeterinaryArticleSchema(
+        data={generateBreadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Symptom triage", path: "/health-symptoms" },
           {
-            title: longGuide?.title ?? `${symptom.title} in ${SPECIES_LABEL[symptom.species]}`,
-            description: symptom.shortDescription,
+            name: symptom.title,
             path: `/health-symptoms/${symptom.species}/${symptom.slug}`,
           },
-          "symptom",
-        )}
+        ])}
       />
       <Breadcrumbs
         items={[

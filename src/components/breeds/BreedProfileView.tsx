@@ -211,12 +211,14 @@ export function BreedProfileView({ breed }: { breed: Breed }) {
           <section className="rounded-2xl border border-brand-primary/20 bg-white p-5">
             <div className="mb-3 flex items-center gap-2 text-brand-primary">
               <ShieldCheck className="h-5 w-5" aria-hidden="true" />
-              <h2 className="text-base font-semibold">Veterinary review</h2>
+              <h2 className="text-base font-semibold">Editorial sources</h2>
             </div>
             <p className="mb-6 text-sm leading-relaxed text-slate-700">
-              Dr. Sarah Jenkins, DVM, supervises clinical review for the PetAuthority Veterinary
-              Medical Advisory Board. This profile is educational. It is not a diagnosis, a drug
-              dose, or a treatment plan, and a licensed veterinarian who has examined your animal
+              <Link href="/editorial-standards" className="font-semibold text-brand-primary hover:underline">
+                Researched & Compiled by the PetAuthority Editorial Team
+              </Link>
+              . Clinical Data Sources: ASPCA Animal Poison Control Center & Merck Veterinary Manual.
+              This profile is educational, and a licensed veterinarian who has examined your animal
               still has to confirm the next step.
             </p>
           </section>

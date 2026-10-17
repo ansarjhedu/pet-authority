@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { MEDIAVINE_CONTENT_CLASS } from "@/components/ads/MediavineScript";
 import { ClinicalReview } from "@/components/editorial/ClinicalReview";
-import { SnippetAnswer } from "@/components/editorial/SnippetAnswer";
+import { DirectAnswer, SnippetAnswer } from "@/components/editorial/SnippetAnswer";
 import { HotlineBar } from "@/components/emergency/HotlineBar";
+import { takeLeadSnippet } from "@/lib/editorial/lead";
 import type { BreedGuide, GuideBlock } from "@/lib/breeds/guide";
 import { SPECIES_LABEL, SPECIES_PATH, type Breed } from "@/lib/breeds/types";
 
@@ -105,6 +106,7 @@ function GuideBlocks({ blocks }: { blocks: GuideBlock[] }) {
 }
 
 export function BreedGuideArticle({ breed, guide }: { breed: Breed; guide: BreedGuide }) {
+  const { lead, sections } = takeLeadSnippet(guide.sections);
   return (
     <article className={MEDIAVINE_CONTENT_CLASS}>
       <header className="mb-8 max-w-reading">
@@ -116,11 +118,12 @@ export function BreedGuideArticle({ breed, guide }: { breed: Breed; guide: Breed
         <h1 className="mb-4 text-3xl font-semibold tracking-tight text-brand-primary sm:text-4xl">
           {guide.title}
         </h1>
+        {lead ? <DirectAnswer>{lead}</DirectAnswer> : null}
         <p className="mb-6 leading-relaxed text-slate-700">{guide.lede}</p>
         <ClinicalReview />
       </header>
       <div className="space-y-8">
-        {guide.sections.map((section) => {
+        {sections.map((section) => {
           const Heading = section.level === 3 ? "h3" : "h2";
           const headingClass =
             section.level === 3

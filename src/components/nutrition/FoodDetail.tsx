@@ -116,20 +116,37 @@ export function FoodDetail({ food }: { food: FoodItem }) {
         )}
 
         <aside className="space-y-4">
-          <section className="rounded-2xl border border-slate-200 bg-white p-5">
-            <h2 className="mb-3 text-base font-semibold text-brand-primary">Portion planning</h2>
-            <p className="mb-6 text-sm leading-relaxed text-slate-700">
-              Treats sit on top of a complete diet, and they should stay near ten percent of the daily
-              calorie target. Use the calculator with the pet&apos;s weight in pounds (kilograms), then
-              keep extras small rather than adding a full extra meal.
-            </p>
-            <Link
-              href="/tools/pet-food-calculator"
-              className="inline-flex min-h-11 items-center text-sm font-bold text-brand-primary hover:underline"
-            >
-              Open the pet food calculator
-            </Link>
-          </section>
+          {food.safetyStatus === "SAFE" ? (
+            <section className="rounded-2xl border border-slate-200 bg-white p-5">
+              <h2 className="mb-3 text-base font-semibold text-brand-primary">Portion planning</h2>
+              <p className="mb-6 text-sm leading-relaxed text-slate-700">
+                Treats sit on top of a complete diet, and they should stay near ten percent of the daily
+                calorie target. Use the calculator with the pet&apos;s weight in pounds (kilograms), then
+                keep extras small rather than adding a full extra meal.
+              </p>
+              <Link
+                href="/tools/pet-food-calculator"
+                className="inline-flex min-h-11 items-center text-sm font-bold text-brand-primary hover:underline"
+              >
+                Open the pet food calculator
+              </Link>
+            </section>
+          ) : (
+            <section className="rounded-2xl border border-triage-red/30 bg-triage-red-surface p-5">
+              <h2 className="mb-3 text-base font-semibold text-triage-red-foreground">No safe portion</h2>
+              <p className="mb-6 text-sm leading-relaxed text-slate-800">
+                This food has no treat allowance and no leftover amount to finish at home. If it was
+                eaten, call a poison hotline and use the vet finder. A calorie calculator does not
+                clear a toxin.
+              </p>
+              <Link
+                href="/tools/vet-finder"
+                className="inline-flex min-h-11 items-center text-sm font-bold text-triage-red hover:underline"
+              >
+                Find a 24/7 emergency hospital
+              </Link>
+            </section>
+          )}
         </aside>
       </div>
     </div>

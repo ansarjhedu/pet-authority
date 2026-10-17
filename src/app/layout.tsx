@@ -30,6 +30,17 @@ export const metadata: Metadata = {
     title: "PetAuthority",
     description: siteDescription,
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "./",
+  },
+  other: {
+    "google-adsense-account":
+      process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ACCOUNT ?? "REPLACE_WITH_CA_PUB_ID",
+  },
 };
 
 const themeClassName =

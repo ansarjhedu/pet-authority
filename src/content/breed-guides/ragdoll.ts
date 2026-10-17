@@ -165,6 +165,8 @@ export const ragdollGuide: BreedGuide = {
               href: "/health-symptoms/cats/straining-in-litter-box",
               label: "Check litter-box straining in symptom triage",
             },
+            { href: "/emergency/lily-toxicity", label: "Lily toxicity in cats" },
+            { href: "/medications/ibuprofen", label: "Ibuprofen toxicity in cats" },
           ],
         },
       ],

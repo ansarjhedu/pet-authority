@@ -11,6 +11,7 @@ export type VeterinaryArticleInput = {
   title: string;
   description: string;
   path: string;
+  faqs?: { question: string; answer: string }[];
 };
 
 const PUBLISHED_SITE_URL = "https://petauthority.com";
@@ -33,33 +34,35 @@ export function serializeJsonLd(data: unknown): string {
   return JSON.stringify(data).replace(/</g, "\\u003c");
 }
 
-const reviewer = {
-  "@type": "Person",
-  name: "Dr. Sarah Jenkins, DVM",
-  honorificSuffix: "DVM",
-  jobTitle: "Veterinarian",
-  memberOf: {
+const CLINICAL_CITATIONS = [
+  "https://www.aspca.org/pet-care/animal-poison-control",
+  "https://www.merckvetmanual.com/",
+] as const;
+
+function editorialAuthor() {
+  return {
     "@type": "Organization",
-    name: "Veterinary Medical Advisory Board",
-  },
-} as const;
+    name: "PetAuthority Editorial Team",
+    url: absoluteUrl("/about"),
+  };
+}
 
 export function generateOrganizationSchema() {
   const url = getSiteUrl();
   return {
     "@context": "https://schema.org",
-    "@type": ["MedicalBusiness", "Organization"],
+    "@type": "Organization",
     name: "PetAuthority",
     url,
     description:
       "Evidence-based pet care, symptom triage, and veterinary tools for dogs, cats, birds, and small pets.",
-    medicalSpecialty: "https://schema.org/VeterinaryCare",
-    publishingPrinciples: `${url}/editorial-policy`,
+    publishingPrinciples: `${url}/editorial-standards`,
     knowsAbout: ["Veterinary medicine", "Pet nutrition", "Emergency pet care"],
-    member: {
-      "@type": "Organization",
-      name: "Veterinary Medical Advisory Board",
-      member: reviewer,
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "contact@petauthority.com",
+      contactType: "customer support",
+      url: `${url}/contact`,
     },
   };
 }
@@ -97,6 +100,8 @@ export function generateBreedSchema(breed: Breed) {
           "@type": "Audience",
           audienceType: "Pet Owners in US, UK, Australia",
         },
+        author: editorialAuthor(),
+        citation: CLINICAL_CITATIONS,
         publisher: {
           "@type": "Organization",
           name: "PetAuthority",
@@ -119,30 +124,57 @@ export function generateBreedSchema(breed: Breed) {
   };
 }
 
+const ARTICLE_ABOUT = {
+  emergency: "Emergency veterinary guidance",
+  symptom: "Symptom triage guidance",
+  nutrition: "Pet food safety guidance",
+  medication: "Veterinary medication safety",
+} as const;
+
 export function generateVeterinaryArticleSchema(
   article: VeterinaryArticleInput,
-  type: "emergency" | "symptom",
+  type: keyof typeof ARTICLE_ABOUT,
 ) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "MedicalWebPage",
+  const url = absoluteUrl(article.path);
+  const articleNode = {
+    "@type": "Article",
     name: article.title,
     headline: article.title,
     description: article.description,
-    url: absoluteUrl(article.path),
+    url,
     dateModified: CONTENT_DATE,
-    lastReviewed: CONTENT_DATE,
-    about: type === "emergency" ? "Emergency veterinary guidance" : "Symptom triage guidance",
+    about: ARTICLE_ABOUT[type],
+    author: editorialAuthor(),
+    citation: CLINICAL_CITATIONS,
     audience: {
       "@type": "Audience",
       audienceType: "Pet Owners in US, UK, Australia",
     },
-    reviewedBy: reviewer,
     publisher: {
       "@type": "Organization",
       name: "PetAuthority",
       url: getSiteUrl(),
     },
+  };
+
+  if (!article.faqs?.length) {
+    return { "@context": "https://schema.org", ...articleNode };
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      articleNode,
+      {
+        "@type": "FAQPage",
+        url,
+        mainEntity: article.faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: { "@type": "Answer", text: faq.answer },
+        })),
+      },
+    ],
   };
 }
 

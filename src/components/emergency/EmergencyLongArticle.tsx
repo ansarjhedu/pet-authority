@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { MEDIAVINE_CONTENT_CLASS } from "@/components/ads/MediavineScript";
 import { ClinicalReview } from "@/components/editorial/ClinicalReview";
-import { SnippetAnswer } from "@/components/editorial/SnippetAnswer";
+import { DirectAnswer, SnippetAnswer } from "@/components/editorial/SnippetAnswer";
 import type { EmergencyBlock, EmergencyLongGuide } from "@/content/emergency-guides/types";
 import { HotlineCardGrid, hotlineCardsFromLabels } from "@/components/emergency/HotlineBar";
+import { takeLeadSnippet } from "@/lib/editorial/lead";
 import { actionWindowLabel, SPECIES_LABEL, urgencyLabel, type EmergencyGuide } from "@/lib/clinical/guides";
 
 export function EmergencyBlocks({ blocks }: { blocks: EmergencyBlock[] }) {
@@ -111,6 +112,7 @@ export function EmergencyLongArticle({
   guide: EmergencyGuide;
   longGuide: EmergencyLongGuide;
 }) {
+  const { lead, sections } = takeLeadSnippet(longGuide.sections);
   return (
     <article className={MEDIAVINE_CONTENT_CLASS}>
       <header className="mb-6 rounded-3xl bg-triage-red px-5 py-6 text-white sm:px-8">
@@ -120,6 +122,7 @@ export function EmergencyLongArticle({
         <h1 className="mb-4 max-w-reading text-3xl font-semibold tracking-tight text-white sm:text-4xl">
           {longGuide.title}
         </h1>
+        {lead ? <DirectAnswer>{lead}</DirectAnswer> : null}
         <div className="mb-4 max-w-reading text-base font-semibold text-white">
           {actionWindowLabel(guide.actionWithinMinutes)}
         </div>
@@ -133,7 +136,7 @@ export function EmergencyLongArticle({
       </header>
       <ClinicalReview />
       <div className="space-y-8">
-        {longGuide.sections.map((section) => {
+        {sections.map((section) => {
           const Heading = section.level === 3 ? "h3" : "h2";
           const headingClass =
             section.level === 3

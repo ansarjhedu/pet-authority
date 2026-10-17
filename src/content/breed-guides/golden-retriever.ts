@@ -9,7 +9,7 @@ export const goldenRetrieverGuide: BreedGuide = {
       blocks: [
         {
           type: "snippet",
-          text: "The Golden Retriever is a friendly sporting dog, gentle and eager to please. Most live about 10 to 12 years. They suit active families who can give about 60 minutes of daily exercise and regular brushing, not long days alone.",
+          text: "The Golden Retriever is a friendly sporting dog, gentle and eager to please. Most live about 10 to 12 years. They suit active families who can give about 60 minutes of daily exercise and regular brushing, not long days left alone.",
         },
       ],
     },
@@ -200,7 +200,12 @@ export const goldenRetrieverGuide: BreedGuide = {
         },
         {
           type: "links",
-          items: [{ href: "/emergency/bloat-gdv", label: "Open the bloat emergency guide" }],
+          items: [
+            { href: "/emergency/bloat-gdv", label: "Open the bloat emergency guide" },
+            { href: "/emergency/chocolate-toxicity", label: "Dark chocolate poisoning in dogs" },
+            { href: "/health-symptoms/dogs/vomiting-yellow-bile", label: "Yellow bile vomiting in dogs" },
+            { href: "/nutrition/grapes-raisins-dogs", label: "Grape and raisin toxicity in dogs" },
+          ],
         },
       ],
     },

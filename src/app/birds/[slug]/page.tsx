@@ -3,10 +3,11 @@ import { notFound } from "next/navigation";
 import { BreedProfileView } from "@/components/breeds/BreedProfileView";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { getBreedGuide } from "@/content/breed-guides";
 import { breedsBySpecies, getBreed } from "@/lib/breeds/directory";
 import { breedProfileMetadata } from "@/lib/breeds/metadata";
 import { breedPath, SPECIES_LABEL, SPECIES_PATH } from "@/lib/breeds/types";
-import { generateBreedSchema } from "@/lib/seo/schema";
+import { generateBreadcrumbSchema, generateBreedSchema } from "@/lib/seo/schema";
 
 type BirdBreedPageProps = {
   params: Promise<{ slug: string }>;
@@ -31,7 +32,14 @@ export default async function BirdBreedPage({ params }: BirdBreedPageProps) {
   }
   return (
     <>
-      <JsonLd data={generateBreedSchema(breed)} />
+      {getBreedGuide(breed.slug) ? <JsonLd data={generateBreedSchema(breed)} /> : null}
+      <JsonLd
+        data={generateBreadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: SPECIES_LABEL[breed.species], path: SPECIES_PATH[breed.species] },
+          { name: breed.name, path: breedPath(breed) },
+        ])}
+      />
       <div className="container pt-8">
         <Breadcrumbs
           items={[

@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { MEDIAVINE_CONTENT_CLASS } from "@/components/ads/MediavineScript";
 import { ClinicalReview } from "@/components/editorial/ClinicalReview";
+import { DirectAnswer } from "@/components/editorial/SnippetAnswer";
 import { EmergencyBlocks } from "@/components/emergency/EmergencyLongArticle";
 import type { EmergencyLongGuide } from "@/content/emergency-guides/types";
+import { takeLeadSnippet } from "@/lib/editorial/lead";
 import { PRESCRIPTION_LABEL, type Medication } from "@/lib/medications/types";
 import { cn } from "@/lib/utils";
 
@@ -14,6 +16,7 @@ export function MedicationLongArticle({
   longGuide: EmergencyLongGuide;
 }) {
   const dangerous = medication.prescriptionStatus === "LETHAL_TOXIN_DO_NOT_GIVE";
+  const { lead, sections } = takeLeadSnippet(longGuide.sections);
 
   return (
     <article className={MEDIAVINE_CONTENT_CLASS}>
@@ -26,6 +29,7 @@ export function MedicationLongArticle({
         <h1 className="mb-3 text-3xl font-semibold tracking-tight text-brand-primary sm:text-4xl">
           {longGuide.title}
         </h1>
+        {lead ? <DirectAnswer>{lead}</DirectAnswer> : null}
         <div className="mb-4 text-slate-700">{medication.commonBrands.join(", ")}</div>
         <div
           className={cn(
@@ -39,7 +43,7 @@ export function MedicationLongArticle({
         <ClinicalReview />
       </header>
       <div className="space-y-8">
-        {longGuide.sections.map((section) => {
+        {sections.map((section) => {
           const Heading = section.level === 3 ? "h3" : "h2";
           const warning = section.heading.startsWith("2. Critical");
           const headingClass =
