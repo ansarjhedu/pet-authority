@@ -126,7 +126,7 @@ export function SpeciesNutrition({ species }: { species: "dogs" | "cats" }) {
 
         <aside className="h-fit rounded-2xl bg-brand-primary p-5 text-white">
           <h2 className="mb-3 text-lg font-semibold">Daily portions</h2>
-          <p className="mb-4 text-sm text-emerald-50">
+          <p className="mb-4 text-sm text-brand-primary-100">
             Enter weight, life stage, and body condition. The calculator uses WSAVA resting-energy
             math and turns it into a food portion.
           </p>

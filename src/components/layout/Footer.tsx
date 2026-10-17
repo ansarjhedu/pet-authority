@@ -1,5 +1,5 @@
+import Image from "next/image";
 import Link from "next/link";
-import { PawPrint, Shield } from "lucide-react";
 
 const categories = [
   { label: "Dog Breeds", href: "/dogs" },
@@ -54,13 +54,12 @@ export function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <Link href="/" className="mb-4 inline-flex items-center gap-2">
-              <span className="relative flex h-9 w-9 items-center justify-center rounded-lg bg-white/10">
-                <Shield className="h-5 w-5" aria-hidden="true" />
-                <PawPrint className="absolute h-3 w-3" aria-hidden="true" />
+              <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-white">
+                <Image src="/brand/logo-icon.png" alt="" width={36} height={36} className="h-9 w-9" />
               </span>
               <span className="text-lg font-semibold">PetAuthority</span>
             </Link>
-            <p className="mb-0 max-w-reading text-sm leading-relaxed text-emerald-50">
+            <p className="mb-0 max-w-reading text-sm leading-relaxed text-brand-primary-100">
               PetAuthority publishes veterinary evidence-based guidance for everyday pet care.
               Our editors work from clinical references so you can spot problems early and know
               when a licensed veterinarian should take over.
@@ -115,7 +114,7 @@ export function Footer() {
                       {contact.region}
                     </span>
                     <span className="block text-sm font-semibold">{contact.name}</span>
-                    <span className="block text-sm text-emerald-50">{contact.detail}</span>
+                    <span className="block text-sm text-brand-primary-100">{contact.detail}</span>
                   </a>
                 </li>
               ))}
@@ -134,7 +133,7 @@ export function Footer() {
           </p>
         </div>
 
-        <div className="mt-8 flex flex-col gap-4 border-t border-white/15 pt-6 text-sm text-emerald-50 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-8 flex flex-col gap-4 border-t border-white/15 pt-6 text-sm text-brand-primary-100 sm:flex-row sm:items-center sm:justify-between">
           <p className="mb-0">© 2026 PetAuthority. All rights reserved.</p>
           <nav aria-label="Editorial" className="flex flex-wrap gap-x-4 gap-y-2">
             {trust.map((item) => (

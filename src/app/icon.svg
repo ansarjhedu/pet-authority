@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="PetAuthority">
-  <rect width="32" height="32" rx="8" fill="#0F5132"/>
-  <g fill="#F8FAFC">
-    <ellipse cx="9.5" cy="12" rx="2.1" ry="2.7"/>
-    <ellipse cx="16" cy="9" rx="2.1" ry="2.7"/>
-    <ellipse cx="22.5" cy="12" rx="2.1" ry="2.7"/>
-    <ellipse cx="16" cy="19.5" rx="5.2" ry="4.2"/>
-  </g>
-</svg>

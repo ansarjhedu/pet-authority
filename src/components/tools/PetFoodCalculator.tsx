@@ -286,7 +286,7 @@ export function PetFoodCalculator({ className, onResult }: PetFoodCalculatorProp
         {result ? (
           <ResultDetails result={result} unit={profile.unit} unusual={unusual} />
         ) : (
-          <p className="mt-4 mb-0 text-base leading-relaxed text-emerald-50">
+          <p className="mt-4 mb-0 text-base leading-relaxed text-brand-primary-100">
             Enter a body weight to calculate resting energy, the life-stage target, and a portion
             for breakfast and dinner.
           </p>
@@ -313,29 +313,29 @@ function ResultDetails({
     <div className="mt-4 space-y-4">
       <p className="mb-0">
         <span className="block text-4xl font-semibold tracking-tight">{result.targetKcal}</span>
-        <span className="text-sm text-emerald-50">kcal/day for this {speciesName}</span>
+        <span className="text-sm text-brand-primary-100">kcal/day for this {speciesName}</span>
       </p>
       <dl className="space-y-3 text-sm">
         <div>
-          <dt className="text-emerald-100">Exact daily portion</dt>
+          <dt className="text-brand-primary-200">Exact daily portion</dt>
           <dd className="text-lg font-semibold">{describePortion(result.daily, unit, result.food)}</dd>
         </div>
         <div className="grid grid-cols-2 gap-3">
           <div className="rounded-xl bg-white/10 p-3">
-            <dt className="text-emerald-100">Breakfast</dt>
+            <dt className="text-brand-primary-200">Breakfast</dt>
             <dd className="font-semibold">{describePortion(result.breakfast, unit, result.food)}</dd>
           </div>
           <div className="rounded-xl bg-white/10 p-3">
-            <dt className="text-emerald-100">Dinner</dt>
+            <dt className="text-brand-primary-200">Dinner</dt>
             <dd className="font-semibold">{describePortion(result.dinner, unit, result.food)}</dd>
           </div>
         </div>
         <div>
-          <dt className="text-emerald-100">Minimum daily water</dt>
+          <dt className="text-brand-primary-200">Minimum daily water</dt>
           <dd className="font-semibold">{formatWater(result.waterMl, unit)}</dd>
         </div>
       </dl>
-      <p className="mb-0 text-sm leading-relaxed text-emerald-50">
+      <p className="mb-0 text-sm leading-relaxed text-brand-primary-100">
         RER {Math.round(result.rer)} kcal × {result.lifeStage.factor} life stage, then {bcsChange}.
         {unusual ? " This weight is outside the usual range, so confirm the unit before you portion food." : ""}
       </p>

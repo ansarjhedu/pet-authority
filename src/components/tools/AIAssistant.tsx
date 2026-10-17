@@ -2,10 +2,9 @@
 
 import { FormEvent, useEffect, useId, useRef, useState } from "react";
 import { Loader2, RotateCcw, Send, Shield } from "lucide-react";
-import { POISON_HOTLINES, isEmergencyText } from "@/lib/ai/triage";
+import { MAX_MESSAGE_CHARS } from "@/lib/ai/limits";
+import { DAILY_LIMIT_MESSAGE, POISON_HOTLINES, isEmergencyText } from "@/lib/ai/triage";
 import { cn } from "@/lib/utils";
-
-const SESSION_LIMIT = 8;
 
 const SUGGESTIONS = [
   "Can dogs safely eat blueberries?",
@@ -35,9 +34,8 @@ export function AIAssistant({ className }: { className?: string }) {
   const [messages, setMessages] = useState<ChatMessage[]>([greeting]);
   const [draft, setDraft] = useState("");
   const [loading, setLoading] = useState(false);
-  const [inquiries, setInquiries] = useState(0);
   const [preview, setPreview] = useState(false);
-  const limitReached = inquiries >= SESSION_LIMIT;
+  const [dailyLimit, setDailyLimit] = useState(false);
 
   useEffect(() => {
     listRef.current?.scrollTo({ top: listRef.current.scrollHeight, behavior: "smooth" });
@@ -45,7 +43,7 @@ export function AIAssistant({ className }: { className?: string }) {
 
   async function send(text: string) {
     const message = text.trim();
-    if (!message || loading || limitReached) {
+    if (!message || loading || dailyLimit) {
       return;
     }
 
@@ -78,6 +76,7 @@ export function AIAssistant({ className }: { className?: string }) {
         reply?: string;
         preview?: boolean;
         error?: string;
+        limit?: string;
       } | null;
       const reply =
         payload?.reply ??
@@ -85,6 +84,9 @@ export function AIAssistant({ className }: { className?: string }) {
         "The assistant did not return a reply. Please try again, or call a clinic if this may be urgent.";
 
       setPreview(Boolean(payload?.preview));
+      if (payload?.limit === "day") {
+        setDailyLimit(true);
+      }
       setMessages((current) => [
         ...current,
         {
@@ -94,7 +96,6 @@ export function AIAssistant({ className }: { className?: string }) {
           emergency: isEmergencyText(message) || isEmergencyText(reply),
         },
       ]);
-      setInquiries((count) => count + 1);
     } catch {
       setMessages((current) => [
         ...current,
@@ -118,7 +119,6 @@ export function AIAssistant({ className }: { className?: string }) {
   function resetSession() {
     setMessages([greeting]);
     setDraft("");
-    setInquiries(0);
     setPreview(false);
     setLoading(false);
   }
@@ -141,13 +141,13 @@ export function AIAssistant({ className }: { className?: string }) {
                 <span
                   className={cn(
                     "absolute inline-flex h-full w-full rounded-full opacity-75 motion-safe:animate-ping",
-                    preview ? "bg-brand-accent" : "bg-emerald-500",
+                    preview ? "bg-amber-500" : "bg-brand-accent",
                   )}
                 />
                 <span
                   className={cn(
                     "relative inline-flex h-2 w-2 rounded-full",
-                    preview ? "bg-brand-accent-700" : "bg-emerald-600",
+                    preview ? "bg-amber-700" : "bg-brand-accent-700",
                   )}
                 />
               </span>
@@ -157,9 +157,7 @@ export function AIAssistant({ className }: { className?: string }) {
           <p className="mb-0 text-xs text-slate-600">Not a clinical veterinary diagnosis</p>
         </div>
         <div className="flex shrink-0 items-center gap-2">
-          <p className="mb-0 text-xs font-semibold text-slate-600 sm:text-sm">
-            {inquiries}/{SESSION_LIMIT}
-          </p>
+          <p className="mb-0 text-xs font-semibold text-slate-600">15/min · 1,500/day</p>
           <button
             type="button"
             className="inline-flex min-h-9 items-center gap-1.5 rounded-full border border-slate-200 px-3 text-xs font-semibold text-slate-700 hover:border-brand-primary hover:text-brand-primary"
@@ -179,7 +177,7 @@ export function AIAssistant({ className }: { className?: string }) {
                 key={suggestion}
                 type="button"
                 className="shrink-0 rounded-full border border-brand-primary/15 bg-brand-surface px-3 py-1.5 text-left text-sm font-semibold text-brand-primary hover:bg-brand-primary-50 disabled:cursor-not-allowed disabled:opacity-50"
-                disabled={loading || limitReached}
+                disabled={loading || dailyLimit}
                 onClick={() => void send(suggestion)}
               >
                 {suggestion}
@@ -206,11 +204,11 @@ export function AIAssistant({ className }: { className?: string }) {
       </div>
 
       <form className="shrink-0 border-t border-slate-200 bg-white px-3 py-3 sm:px-4" onSubmit={onSubmit}>
-        {limitReached ? (
-          <p className="mb-2 text-sm text-slate-800">
-            This session used {SESSION_LIMIT} questions. Reset to ask again.
-          </p>
-        ) : null}
+        <p className="mb-2 text-xs leading-relaxed text-slate-600">
+          {dailyLimit
+            ? DAILY_LIMIT_MESSAGE
+            : "Free tier: 15 questions a minute, 1,500 a day, and 1 million tokens a minute. Google may log this chat to train future models."}
+        </p>
         <div className="flex items-end gap-2">
           <label htmlFor={inputId} className="sr-only">
             Your question
@@ -218,10 +216,10 @@ export function AIAssistant({ className }: { className?: string }) {
           <textarea
             id={inputId}
             rows={1}
-            maxLength={2000}
+            maxLength={MAX_MESSAGE_CHARS}
             value={draft}
-            disabled={loading || limitReached}
-            placeholder={limitReached ? "Session limit reached" : "Describe the pet and what changed"}
+            disabled={loading || dailyLimit}
+            placeholder={dailyLimit ? "Daily limit reached" : "Describe the pet and what changed"}
             className="max-h-24 min-h-11 w-full resize-none rounded-2xl border border-slate-300 bg-brand-surface px-3 py-2.5 text-base text-slate-800 focus:border-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/30 disabled:opacity-60"
             onChange={(event) => setDraft(event.target.value)}
             onKeyDown={(event) => {
@@ -234,7 +232,7 @@ export function AIAssistant({ className }: { className?: string }) {
           <button
             type="submit"
             className="inline-flex h-11 shrink-0 items-center justify-center gap-2 rounded-full bg-brand-primary px-4 text-sm font-semibold text-white hover:bg-brand-primary-700 disabled:cursor-not-allowed disabled:opacity-50"
-            disabled={loading || limitReached || draft.trim().length === 0}
+            disabled={loading || dailyLimit || draft.trim().length === 0}
           >
             <Send className="h-4 w-4" aria-hidden="true" />
             Send

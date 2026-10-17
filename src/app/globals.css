@@ -18,8 +18,8 @@
 }
 
 :root {
-  --background: #faf9f6;
-  --foreground: #1e293b;
+  --background: #f4f9fb;
+  --foreground: #1c3344;
   color-scheme: light;
 }
 
@@ -104,7 +104,7 @@
   html,
   body {
     background: #fff !important;
-    color: #1e293b !important;
+    color: #1c3344 !important;
     font-size: 11pt;
   }
 

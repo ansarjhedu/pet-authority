@@ -27,8 +27,9 @@ export default function PrivacyPolicyPage() {
         <p className="mb-6 text-slate-700">
           Server logs may include the browser, the page requested, and the IP address needed to
           deliver the page. When those services are enabled, the vet finder sends the place name you
-          type to Google Places, and the AI assistant sends your question to Google Gemini. Do not
-          include a person&apos;s medical history in those tools.
+          type to Google Places, and the AI assistant sends your question to Google Gemini. On the
+          free Gemini tier, Google may log that chat to train future models, so leave out a
+          person&apos;s name, address, and medical history.
         </p>
         <h2 className="mb-3 text-2xl font-semibold text-brand-primary">Advertising and cookies</h2>
         <p className="mb-6 text-slate-700">

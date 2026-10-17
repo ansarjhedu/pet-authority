@@ -29,6 +29,11 @@ const faqs = [
       "Call an emergency clinic or poison hotline first for bloat, trouble urinating, seizures, pale gums, toxin ingestion, or open-mouth breathing in a cat or bird. The chat can repeat that warning, but it cannot examine your pet or start treatment.",
   },
   {
+    question: "How many questions can the free assistant answer?",
+    answer:
+      "The free Gemini tier allows 15 questions a minute, 1,500 questions a day, and 1 million tokens a minute. Older turns are dropped when a chat would use more than one request's share of that token budget. Google may log free-tier chats to train future models, so leave out names and addresses.",
+  },
+  {
     question: "Is this a clinical veterinary diagnosis?",
     answer:
       "No. PetAuthority offers the assistant for education. A licensed veterinarian remains responsible for diagnosis, prognosis, and treatment, including any medication.",

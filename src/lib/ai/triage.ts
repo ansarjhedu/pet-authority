@@ -41,8 +41,19 @@ export function isEmergencyText(text: string): boolean {
 export const PREVIEW_MODE_MESSAGE =
   "AI Assistant is running in local preview mode. Add your free GEMINI_API_KEY to .env.local to enable live Gemini Flash responses.";
 
-export const RATE_LIMIT_MESSAGE =
-  "The free Gemini tier needs a short cooldown. Please wait about a minute, then send your question again. If your pet may be in danger, contact an emergency clinic or a poison hotline now.";
+export const MINUTE_LIMIT_MESSAGE =
+  "The free Gemini tier allows 15 questions a minute. Please wait about a minute and try again. If your pet may be in danger, contact an emergency clinic or a poison hotline.";
+
+export const DAILY_LIMIT_MESSAGE =
+  "The free Gemini tier has reached 1,500 questions for today. Please try again tomorrow. If your pet may be in danger, contact an emergency clinic or a poison hotline now.";
+
+export const TOKEN_LIMIT_MESSAGE =
+  "The free Gemini tier allows 1 million tokens a minute. Please wait about a minute, then send a shorter question. If your pet may be in danger, contact an emergency clinic or a poison hotline.";
+
+export const CONTEXT_LIMIT_MESSAGE =
+  "That question is too long for the free Gemini context limit. Please shorten it and try again. If your pet may be in danger, contact an emergency clinic or a poison hotline.";
+
+export const RATE_LIMIT_MESSAGE = MINUTE_LIMIT_MESSAGE;
 
 export const SYSTEM_INSTRUCTION = `You are the PetAuthority AI Triage & Care Assistant. You provide empathetic, evidence-based guidance for dogs, cats, birds, and small pets.
 SAFETY PROTOCOL:

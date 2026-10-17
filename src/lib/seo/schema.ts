@@ -14,7 +14,7 @@ export type VeterinaryArticleInput = {
   faqs?: { question: string; answer: string }[];
 };
 
-const PUBLISHED_SITE_URL = "https://petauthority.com";
+const PUBLISHED_SITE_URL = "https://www.petsafetyhub.com";
 const CONTENT_DATE = "2026-10-11";
 
 export function getSiteUrl(): string {
@@ -54,6 +54,7 @@ export function generateOrganizationSchema() {
     "@type": "Organization",
     name: "PetAuthority",
     url,
+    logo: absoluteUrl("/brand/logo-icon.png"),
     description:
       "Evidence-based pet care, symptom triage, and veterinary tools for dogs, cats, birds, and small pets.",
     publishingPrinciples: `${url}/editorial-standards`,

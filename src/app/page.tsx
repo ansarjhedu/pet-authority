@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Sidebar } from "@/components/layout/Sidebar";
 
@@ -57,7 +58,7 @@ export default function Home() {
                 <h1 className="mb-4 max-w-reading text-3xl font-semibold tracking-tight text-white sm:text-4xl">
                   Clear pet health guidance, written for the moment you need it.
                 </h1>
-                <p className="mb-6 max-w-reading text-base leading-relaxed text-emerald-50">
+                <p className="mb-6 max-w-reading text-base leading-relaxed text-brand-primary-100">
                   PetAuthority explains symptoms, nutrition, and home care in plain language.
                   Each guide tells you what to watch, what can wait, and when to contact a
                   licensed veterinarian.
@@ -83,10 +84,16 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-              <div
-                className="aspect-[4/3] rounded-2xl bg-brand-primary-800"
-                aria-hidden="true"
-              />
+              <div className="flex aspect-[4/3] items-center justify-center rounded-2xl bg-white p-4">
+                <Image
+                  src="/brand/logo-full.png"
+                  alt="PetAuthority. Veterinary insight for dogs, cats, birds, and small pets."
+                  width={480}
+                  height={430}
+                  priority
+                  className="h-full w-auto object-contain"
+                />
+              </div>
             </div>
           </section>
 

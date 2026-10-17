@@ -1,18 +1,25 @@
+import { fitHistory, MAX_HISTORY_TURNS, MAX_MESSAGE_CHARS, MAX_OUTPUT_TOKENS, type GeminiLimit } from "@/lib/ai/limits";
+import { reconcileGeminiCall, releaseGeminiCall, reserveGeminiCall } from "@/lib/ai/quota";
 import {
+  CONTEXT_LIMIT_MESSAGE,
+  DAILY_LIMIT_MESSAGE,
+  MINUTE_LIMIT_MESSAGE,
   PREVIEW_MODE_MESSAGE,
-  RATE_LIMIT_MESSAGE,
   SYSTEM_INSTRUCTION,
+  TOKEN_LIMIT_MESSAGE,
   isEmergencyText,
 } from "@/lib/ai/triage";
 
-const MODEL = "gemini-1.5-flash";
-const MAX_MESSAGE_LENGTH = 2000;
-const MAX_HISTORY = 16;
+const MODEL = "gemini-3.8-flash";
 
-type ChatRole = "user" | "model";
+const LIMIT_REPLIES: Record<GeminiLimit, string> = {
+  minute: MINUTE_LIMIT_MESSAGE,
+  day: DAILY_LIMIT_MESSAGE,
+  tokens: TOKEN_LIMIT_MESSAGE,
+};
 
 type ChatTurn = {
-  role: ChatRole;
+  role: "user" | "model";
   text: string;
 };
 
@@ -21,6 +28,7 @@ type GeminiResponse = {
     content?: { parts?: Array<{ text?: string }> };
     finishReason?: string;
   }>;
+  usageMetadata?: { totalTokenCount?: number };
   error?: { code?: number; message?: string; status?: string };
 };
 
@@ -46,6 +54,19 @@ export async function POST(request: Request) {
     });
   }
 
+  const fitted = fitHistory(history, message, SYSTEM_INSTRUCTION);
+  if (fitted.overflow) {
+    return Response.json({ reply: CONTEXT_LIMIT_MESSAGE, rateLimited: true, limit: "tokens" }, { status: 413 });
+  }
+
+  const reservation = await reserveGeminiCall(fitted.inputTokens);
+  if (!reservation.ok) {
+    return Response.json(
+      { reply: LIMIT_REPLIES[reservation.limit], rateLimited: true, limit: reservation.limit },
+      { status: 429 },
+    );
+  }
+
   try {
     const geminiResponse = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`,
@@ -60,7 +81,7 @@ export async function POST(request: Request) {
             parts: [{ text: SYSTEM_INSTRUCTION }],
           },
           contents: [
-            ...history.map((turn) => ({
+            ...fitted.history.map((turn) => ({
               role: turn.role,
               parts: [{ text: turn.text }],
             })),
@@ -68,7 +89,7 @@ export async function POST(request: Request) {
           ],
           generationConfig: {
             temperature: 0.4,
-            maxOutputTokens: 800,
+            maxOutputTokens: MAX_OUTPUT_TOKENS,
           },
         }),
         signal: AbortSignal.timeout(20000),
@@ -76,9 +97,20 @@ export async function POST(request: Request) {
     );
 
     const payload = (await geminiResponse.json().catch(() => null)) as GeminiResponse | null;
+    const actualTokens = payload?.usageMetadata?.totalTokenCount;
+    if (typeof actualTokens === "number") {
+      await reconcileGeminiCall(reservation.id, actualTokens);
+    }
 
     if (geminiResponse.status === 429 || payload?.error?.code === 429) {
-      return Response.json({ reply: RATE_LIMIT_MESSAGE, rateLimited: true }, { status: 429 });
+      return Response.json(
+        { reply: MINUTE_LIMIT_MESSAGE, rateLimited: true, limit: "minute" },
+        { status: 429 },
+      );
+    }
+
+    if (!geminiResponse.ok && geminiResponse.status !== 429 && geminiResponse.status < 500) {
+      await releaseGeminiCall(reservation.id);
     }
 
     if (!geminiResponse.ok) {
@@ -136,7 +168,7 @@ function readMessage(body: unknown): string | null {
     return null;
   }
   const trimmed = message.trim();
-  if (!trimmed || trimmed.length > MAX_MESSAGE_LENGTH) {
+  if (!trimmed || trimmed.length > MAX_MESSAGE_CHARS) {
     return null;
   }
   return trimmed;
@@ -152,7 +184,7 @@ function readHistory(body: unknown): ChatTurn[] {
   }
 
   return history
-    .slice(-MAX_HISTORY)
+    .slice(-MAX_HISTORY_TURNS)
     .flatMap((turn) => {
       if (!turn || typeof turn !== "object") {
         return [];
@@ -162,7 +194,7 @@ function readHistory(body: unknown): ChatTurn[] {
       if ((role !== "user" && role !== "model") || typeof text !== "string") {
         return [];
       }
-      const trimmed = text.trim().slice(0, MAX_MESSAGE_LENGTH);
+      const trimmed = text.trim().slice(0, MAX_MESSAGE_CHARS);
       if (!trimmed) {
         return [];
       }

@@ -1,9 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useState } from "react";
-import { ChevronDown, Menu, PawPrint, Shield, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 type NavChild = {
@@ -113,14 +114,14 @@ export function Header() {
             href="/"
             className="flex shrink-0 items-center gap-2.5 rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary"
           >
-            <span className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-brand-primary text-white">
-              <Shield className="h-6 w-6" aria-hidden="true" strokeWidth={1.75} />
-              <PawPrint
-                className="absolute h-3.5 w-3.5"
-                aria-hidden="true"
-                strokeWidth={2.25}
-              />
-            </span>
+            <Image
+              src="/brand/logo-icon.png"
+              alt=""
+              width={44}
+              height={44}
+              priority
+              className="h-11 w-11"
+            />
             <span className="text-lg font-semibold tracking-tight text-brand-primary">
               PetAuthority
             </span>
