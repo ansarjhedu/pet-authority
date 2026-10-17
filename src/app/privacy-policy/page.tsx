@@ -31,6 +31,13 @@ export default function PrivacyPolicyPage() {
           free Gemini tier, Google may log that chat to train future models, so leave out a
           person&apos;s name, address, and medical history.
         </p>
+        <h2 className="mb-3 text-2xl font-semibold text-brand-primary">Analytics</h2>
+        <p className="mb-6 text-slate-700">
+          Pet Safety Hub uses Google Analytics to measure page views and traffic sources. Google may
+          collect device and usage data under Google&apos;s privacy policy at
+          policies.google.com/privacy. You can limit Analytics collection with Google&apos;s browser
+          add-on at tools.google.com/dlpage/gaoptout.
+        </p>
         <h2 className="mb-3 text-2xl font-semibold text-brand-primary">Advertising and cookies</h2>
         <p className="mb-6 text-slate-700">
           Pet Safety Hub does not run advertising cookies until an ad network has approved the site.

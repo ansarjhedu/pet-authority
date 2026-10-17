@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { MediavineScript } from "@/components/ads/MediavineScript";
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -55,6 +56,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${themeClassName} flex flex-col`}>
       <body className={`${themeClassName} flex flex-1 flex-col`}>
+        <GoogleAnalytics />
         <MediavineScript />
         <JsonLd data={generateOrganizationSchema()} />
         <JsonLd data={generateWebSiteSchema()} />
