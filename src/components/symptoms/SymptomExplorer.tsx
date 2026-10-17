@@ -68,7 +68,7 @@ export function SymptomExplorer({ symptoms }: { symptoms: SymptomGuide[] }) {
               role="tab"
               aria-selected={selected}
               className={cn(
-                "inline-flex min-h-11 items-center rounded-full border px-4 text-sm font-semibold",
+                "inline-flex min-h-11 max-w-full items-center whitespace-normal rounded-full border px-4 text-left text-sm font-semibold",
                 selected
                   ? "border-brand-primary bg-brand-primary text-white"
                   : "border-slate-200 bg-white text-slate-800 hover:border-brand-primary",
@@ -91,7 +91,7 @@ export function SymptomExplorer({ symptoms }: { symptoms: SymptomGuide[] }) {
               role="radio"
               aria-checked={selected}
               className={cn(
-                "inline-flex min-h-11 items-center rounded-full border px-4 text-sm font-semibold",
+                "inline-flex min-h-11 max-w-full items-center whitespace-normal rounded-full border px-4 text-left text-sm font-semibold",
                 selected
                   ? "border-slate-800 bg-slate-800 text-white"
                   : "border-slate-200 bg-brand-surface text-slate-800 hover:border-slate-800",

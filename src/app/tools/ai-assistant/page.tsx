@@ -84,9 +84,9 @@ export default function AIAssistantPage() {
               Ask about a dog, cat, bird, or small pet. A veterinarian still makes the diagnosis.
             </p>
           </div>
-          <ul className="flex shrink-0 gap-2 overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] sm:justify-end [&::-webkit-scrollbar]:hidden">
+          <ul className="flex flex-wrap gap-2 sm:justify-end">
             {POISON_HOTLINES.map((line) => (
-              <li key={line.href} className="shrink-0">
+              <li key={line.href}>
                 <a
                   href={line.href}
                   className="flex h-9 items-center gap-1.5 rounded-full border border-triage-red/25 bg-triage-red-surface px-2.5 text-xs font-semibold text-slate-800 hover:bg-white sm:text-sm"

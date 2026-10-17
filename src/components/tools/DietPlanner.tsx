@@ -112,7 +112,7 @@ function ScheduleTable({ plan }: { plan: WeekPlan }) {
     <div className="print-sheet">
       <h3 className="mb-2 text-lg font-semibold text-slate-800">Daily meals</h3>
       <p className="mb-4 text-sm text-slate-700">{plan.summary}</p>
-      <div className="overflow-x-auto">
+      <div className="max-w-full overflow-x-auto">
         <table className="w-full min-w-[36rem] border-collapse text-left text-sm">
           <thead>
             <tr className="border-b border-slate-200 text-slate-600">
@@ -147,7 +147,7 @@ function TransitionTable({ plan }: { plan: WeekPlan }) {
         Amounts assume the old and new foods have the same calorie density. Slow down if stool
         softens, and call a veterinarian if appetite drops.
       </p>
-      <div className="overflow-x-auto">
+      <div className="max-w-full overflow-x-auto">
         <table className="w-full min-w-[36rem] border-collapse text-left text-sm">
           <thead>
             <tr className="border-b border-slate-200 text-slate-600">

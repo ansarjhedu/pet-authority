@@ -1,23 +1,48 @@
 import Image from "next/image";
 import Link from "next/link";
+import {
+  Bird,
+  Bone,
+  Calculator,
+  Cat,
+  Dog,
+  HeartPulse,
+  MapPin,
+  Rabbit,
+  Sparkles,
+  Utensils,
+  type LucideIcon,
+} from "lucide-react";
 import { Sidebar } from "@/components/layout/Sidebar";
 
-const categories = [
-  { label: "Dogs", href: "/dogs" },
-  { label: "Cats", href: "/cats" },
-  { label: "Birds", href: "/birds" },
-  { label: "Small Pets", href: "/small-pets" },
-  { label: "Symptoms & Triage", href: "/health-symptoms" },
-  { label: "Food Calculator", href: "/tools/pet-food-calculator" },
-  { label: "Free AI Assistant", href: "/tools/ai-assistant" },
-  { label: "Vet Finder", href: "/tools/vet-finder" },
-] as const;
+const categories: {
+  label: string;
+  detail: string;
+  href: string;
+  icon: LucideIcon;
+}[] = [
+  { label: "Dogs", detail: "Breeds and daily care", href: "/dogs", icon: Dog },
+  { label: "Cats", detail: "Health and home care", href: "/cats", icon: Cat },
+  { label: "Birds", detail: "Aviary warning signs", href: "/birds", icon: Bird },
+  { label: "Small Pets", detail: "Rabbits and pocket pets", href: "/small-pets", icon: Rabbit },
+  { label: "Symptoms & Triage", detail: "What can wait, what cannot", href: "/health-symptoms", icon: HeartPulse },
+  { label: "Food Calculator", detail: "Portions from body weight", href: "/tools/pet-food-calculator", icon: Calculator },
+  { label: "Free AI Assistant", detail: "Sort a care question", href: "/tools/ai-assistant", icon: Sparkles },
+  { label: "Vet Finder", detail: "Clinics near a place name", href: "/tools/vet-finder", icon: MapPin },
+];
 
-const articles = [
+const articles: {
+  title: string;
+  href: string;
+  kicker: string;
+  summary: string;
+  icon: LucideIcon;
+}[] = [
   {
     title: "How to read a dog food label without guessing",
     href: "/dogs/nutrition",
     kicker: "Dog nutrition",
+    icon: Utensils,
     summary:
       "The guaranteed analysis lists minimums, not the bowl in front of your dog. Compare calories per cup with the feeding table, then adjust for weight trend over two weeks.",
   },
@@ -25,6 +50,7 @@ const articles = [
     title: "When a cat stops eating, the clock matters",
     href: "/cats/care",
     kicker: "Cat care",
+    icon: Cat,
     summary:
       "A missed meal can become hepatic lipidosis faster in overweight cats. Note the last full meal, any vomiting, and whether water intake changed before you call a clinic.",
   },
@@ -32,6 +58,7 @@ const articles = [
     title: "Quiet birds are not always resting",
     href: "/birds",
     kicker: "Avian care",
+    icon: Bird,
     summary:
       "Fluffed feathers, a tail bob, or staying on the cage floor are early illness signs. Weigh small birds weekly so a drop shows up before the bird looks sick.",
   },
@@ -39,10 +66,11 @@ const articles = [
     title: "A limp is a symptom, not a diagnosis",
     href: "/health-symptoms/dogs/limping",
     kicker: "Triage",
+    icon: Bone,
     summary:
       "Sudden non-weight-bearing lameness needs same-day care, especially after a jump or a fight. Mild stiffness that eases with a short walk can be monitored and logged.",
   },
-] as const;
+];
 
 export default function Home() {
   return (
@@ -97,23 +125,32 @@ export default function Home() {
             </div>
           </section>
 
-          <nav aria-label="Categories" className="flex gap-2 overflow-x-auto pb-1">
-            {categories.map((category) => (
-              <Link
-                key={category.href}
-                href={category.href}
-                className="shrink-0 rounded-full border border-brand-primary/15 bg-white px-4 py-2 text-sm font-semibold text-brand-primary hover:border-brand-primary hover:bg-brand-primary-50"
-              >
-                {category.label}
-              </Link>
-            ))}
+          <nav aria-label="Categories" className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+            {categories.map((category) => {
+              const Icon = category.icon;
+              return (
+                <Link
+                  key={category.href}
+                  href={category.href}
+                  className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition-colors hover:border-brand-primary/30 hover:bg-brand-primary-50"
+                >
+                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-primary text-white">
+                    <Icon className="h-5 w-5" aria-hidden="true" strokeWidth={1.75} />
+                  </span>
+                  <span className="mt-4">
+                    <span className="block text-sm font-semibold text-brand-primary">{category.label}</span>
+                    <span className="mt-1 block text-xs leading-snug text-slate-600">{category.detail}</span>
+                  </span>
+                </Link>
+              );
+            })}
           </nav>
 
           <section className="space-y-4">
             <h2 className="text-2xl font-semibold text-brand-primary">From the care library</h2>
             <p className="mb-6 max-w-reading text-slate-700">
               These guides show how nutrition, illness signs, and home monitoring read in the
-              care library. Image areas keep a fixed ratio so photos cannot shift the page.
+              care library.
             </p>
             <div className="grid gap-6 sm:grid-cols-2">
               {articles.map((article) => (
@@ -136,26 +173,28 @@ function ArticleCard({
   href,
   kicker,
   summary,
+  icon: Icon,
 }: {
   title: string;
   href: string;
   kicker: string;
   summary: string;
+  icon: LucideIcon;
 }) {
   return (
-    <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
-      <div className="aspect-[16/10] bg-brand-primary-50" aria-hidden="true" />
-      <div className="p-5">
-        <p className="mb-2 text-xs font-semibold tracking-wide text-brand-accent-700 uppercase">
-          {kicker}
-        </p>
-        <h3 className="mb-3 text-lg font-semibold leading-snug text-slate-800">
-          <Link href={href} className="hover:text-brand-primary">
-            {title}
-          </Link>
-        </h3>
-        <p className="mb-0 text-sm leading-relaxed text-slate-700">{summary}</p>
-      </div>
+    <article className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-5">
+      <span className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-brand-primary text-white">
+        <Icon className="h-5 w-5" aria-hidden="true" strokeWidth={1.75} />
+      </span>
+      <p className="mb-2 text-xs font-semibold tracking-wide text-brand-accent-700 uppercase">
+        {kicker}
+      </p>
+      <h3 className="mb-3 text-lg font-semibold leading-snug text-slate-800">
+        <Link href={href} className="hover:text-brand-primary">
+          {title}
+        </Link>
+      </h3>
+      <p className="mb-0 text-sm leading-relaxed text-slate-700">{summary}</p>
     </article>
   );
 }

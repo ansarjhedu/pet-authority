@@ -127,7 +127,7 @@ export function Header() {
             </span>
           </Link>
 
-          <nav aria-label="Primary" className="hidden items-center gap-0.5 lg:flex">
+          <nav aria-label="Primary" className="hidden min-w-0 items-center gap-0.5 xl:flex">
             {navigation.map((item) =>
               item.children ? (
                 <div key={item.label} className="group relative">
@@ -168,7 +168,7 @@ export function Header() {
 
           <button
             type="button"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-lg text-brand-primary hover:bg-brand-primary-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary lg:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-lg text-brand-primary hover:bg-brand-primary-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary xl:hidden"
             aria-expanded={open}
             aria-controls={menuId}
             onClick={() => setOpen((current) => !current)}
@@ -182,7 +182,7 @@ export function Header() {
           id={menuId}
           aria-label="Mobile"
           hidden={!open}
-          className="absolute inset-x-0 top-full z-40 max-h-[calc(100dvh-7.5rem)] overflow-y-auto border-b border-slate-200 bg-brand-surface shadow-lg lg:hidden"
+          className="absolute inset-x-0 top-full z-40 max-h-[calc(100dvh-7.5rem)] overflow-y-auto border-b border-slate-200 bg-brand-surface shadow-lg xl:hidden"
         >
           <ul className="container space-y-1 py-3">
             {navigation.map((item) => (
