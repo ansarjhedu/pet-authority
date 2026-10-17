@@ -6,11 +6,12 @@ import plugin from "tailwindcss/plugin";
  * Long-form copy should use max-w-reading (70ch, inside the 65–75 character range).
  */
 const containerPreset = {
-  maxWidth: "80rem",
+  maxWidth: "90rem",
   padding: {
     DEFAULT: "1rem",
     sm: "1.5rem",
     lg: "2rem",
+    xl: "2.5rem",
   },
 } as const;
 
@@ -86,6 +87,7 @@ const config: Config = {
           "--container-padding": containerPreset.padding.DEFAULT,
           "--container-padding-sm": containerPreset.padding.sm,
           "--container-padding-lg": containerPreset.padding.lg,
+          "--container-padding-xl": containerPreset.padding.xl,
         },
       });
     }),

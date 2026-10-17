@@ -42,7 +42,7 @@ export function BreedDirectory({ breeds }: { breeds: Breed[] }) {
           No breeds match that search. Clear a filter or try the breed&apos;s common name.
         </p>
       ) : (
-        <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+        <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
           {visible.map((breed) => (
             <li key={breed.id}>
               <BreedCard breed={breed} />

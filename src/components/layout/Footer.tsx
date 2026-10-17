@@ -57,12 +57,11 @@ export function Footer() {
               <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-white">
                 <Image src="/brand/logo-icon.png" alt="" width={36} height={36} className="h-9 w-9" />
               </span>
-              <span className="text-lg font-semibold">PetAuthority</span>
+              <span className="text-lg font-semibold">Pet Safety Hub</span>
             </Link>
             <p className="mb-0 max-w-reading text-sm leading-relaxed text-brand-primary-100">
-              PetAuthority publishes veterinary evidence-based guidance for everyday pet care.
-              Our editors work from clinical references so you can spot problems early and know
-              when a licensed veterinarian should take over.
+              Pet Safety Hub publishes educational pet-care guides from clinical references. Use the
+              triage codes and toxin pages to decide when a licensed veterinarian should take over.
             </p>
           </div>
 
@@ -127,14 +126,14 @@ export function Footer() {
             Veterinary disclaimer
           </h2>
           <p className="mb-0 text-sm leading-relaxed">
-            PetAuthority content is for educational purposes and is not a substitute for clinical
+            Pet Safety Hub content is for educational purposes and is not a substitute for clinical
             veterinary diagnosis, prognosis, or treatment. Always consult a licensed veterinarian
             in an emergency.
           </p>
         </div>
 
         <div className="mt-8 flex flex-col gap-4 border-t border-white/15 pt-6 text-sm text-brand-primary-100 sm:flex-row sm:items-center sm:justify-between">
-          <p className="mb-0">© 2026 PetAuthority. All rights reserved.</p>
+          <p className="mb-0">© 2026 Pet Safety Hub. All rights reserved.</p>
           <nav aria-label="Editorial" className="flex flex-wrap gap-x-4 gap-y-2">
             {trust.map((item) => (
               <Link

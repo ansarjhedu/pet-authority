@@ -121,7 +121,7 @@ export function SymptomExplorer({ symptoms }: { symptoms: SymptomGuide[] }) {
           cat is straining, open the emergency guide.
         </p>
       ) : (
-        <ul className="grid gap-4 sm:grid-cols-2">
+        <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
           {visible.map((symptom) => (
             <li key={symptom.id}>
               <article className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-5">

@@ -41,14 +41,14 @@ export const xylitolDogsGuide: EmergencyLongGuide = {
         },
         {
           type: "p",
-          text: "This page was researched and compiled by the PetAuthority Editorial Team from published clinical references, not from an examination. It does not diagnose an individual animal or replace a clinic visit. A licensed veterinarian who has seen the animal still has to set the treatment.",
+          text: "This page was researched and compiled by the Pet Safety Hub Editorial Team from published clinical references, not from an examination. It does not diagnose an individual animal or replace a clinic visit. A licensed veterinarian who has seen the animal still has to set the treatment.",
         },
         {
           type: "links",
           items: [
             {
               href: "/editorial-standards",
-              label: "PetAuthority editorial standards",
+              label: "Pet Safety Hub editorial standards",
             },
           ],
         },

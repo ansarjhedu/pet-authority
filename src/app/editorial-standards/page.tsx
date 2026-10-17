@@ -4,13 +4,13 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Editorial Standards",
   description:
-    "How the PetAuthority Editorial Team compiles educational pet-care pages from published sources, and what those pages cannot do.",
+    "How the Pet Safety Hub Editorial Team compiles educational pet-care pages from published sources, and what those pages cannot do.",
 };
 
 export default function EditorialStandardsPage() {
   return (
     <div className="container py-8 lg:py-12">
-      <article className="max-w-reading">
+      <article className="mx-auto max-w-reading">
         <p className="mb-3 text-sm font-semibold tracking-wide text-brand-accent-700 uppercase">
           Standards
         </p>
@@ -18,8 +18,8 @@ export default function EditorialStandardsPage() {
           Editorial standards
         </h1>
         <p className="mb-6 text-slate-700">
-          PetAuthority publishes educational guidance for pet owners in the United States, the
-          United Kingdom, and Australia. The pages are researched and compiled by the PetAuthority
+          Pet Safety Hub publishes educational guidance for pet owners in the United States, the
+          United Kingdom, and Australia. The pages are researched and compiled by the Pet Safety Hub
           Editorial Team. They are not signed by an in-house veterinarian, and they cannot diagnose
           one animal or replace an examination.
         </p>
@@ -36,7 +36,7 @@ export default function EditorialStandardsPage() {
           Published guides are scheduled for another pass at least every quarter, and sooner when a
           regulator or a poison-control recommendation changes. The date on a page is the last
           content update, not a promise that a veterinarian rechecked every sentence that morning.
-          Send a correction to editorial@petauthority.com and name the URL.
+          Send a correction to editorial@petsafetyhub.com and name the URL.
         </p>
         <h2 className="mb-3 text-2xl font-semibold text-brand-primary">Independence from advertising</h2>
         <p className="mb-6 text-slate-700">

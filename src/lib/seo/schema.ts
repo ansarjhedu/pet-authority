@@ -42,7 +42,7 @@ const CLINICAL_CITATIONS = [
 function editorialAuthor() {
   return {
     "@type": "Organization",
-    name: "PetAuthority Editorial Team",
+    name: "Pet Safety Hub Editorial Team",
     url: absoluteUrl("/about"),
   };
 }
@@ -52,16 +52,16 @@ export function generateOrganizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "PetAuthority",
+    name: "Pet Safety Hub",
     url,
     logo: absoluteUrl("/brand/logo-icon.png"),
     description:
-      "Evidence-based pet care, symptom triage, and veterinary tools for dogs, cats, birds, and small pets.",
+      "Pet Safety Hub publishes educational pet-care guides, including symptom triage, nutrition, and toxin pages for dogs, cats, birds, and small pets.",
     publishingPrinciples: `${url}/editorial-standards`,
-    knowsAbout: ["Veterinary medicine", "Pet nutrition", "Emergency pet care"],
+    knowsAbout: ["Pet health education", "Pet nutrition", "Pet emergency triage"],
     contactPoint: {
       "@type": "ContactPoint",
-      email: "contact@petauthority.com",
+      email: "contact@petsafetyhub.com",
       contactType: "customer support",
       url: `${url}/contact`,
     },
@@ -73,11 +73,11 @@ export function generateWebSiteSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "PetAuthority",
+    name: "Pet Safety Hub",
     url,
     publisher: {
       "@type": "Organization",
-      name: "PetAuthority",
+      name: "Pet Safety Hub",
       url,
     },
   };
@@ -105,7 +105,7 @@ export function generateBreedSchema(breed: Breed) {
         citation: CLINICAL_CITATIONS,
         publisher: {
           "@type": "Organization",
-          name: "PetAuthority",
+          name: "Pet Safety Hub",
           url: getSiteUrl(),
         },
       },
@@ -153,7 +153,7 @@ export function generateVeterinaryArticleSchema(
     },
     publisher: {
       "@type": "Organization",
-      name: "PetAuthority",
+      name: "Pet Safety Hub",
       url: getSiteUrl(),
     },
   };
@@ -196,7 +196,7 @@ export function generateToolSchema(name: string, description: string, url: strin
     },
     provider: {
       "@type": "Organization",
-      name: "PetAuthority",
+      name: "Pet Safety Hub",
       url: getSiteUrl(),
     },
   };

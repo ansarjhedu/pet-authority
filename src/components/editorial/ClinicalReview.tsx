@@ -4,7 +4,7 @@ export function ClinicalReview() {
   return (
     <div className="mb-6 max-w-reading rounded-2xl border border-brand-primary/20 bg-white px-4 py-3">
       <p className="text-sm font-semibold leading-relaxed text-slate-800">
-        Researched & Compiled by the PetAuthority Editorial Team
+        Researched & Compiled by the Pet Safety Hub Editorial Team
       </p>
       <p className="mt-1 text-sm leading-relaxed text-slate-700">
         Clinical Data Sources: ASPCA Animal Poison Control Center & Merck Veterinary Manual

@@ -7,27 +7,29 @@ import { generateOrganizationSchema, generateWebSiteSchema, getSiteUrl } from "@
 import "./globals.css";
 
 const siteDescription =
-  "Evidence-based pet care, symptom triage, and veterinary tools for dogs, cats, birds, and small pets.";
+  "Pet Safety Hub (petsafetyhub.com): symptom triage, nutrition guides, toxin pages, and care tools for dogs, cats, birds, and small pets.";
+
+const adsenseAccount = process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ACCOUNT?.trim();
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   title: {
-    default: "PetAuthority",
-    template: "%s · PetAuthority",
+    default: "Pet Safety Hub",
+    template: "%s · Pet Safety Hub",
   },
   description: siteDescription,
-  applicationName: "PetAuthority",
+  applicationName: "Pet Safety Hub",
   openGraph: {
     type: "website",
-    siteName: "PetAuthority",
-    title: "PetAuthority",
+    siteName: "Pet Safety Hub",
+    title: "Pet Safety Hub",
     description: siteDescription,
     url: getSiteUrl(),
     locale: "en_US",
   },
   twitter: {
     card: "summary",
-    title: "PetAuthority",
+    title: "Pet Safety Hub",
     description: siteDescription,
   },
   robots: {
@@ -37,10 +39,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "./",
   },
-  other: {
-    "google-adsense-account":
-      process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ACCOUNT ?? "REPLACE_WITH_CA_PUB_ID",
-  },
+  ...(adsenseAccount
+    ? {
+        other: {
+          "google-adsense-account": adsenseAccount,
+        },
+      }
+    : {}),
 };
 
 const themeClassName =

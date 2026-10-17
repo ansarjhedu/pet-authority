@@ -89,7 +89,7 @@ export function FoodExplorer() {
           No foods match that search. Try the food name, such as pumpkin, grapes, or xylitol.
         </p>
       ) : (
-        <ul className="grid gap-4 sm:grid-cols-2">
+        <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
           {visible.map((food) => (
             <li key={food.id}>
               <FoodResult food={food} />

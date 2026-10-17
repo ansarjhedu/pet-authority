@@ -258,7 +258,7 @@ function MessageBubble({ message }: { message: ChatMessage }) {
         {isUser ? null : (
           <div className="mb-2 flex items-center gap-2 text-xs font-semibold tracking-wide text-brand-primary uppercase">
             <Shield className="h-4 w-4" aria-hidden="true" />
-            PetAuthority
+            Pet Safety Hub
           </div>
         )}
         <MessageBody text={message.text} />

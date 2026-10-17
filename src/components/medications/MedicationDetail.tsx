@@ -68,7 +68,7 @@ export function MedicationDetail({ medication }: { medication: Medication }) {
 
           <section className="rounded-2xl border border-slate-200 bg-white p-5">
             <h2 className="mb-3 text-2xl font-semibold text-slate-800">
-              Weight and dosage reference
+              Why this page has no home dose
             </h2>
             <p className="mb-6 font-bold leading-relaxed text-triage-red">
               Do not calculate a home dose from this page. A veterinarian uses the animal&apos;s weight

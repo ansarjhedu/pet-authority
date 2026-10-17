@@ -36,7 +36,7 @@ const faqs = [
   {
     question: "Is this a clinical veterinary diagnosis?",
     answer:
-      "No. PetAuthority offers the assistant for education. A licensed veterinarian remains responsible for diagnosis, prognosis, and treatment, including any medication.",
+      "No. Pet Safety Hub offers the assistant for education. A licensed veterinarian remains responsible for diagnosis, prognosis, and treatment, including any medication.",
   },
 ] as const;
 

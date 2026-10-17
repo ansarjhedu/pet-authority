@@ -2,7 +2,7 @@ import type { EmergencyLongGuide } from "@/content/emergency-guides/types";
 
 export const blueberriesDogsGuide: EmergencyLongGuide = {
   title: "Can Dogs Eat Blueberries? Safety, Portions & Risks",
-  lede: "This guide is for dog owners in the United States, the United Kingdom, and Australia who want a plain-berry answer. PetAuthority classes plain fresh or frozen blueberries as Safe in a small portion. It does not clear muffins, jam, yogurt drops, or any sugar-free product.",
+  lede: "This guide is for dog owners in the United States, the United Kingdom, and Australia who want a plain-berry answer. Pet Safety Hub classes plain fresh or frozen blueberries as Safe in a small portion. It does not clear muffins, jam, yogurt drops, or any sugar-free product.",
   sections: [
     {
       heading: "1. Quick Answer and Safety Verdict",

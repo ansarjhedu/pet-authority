@@ -15,6 +15,10 @@
   @media (min-width: 1024px) {
     padding-inline: var(--container-padding-lg);
   }
+
+  @media (min-width: 1280px) {
+    padding-inline: var(--container-padding-xl);
+  }
 }
 
 :root {
@@ -91,7 +95,41 @@
     html {
       scroll-behavior: auto;
     }
+
+    .home-rise {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
   }
+}
+
+@keyframes home-rise {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-rise {
+  animation: home-rise 0.55s ease-out both;
+}
+
+.home-rise-delay-1 {
+  animation-delay: 0.08s;
+}
+
+.home-rise-delay-2 {
+  animation-delay: 0.16s;
+}
+
+.home-rise-delay-3 {
+  animation-delay: 0.24s;
 }
 
 @media print {

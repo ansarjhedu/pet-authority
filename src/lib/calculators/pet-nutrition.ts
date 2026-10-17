@@ -93,7 +93,7 @@ export const LIFE_STAGES: readonly LifeStageFactor[] = [
   },
 ] as const;
 
-export const NUTRITION_PROFILE_KEY = "petauthority-nutrition-profile";
+export const NUTRITION_PROFILE_KEY = "petsafetyhub-nutrition-profile";
 
 export type NutritionProfile = {
   species: Species;

@@ -215,7 +215,7 @@ export function BreedProfileView({ breed }: { breed: Breed }) {
             </div>
             <p className="mb-6 text-sm leading-relaxed text-slate-700">
               <Link href="/editorial-standards" className="font-semibold text-brand-primary hover:underline">
-                Researched & Compiled by the PetAuthority Editorial Team
+                Researched & Compiled by the Pet Safety Hub Editorial Team
               </Link>
               . Clinical Data Sources: ASPCA Animal Poison Control Center & Merck Veterinary Manual.
               This profile is educational, and a licensed veterinarian who has examined your animal

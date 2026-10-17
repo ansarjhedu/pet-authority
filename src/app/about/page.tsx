@@ -2,26 +2,33 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About PetAuthority",
+  title: "About Pet Safety Hub",
   description:
-    "PetAuthority publishes educational pet-care guidance for owners in the United States, the United Kingdom, and Australia.",
+    "Pet Safety Hub publishes educational pet-care guidance for owners in the United States, the United Kingdom, and Australia.",
 };
 
 export default function AboutPage() {
   return (
     <div className="container py-8 lg:py-12">
-      <article className="max-w-reading">
+      <article className="mx-auto max-w-reading">
         <p className="mb-3 text-sm font-semibold tracking-wide text-brand-accent-700 uppercase">
           About the publisher
         </p>
         <h1 className="mb-4 text-3xl font-semibold tracking-tight text-brand-primary sm:text-4xl">
-          About PetAuthority
+          About Pet Safety Hub
         </h1>
         <p className="mb-6 text-slate-700">
-          PetAuthority explains everyday care, nutrition, symptoms, and emergencies for dogs, cats,
-          birds, and small pets. The pages are written for owners in the United States, the United
-          Kingdom, and Australia. A licensed veterinarian who has examined the animal remains
-          responsible for diagnosis and treatment.
+          Pet Safety Hub at{" "}
+          <a
+            href="https://www.petsafetyhub.com"
+            className="font-semibold text-brand-primary hover:underline"
+          >
+            www.petsafetyhub.com
+          </a>{" "}
+          covers everyday care, nutrition, symptoms, and emergencies for dogs, cats, birds, and
+          small pets. Guides are written for owners in the United States, the United Kingdom, and
+          Australia. A licensed veterinarian who has examined the animal remains responsible for
+          diagnosis and treatment.
         </p>
         <h2 className="mb-3 text-2xl font-semibold text-brand-primary">What this site covers</h2>
         <p className="mb-6 text-slate-700">
@@ -32,7 +39,7 @@ export default function AboutPage() {
         </p>
         <h2 className="mb-3 text-2xl font-semibold text-brand-primary">Who compiles the clinical pages</h2>
         <p className="mb-6 text-slate-700">
-          The PetAuthority Editorial Team researches and compiles these pages from published
+          The Pet Safety Hub Editorial Team researches and compiles these pages from published
           veterinary references, including the ASPCA Animal Poison Control Center and the Merck
           Veterinary Manual. The{" "}
           <Link href="/editorial-standards" className="font-semibold text-brand-primary hover:underline">
@@ -47,7 +54,7 @@ export default function AboutPage() {
           <Link href="/contact" className="font-semibold text-brand-primary hover:underline">
             contact page
           </Link>
-          . PetAuthority does not examine an individual animal and does not provide emergency triage
+          . Pet Safety Hub does not examine an individual animal and does not provide emergency triage
           by email.
         </p>
       </article>

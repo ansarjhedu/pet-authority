@@ -68,7 +68,7 @@ export function MedicationExplorer({ medications }: { medications: Medication[] 
           No medicines match that search.
         </p>
       ) : (
-        <ul className="grid gap-4 sm:grid-cols-2">
+        <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
           {visible.map((medication) => (
             <li key={medication.id}>
               <article className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-5">
