@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MEDIAVINE_CONTENT_CLASS } from "@/components/ads/MediavineScript";
 import { ClinicalReview } from "@/components/editorial/ClinicalReview";
 import { SnippetAnswer } from "@/components/editorial/SnippetAnswer";
+import { DetailHero } from "@/components/media/DetailHero";
 import { FoodLongArticle } from "@/components/nutrition/FoodLongArticle";
 import { HotlineBar } from "@/components/emergency/HotlineBar";
 import { getFoodLongGuide } from "@/content/food-guides";
@@ -13,15 +14,9 @@ import {
   foodServingParagraph,
   foodSnippet,
 } from "@/lib/editorial/copy";
+import { foodImage } from "@/lib/images";
 import { foodEmergencyHref } from "@/lib/nutrition/directory";
 import { SAFETY_LABEL, SPECIES_LABEL, type FoodItem } from "@/lib/nutrition/types";
-import { cn } from "@/lib/utils";
-
-const PILL: Record<FoodItem["safetyStatus"], string> = {
-  SAFE: "bg-triage-green text-white",
-  CAUTION: "bg-triage-yellow text-triage-yellow-foreground",
-  TOXIC_DEADLY: "bg-triage-red text-white",
-};
 
 export function FoodDetail({ food }: { food: FoodItem }) {
   const longGuide = getFoodLongGuide(food.slug);
@@ -29,14 +24,28 @@ export function FoodDetail({ food }: { food: FoodItem }) {
   const lifeThreatening = food.safetyStatus !== "SAFE";
   const eaten = foodEatenParagraphs(food);
 
+  const badgeTone =
+    food.safetyStatus === "SAFE"
+      ? "safe"
+      : food.safetyStatus === "CAUTION"
+        ? "caution"
+        : "toxic";
+
   return (
-    <div className="container pb-8 lg:pb-12">
-      <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_20rem]">
+    <div className="mx-auto w-full max-w-[100rem] px-4 pb-8 sm:px-6 lg:px-8 xl:px-10 lg:pb-12">
+      <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_20rem] xl:gap-10">
         {longGuide ? (
           <FoodLongArticle food={food} longGuide={longGuide} />
         ) : (
         <article className={MEDIAVINE_CONTENT_CLASS}>
-          <header className="mb-8 max-w-reading">
+          <header className="mb-8">
+            <DetailHero
+              src={foodImage(food.slug)}
+              alt={`${food.name} for ${SPECIES_LABEL[food.species]}`}
+              badge={SAFETY_LABEL[food.safetyStatus]}
+              badgeTone={badgeTone}
+            />
+            <div className="max-w-reading">
             <div className="mb-3 text-sm font-semibold tracking-wide text-brand-accent-700 uppercase">
               <Link href="/nutrition" className="hover:underline">
                 Food safety
@@ -47,13 +56,6 @@ export function FoodDetail({ food }: { food: FoodItem }) {
             <h1 className="mb-4 text-3xl font-semibold tracking-tight text-brand-primary sm:text-4xl">
               {food.name} for {SPECIES_LABEL[food.species].toLowerCase()}
             </h1>
-            <div
-              className={cn(
-                "inline-flex min-h-11 items-center rounded-full px-4 text-sm font-bold",
-                PILL[food.safetyStatus],
-              )}
-            >
-              {SAFETY_LABEL[food.safetyStatus]}
             </div>
           </header>
           <ClinicalReview />

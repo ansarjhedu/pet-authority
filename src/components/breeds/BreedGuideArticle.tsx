@@ -3,9 +3,11 @@ import { MEDIAVINE_CONTENT_CLASS } from "@/components/ads/MediavineScript";
 import { ClinicalReview } from "@/components/editorial/ClinicalReview";
 import { DirectAnswer, SnippetAnswer } from "@/components/editorial/SnippetAnswer";
 import { HotlineBar } from "@/components/emergency/HotlineBar";
+import { DetailHero } from "@/components/media/DetailHero";
 import { takeLeadSnippet } from "@/lib/editorial/lead";
 import type { BreedGuide, GuideBlock } from "@/lib/breeds/guide";
 import { SPECIES_LABEL, SPECIES_PATH, type Breed } from "@/lib/breeds/types";
+import { breedImage } from "@/lib/images";
 
 function GuideBlocks({ blocks }: { blocks: GuideBlock[] }) {
   return blocks.map((block, index) => {
@@ -110,6 +112,7 @@ export function BreedGuideArticle({ breed, guide }: { breed: Breed; guide: Breed
   return (
     <article className={MEDIAVINE_CONTENT_CLASS}>
       <header className="mb-8 max-w-reading">
+        <DetailHero src={breedImage(breed.slug)} alt={`${breed.name} portrait`} />
         <div className="mb-3 text-sm font-semibold tracking-wide text-brand-accent-700 uppercase">
           <Link href={SPECIES_PATH[breed.species]} className="hover:underline">
             {SPECIES_LABEL[breed.species]}

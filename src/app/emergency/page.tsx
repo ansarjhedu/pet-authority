@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { EmergencyBoard } from "@/components/emergency/EmergencyBoard";
 import { HotlineBar } from "@/components/emergency/HotlineBar";
+import { HubBanner } from "@/components/media/HubBanner";
 import { EMERGENCY_GUIDES } from "@/lib/clinical/guides";
+import { hubImage } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Pet Emergency Guide",
@@ -12,19 +14,15 @@ export const metadata: Metadata = {
 
 export default function EmergencyPage() {
   return (
-    <div className="container py-8 lg:py-12">
-      <header className="mb-6 max-w-reading">
-        <p className="mb-3 text-sm font-semibold tracking-wide text-triage-red uppercase">
-          Act first
-        </p>
-        <h1 className="mb-4 text-3xl font-semibold tracking-tight text-slate-800 sm:text-4xl">
-          Pet emergency guide
-        </h1>
-        <p className="mb-0 text-slate-700">
-          Pick the species, open the matching guide, and call a hospital before you leave. These
-          pages support first decisions. A licensed veterinarian examines and treats your pet.
-        </p>
-      </header>
+    <div className="mx-auto w-full max-w-[100rem] px-4 py-8 sm:px-6 lg:px-8 xl:px-10 lg:py-12">
+      <HubBanner
+        src={hubImage("emergency")}
+        alt="Veterinary emergency hospital"
+        eyebrow="Act first"
+        title="Pet emergency guide"
+        lede="Pick the species, open the matching guide, and call a hospital before you leave. These pages support first decisions. A licensed veterinarian examines and treats your pet."
+        tone="emergency"
+      />
 
       <div className="mb-6">
         <HotlineBar />

@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { HubBanner } from "@/components/media/HubBanner";
 import { MedicationDisclaimer } from "@/components/medications/MedicationDisclaimer";
 import { MedicationExplorer } from "@/components/medications/MedicationExplorer";
 import { MEDICATIONS } from "@/lib/medications/directory";
+import { hubImage } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Medications & Safety",
@@ -12,21 +14,15 @@ export const metadata: Metadata = {
 
 export default function MedicationsPage() {
   return (
-    <div className="container py-8 lg:py-12">
+    <div className="mx-auto w-full max-w-[100rem] px-4 py-8 sm:px-6 lg:px-8 xl:px-10 lg:py-12">
       <MedicationDisclaimer />
-      <header className="mb-8 max-w-reading">
-        <p className="mb-3 text-sm font-semibold tracking-wide text-brand-accent-700 uppercase">
-          Clinical safety
-        </p>
-        <h1 className="mb-4 text-3xl font-semibold tracking-tight text-brand-primary sm:text-4xl">
-          Medications and safety
-        </h1>
-        <p className="mb-0 text-slate-700">
-          Compare medicines a veterinarian may prescribe with human pain tablets that injure the
-          stomach, kidneys, or blood. The notes explain the risk. They do not tell you how many
-          milligrams to give.
-        </p>
-      </header>
+      <HubBanner
+        src={hubImage("medications")}
+        alt="Pet medication safety"
+        eyebrow="Clinical safety"
+        title="Medications and safety"
+        lede="Compare medicines a veterinarian may prescribe with human pain tablets that injure the stomach, kidneys, or blood. The notes explain the risk. They do not tell you how many milligrams to give."
+      />
       <MedicationExplorer medications={MEDICATIONS} />
     </div>
   );

@@ -68,6 +68,10 @@
   svg {
     display: block;
     max-width: 100%;
+  }
+
+  /* Do not force height:auto on next/image fill (breaks aspect frames). */
+  img:not([data-nimg]) {
     height: auto;
   }
 

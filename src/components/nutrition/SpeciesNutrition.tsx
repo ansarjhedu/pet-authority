@@ -1,4 +1,7 @@
 import Link from "next/link";
+import { ContentImage, MediaFrame } from "@/components/media/ContentImage";
+import { HubBanner } from "@/components/media/HubBanner";
+import { foodImage, hubImage } from "@/lib/images";
 
 const DOG_STAGES = [
   {
@@ -37,24 +40,24 @@ const CAT_STAGES = [
 ] as const;
 
 const DOG_CHIPS = [
-  { href: "/nutrition/pumpkin-dogs", label: "Pumpkin" },
-  { href: "/nutrition/blueberries-dogs", label: "Blueberries" },
-  { href: "/nutrition/cooked-chicken-dogs", label: "Cooked chicken" },
-  { href: "/nutrition/carrots-dogs", label: "Carrots" },
-  { href: "/nutrition/chocolate-dogs", label: "Chocolate" },
-  { href: "/nutrition/grapes-raisins-dogs", label: "Grapes" },
-  { href: "/nutrition/xylitol-dogs", label: "Xylitol" },
-  { href: "/nutrition/onions-garlic-dogs", label: "Onions" },
+  { href: "/nutrition/pumpkin-dogs", slug: "pumpkin-dogs", label: "Pumpkin" },
+  { href: "/nutrition/blueberries-dogs", slug: "blueberries-dogs", label: "Blueberries" },
+  { href: "/nutrition/cooked-chicken-dogs", slug: "cooked-chicken-dogs", label: "Cooked chicken" },
+  { href: "/nutrition/carrots-dogs", slug: "carrots-dogs", label: "Carrots" },
+  { href: "/nutrition/chocolate-dogs", slug: "chocolate-dogs", label: "Chocolate" },
+  { href: "/nutrition/grapes-raisins-dogs", slug: "grapes-raisins-dogs", label: "Grapes" },
+  { href: "/nutrition/xylitol-dogs", slug: "xylitol-dogs", label: "Xylitol" },
+  { href: "/nutrition/onions-garlic-dogs", slug: "onions-garlic-dogs", label: "Onions" },
 ] as const;
 
 const CAT_CHIPS = [
-  { href: "/nutrition/pumpkin-cats", label: "Pumpkin" },
-  { href: "/nutrition/cooked-chicken-cats", label: "Cooked chicken" },
-  { href: "/nutrition/salmon-cats", label: "Salmon" },
-  { href: "/nutrition/blueberries-cats", label: "Blueberries" },
-  { href: "/nutrition/lilies-cats", label: "Lilies" },
-  { href: "/nutrition/onions-garlic-cats", label: "Onions" },
-  { href: "/nutrition/chocolate-cats", label: "Chocolate" },
+  { href: "/nutrition/pumpkin-cats", slug: "pumpkin-cats", label: "Pumpkin" },
+  { href: "/nutrition/cooked-chicken-cats", slug: "cooked-chicken-cats", label: "Cooked chicken" },
+  { href: "/nutrition/salmon-cats", slug: "salmon-cats", label: "Salmon" },
+  { href: "/nutrition/blueberries-cats", slug: "blueberries-cats", label: "Blueberries" },
+  { href: "/nutrition/lilies-cats", slug: "lilies-cats", label: "Lilies" },
+  { href: "/nutrition/onions-garlic-cats", slug: "onions-garlic-cats", label: "Onions" },
+  { href: "/nutrition/chocolate-cats", slug: "chocolate-cats", label: "Chocolate" },
 ] as const;
 
 export function SpeciesNutrition({ species }: { species: "dogs" | "cats" }) {
@@ -63,27 +66,20 @@ export function SpeciesNutrition({ species }: { species: "dogs" | "cats" }) {
   const label = species === "dogs" ? "dog" : "cat";
 
   return (
-    <div className="container py-8 lg:py-12">
-      <header className="mb-8 max-w-reading">
-        <p className="mb-3 text-sm font-semibold tracking-wide text-brand-accent-700 uppercase">
-          <Link href={species === "dogs" ? "/dogs" : "/cats"} className="hover:underline">
-            {species === "dogs" ? "Dogs" : "Cats"}
-          </Link>
-        </p>
-        <h1 className="mb-4 text-3xl font-semibold tracking-tight text-brand-primary sm:text-4xl">
-          {species === "dogs" ? "Dog nutrition" : "Cat nutrition"}
-        </h1>
-        <p className="mb-0 text-slate-700">
-          Life stage changes the calorie target. Water needs track the food. The safe-food chips
-          open the species note rather than a generic list.
-        </p>
-      </header>
+    <div className="mx-auto w-full max-w-[100rem] px-4 py-8 sm:px-6 lg:px-8 xl:px-10 lg:py-12">
+      <HubBanner
+        src={hubImage("nutrition")}
+        alt={`${label} nutrition`}
+        eyebrow={species === "dogs" ? "Dogs" : "Cats"}
+        title={species === "dogs" ? "Dog nutrition" : "Cat nutrition"}
+        lede="Life stage changes the calorie target. Water needs track the food. The safe-food cards open the species note rather than a generic list."
+      />
 
-      <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_20rem]">
+      <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_20rem] xl:gap-10">
         <div className="space-y-8">
           <section>
             <h2 className="mb-4 text-2xl font-semibold text-slate-800">From growth to senior</h2>
-            <ul className="space-y-4">
+            <ul className="grid gap-4 sm:grid-cols-3">
               {stages.map((stage) => (
                 <li key={stage.title} className="rounded-2xl border border-slate-200 bg-white p-5">
                   <h3 className="mb-2 text-lg font-semibold text-slate-800">{stage.title}</h3>
@@ -93,9 +89,9 @@ export function SpeciesNutrition({ species }: { species: "dogs" | "cats" }) {
             </ul>
           </section>
 
-          <section className="max-w-reading">
+          <section>
             <h2 className="mb-3 text-2xl font-semibold text-slate-800">Hydration</h2>
-            <p className="mb-0">
+            <p className="mb-0 max-w-reading text-slate-700">
               A practical planning figure is about 1 milliliter of water for each kilocalorie eaten.
               Wet food already contains moisture, so the bowl may look quieter. A sudden increase in
               drinking, or a {label} who will not drink and will not eat, needs a veterinarian.
@@ -103,39 +99,57 @@ export function SpeciesNutrition({ species }: { species: "dogs" | "cats" }) {
           </section>
 
           <section>
-            <h2 className="mb-3 text-2xl font-semibold text-slate-800">Safe and toxic quick search</h2>
-            <ul className="flex flex-wrap gap-2">
+            <h2 className="mb-4 text-2xl font-semibold text-slate-800">
+              Common {label} food notes
+            </h2>
+            <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
               {chips.map((chip) => (
                 <li key={chip.href}>
                   <Link
                     href={chip.href}
-                    className="inline-flex min-h-11 items-center rounded-full border border-brand-primary/20 bg-white px-4 text-sm font-semibold text-brand-primary hover:bg-brand-primary-50"
+                    className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white transition-colors hover:border-brand-primary/30"
                   >
-                    {chip.label}
+                    <MediaFrame ratio="aspect-[4/3]" className="rounded-none">
+                      <ContentImage
+                        src={foodImage(chip.slug)}
+                        alt={chip.label}
+                        sizes="(max-width: 640px) 50vw, 25vw"
+                      />
+                    </MediaFrame>
+                    <span className="p-4 text-sm font-semibold text-brand-primary group-hover:underline">
+                      {chip.label}
+                    </span>
                   </Link>
                 </li>
               ))}
             </ul>
-            <p className="mt-4 mb-0 text-sm">
-              <Link href="/nutrition" className="font-bold text-brand-primary hover:underline">
-                Search the full food list
+            <p className="mt-4 mb-0">
+              <Link href="/nutrition" className="text-sm font-semibold text-brand-primary hover:underline">
+                Open the full food safety search →
               </Link>
             </p>
           </section>
         </div>
 
-        <aside className="h-fit rounded-2xl bg-brand-primary p-5 text-white">
-          <h2 className="mb-3 text-lg font-semibold">Daily portions</h2>
+        <aside className="h-fit rounded-2xl bg-brand-primary p-5 text-white lg:sticky lg:top-28">
+          <h2 className="mb-3 text-lg font-semibold">Portion tools</h2>
           <p className="mb-4 text-sm text-brand-primary-100">
-            Enter weight, life stage, and body condition. The calculator uses WSAVA resting-energy
-            math and turns it into a food portion.
+            Size a daily calorie target, then turn it into a week of meals.
           </p>
-          <Link
-            href="/tools/pet-food-calculator"
-            className="inline-flex min-h-11 items-center rounded-full bg-white px-5 text-sm font-bold text-brand-primary hover:bg-brand-accent-50"
-          >
-            Open the pet food calculator
-          </Link>
+          <div className="flex flex-col gap-3">
+            <Link
+              href="/tools/pet-food-calculator"
+              className="inline-flex min-h-11 items-center justify-center rounded-full bg-white px-4 text-sm font-semibold text-brand-primary hover:bg-brand-accent-50"
+            >
+              Pet food calculator
+            </Link>
+            <Link
+              href="/tools/diet-planner"
+              className="inline-flex min-h-11 items-center justify-center rounded-full border border-white/40 px-4 text-sm font-semibold text-white hover:bg-white/10"
+            >
+              7-day diet planner
+            </Link>
+          </div>
         </aside>
       </div>
     </div>

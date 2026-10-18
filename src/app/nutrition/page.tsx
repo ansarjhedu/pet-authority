@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { HubBanner } from "@/components/media/HubBanner";
 import { FoodExplorer } from "@/components/nutrition/FoodExplorer";
+import { hubImage } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Food Safety",
@@ -10,19 +12,14 @@ export const metadata: Metadata = {
 
 export default function NutritionPage() {
   return (
-    <div className="container py-8 lg:py-12">
-      <header className="mb-8 max-w-reading">
-        <p className="mb-3 text-sm font-semibold tracking-wide text-brand-accent-700 uppercase">
-          Nutrition
-        </p>
-        <h1 className="mb-4 text-3xl font-semibold tracking-tight text-brand-primary sm:text-4xl">
-          Can my pet eat this?
-        </h1>
-        <p className="mb-0 text-slate-700">
-          Search a food and the species. Green means a plain portion can fit a treat plan. Amber
-          means strict limits. Red means do not wait for symptoms before you call.
-        </p>
-      </header>
+    <div className="mx-auto w-full max-w-[100rem] px-4 py-8 sm:px-6 lg:px-8 xl:px-10 lg:py-12">
+      <HubBanner
+        src={hubImage("nutrition")}
+        alt="Pet nutrition and food safety"
+        eyebrow="Nutrition"
+        title="Can my pet eat this?"
+        lede="Search a food and the species. Green means a plain portion can fit a treat plan. Amber means strict limits. Red means do not wait for symptoms before you call."
+      />
       <FoodExplorer />
     </div>
   );

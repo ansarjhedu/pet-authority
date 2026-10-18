@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { DetailHero } from "@/components/media/DetailHero";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { PetFoodCalculator } from "@/components/tools/PetFoodCalculator";
+import { toolImage } from "@/lib/images";
 import { generateToolSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
@@ -81,6 +83,10 @@ export default function PetFoodCalculatorPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <header className="mb-8 max-w-reading">
+        <DetailHero
+          src={toolImage("pet-food-calculator")}
+          alt="Pet food measuring cup and scale"
+        />
         <p className="mb-3 text-sm font-semibold tracking-wide text-brand-accent-700 uppercase">
           Nutrition tool
         </p>

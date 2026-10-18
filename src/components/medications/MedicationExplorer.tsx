@@ -2,11 +2,13 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { ContentImage, MediaFrame } from "@/components/media/ContentImage";
 import {
   filterMedications,
   type MedicationFilter,
 } from "@/lib/medications/directory";
 import { PRESCRIPTION_LABEL, type Medication } from "@/lib/medications/types";
+import { medImage } from "@/lib/images";
 import { cn } from "@/lib/utils";
 
 const FILTERS: Array<{ id: MedicationFilter; label: string }> = [
@@ -71,29 +73,40 @@ export function MedicationExplorer({ medications }: { medications: Medication[] 
         <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
           {visible.map((medication) => (
             <li key={medication.id}>
-              <article className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-5">
-                <p
-                  className={cn(
-                    "mb-3 text-xs font-bold tracking-wide uppercase",
-                    medication.prescriptionStatus === "LETHAL_TOXIN_DO_NOT_GIVE"
-                      ? "text-triage-red"
-                      : "text-brand-primary",
-                  )}
-                >
-                  {PRESCRIPTION_LABEL[medication.prescriptionStatus]}
-                </p>
-                <h2 className="mb-2 text-xl font-semibold text-slate-800">
-                  <Link href={`/medications/${medication.slug}`} className="hover:text-brand-primary">
-                    {medication.name}
+              <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white">
+                <div className="relative">
+                  <MediaFrame ratio="aspect-[4/3]" className="rounded-none">
+                    <ContentImage
+                      src={medImage(medication.slug)}
+                      alt={`${medication.name} medication`}
+                      sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                    />
+                  </MediaFrame>
+                  <span
+                    className={cn(
+                      "absolute top-3 left-3 rounded-xl px-2.5 py-1 text-xs font-bold tracking-wide text-white uppercase shadow-md ring-2 ring-white/90",
+                      medication.prescriptionStatus === "LETHAL_TOXIN_DO_NOT_GIVE"
+                        ? "bg-triage-red"
+                        : "bg-brand-primary",
+                    )}
+                  >
+                    {PRESCRIPTION_LABEL[medication.prescriptionStatus]}
+                  </span>
+                </div>
+                <div className="flex flex-1 flex-col p-5">
+                  <h2 className="mb-2 text-xl font-semibold text-slate-800">
+                    <Link href={`/medications/${medication.slug}`} className="hover:text-brand-primary">
+                      {medication.name}
+                    </Link>
+                  </h2>
+                  <p className="mb-4 text-sm text-slate-700">{medication.commonBrands.join(", ")}</p>
+                  <Link
+                    href={`/medications/${medication.slug}`}
+                    className="mt-auto inline-flex min-h-11 items-center text-sm font-bold text-brand-primary hover:underline"
+                  >
+                    Read the safety note
                   </Link>
-                </h2>
-                <p className="mb-4 text-sm text-slate-700">{medication.commonBrands.join(", ")}</p>
-                <Link
-                  href={`/medications/${medication.slug}`}
-                  className="mt-auto inline-flex min-h-11 items-center text-sm font-bold text-brand-primary hover:underline"
-                >
-                  Read the safety note
-                </Link>
+                </div>
               </article>
             </li>
           ))}

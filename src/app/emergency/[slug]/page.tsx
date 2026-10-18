@@ -5,6 +5,7 @@ import { MEDIAVINE_CONTENT_CLASS } from "@/components/ads/MediavineScript";
 import { ClinicalReview } from "@/components/editorial/ClinicalReview";
 import { SnippetAnswer } from "@/components/editorial/SnippetAnswer";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { DetailHero } from "@/components/media/DetailHero";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { ActionChecklist } from "@/components/emergency/ActionChecklist";
 import { EmergencyLongArticle } from "@/components/emergency/EmergencyLongArticle";
@@ -18,6 +19,7 @@ import {
   urgencyLabel,
 } from "@/lib/clinical/guides";
 import { emergencyBody, emergencyProcedure, emergencySnippet } from "@/lib/editorial/copy";
+import { emergencyImage } from "@/lib/images";
 import { robotsForGuide } from "@/lib/seo/indexing";
 import { generateBreadcrumbSchema, generateVeterinaryArticleSchema } from "@/lib/seo/schema";
 
@@ -87,6 +89,11 @@ export default async function EmergencyGuidePage({ params }: EmergencyGuidePageP
           <EmergencyLongArticle guide={guide} longGuide={longGuide} />
         ) : (
         <article className={MEDIAVINE_CONTENT_CLASS}>
+          <DetailHero
+            src={emergencyImage(guide.slug)}
+            alt=""
+            className="mb-4 max-w-none"
+          />
           <header className="mb-6 rounded-3xl bg-triage-red px-5 py-6 text-white sm:px-8">
             <div className="mb-3 text-sm font-semibold tracking-wide text-white uppercase">
               {SPECIES_LABEL[guide.species]} · {urgencyLabel(guide.urgency)}

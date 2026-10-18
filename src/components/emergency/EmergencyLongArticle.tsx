@@ -4,8 +4,10 @@ import { ClinicalReview } from "@/components/editorial/ClinicalReview";
 import { DirectAnswer, SnippetAnswer } from "@/components/editorial/SnippetAnswer";
 import type { EmergencyBlock, EmergencyLongGuide } from "@/content/emergency-guides/types";
 import { HotlineCardGrid, hotlineCardsFromLabels } from "@/components/emergency/HotlineBar";
+import { DetailHero } from "@/components/media/DetailHero";
 import { takeLeadSnippet } from "@/lib/editorial/lead";
 import { actionWindowLabel, SPECIES_LABEL, urgencyLabel, type EmergencyGuide } from "@/lib/clinical/guides";
+import { emergencyImage } from "@/lib/images";
 
 export function EmergencyBlocks({ blocks }: { blocks: EmergencyBlock[] }) {
   return blocks.map((block, index) => {
@@ -115,6 +117,11 @@ export function EmergencyLongArticle({
   const { lead, sections } = takeLeadSnippet(longGuide.sections);
   return (
     <article className={MEDIAVINE_CONTENT_CLASS}>
+      <DetailHero
+        src={emergencyImage(guide.slug)}
+        alt=""
+        className="mb-4 max-w-none"
+      />
       <header className="mb-6 rounded-3xl bg-triage-red px-5 py-6 text-white sm:px-8">
         <div className="mb-3 text-sm font-semibold tracking-wide text-white uppercase">
           {SPECIES_LABEL[guide.species]} · {urgencyLabel(guide.urgency)}

@@ -1,5 +1,7 @@
 import { BreedDirectory } from "@/components/breeds/BreedDirectory";
+import { HubBanner } from "@/components/media/HubBanner";
 import { SPECIES_LABEL, type Breed, type BreedSpecies } from "@/lib/breeds/types";
+import { hubImage } from "@/lib/images";
 
 export function BreedHub({
   species,
@@ -13,16 +15,14 @@ export function BreedHub({
   const label = SPECIES_LABEL[species];
 
   return (
-    <div className="container py-8 lg:py-12">
-      <header className="mb-8 max-w-reading">
-        <p className="mb-3 text-sm font-semibold tracking-wide text-brand-accent-700 uppercase">
-          Breed directory
-        </p>
-        <h1 className="mb-4 text-3xl font-semibold tracking-tight text-brand-primary sm:text-4xl">
-          {label}
-        </h1>
-        <p className="mb-0 text-slate-700">{lede}</p>
-      </header>
+    <div className="mx-auto w-full max-w-[100rem] px-4 py-8 sm:px-6 lg:px-8 xl:px-10 lg:py-12">
+      <HubBanner
+        src={hubImage(species)}
+        alt={`${label} care directory`}
+        eyebrow="Breed directory"
+        title={label}
+        lede={lede}
+      />
       <BreedDirectory breeds={breeds} />
     </div>
   );

@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { DetailHero } from "@/components/media/DetailHero";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { DietPlanner } from "@/components/tools/DietPlanner";
+import { toolImage } from "@/lib/images";
 import { generateToolSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
@@ -27,6 +29,7 @@ export default function DietPlannerPage() {
         ]}
       />
       <header className="no-print mb-8 max-w-reading">
+        <DetailHero src={toolImage("diet-planner")} alt="Pet meal prep bowls" />
         <p className="mb-3 text-sm font-semibold tracking-wide text-brand-accent-700 uppercase">
           Nutrition tool
         </p>

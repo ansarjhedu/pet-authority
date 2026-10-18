@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ContentImage, MediaFrame } from "@/components/media/ContentImage";
+import { NOT_FOUND_IMAGE } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Page not found",
@@ -11,6 +13,9 @@ export default function NotFound() {
   return (
     <div className="container flex flex-1 flex-col justify-center py-16 lg:py-24">
       <article className="mx-auto max-w-reading">
+        <MediaFrame ratio="aspect-[4/3]" className="mb-8 rounded-3xl">
+          <ContentImage src={NOT_FOUND_IMAGE} alt="" sizes="(max-width: 768px) 100vw, 640px" />
+        </MediaFrame>
         <p className="mb-3 text-sm font-semibold tracking-wide text-brand-accent-700 uppercase">
           404
         </p>

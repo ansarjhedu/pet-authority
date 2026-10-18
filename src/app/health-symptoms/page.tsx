@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { HubBanner } from "@/components/media/HubBanner";
 import { SymptomExplorer } from "@/components/symptoms/SymptomExplorer";
 import { SYMPTOM_GUIDES } from "@/lib/clinical/guides";
+import { hubImage } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Symptom Triage",
@@ -11,19 +13,14 @@ export const metadata: Metadata = {
 
 export default function SymptomExplorerPage() {
   return (
-    <div className="container py-8 lg:py-12">
-      <header className="mb-8 max-w-reading">
-        <p className="mb-3 text-sm font-semibold tracking-wide text-brand-accent-700 uppercase">
-          Triage
-        </p>
-        <h1 className="mb-4 text-3xl font-semibold tracking-tight text-brand-primary sm:text-4xl">
-          Symptom explorer
-        </h1>
-        <p className="mb-0 text-slate-700">
-          Match the species and the change you see. Red symptoms should go to an emergency
-          hospital. This explorer does not diagnose your pet.
-        </p>
-      </header>
+    <div className="mx-auto w-full max-w-[100rem] px-4 py-8 sm:px-6 lg:px-8 xl:px-10 lg:py-12">
+      <HubBanner
+        src={hubImage("symptoms")}
+        alt="Pet symptom triage"
+        eyebrow="Triage"
+        title="Symptom explorer"
+        lede="Match the species and the change you see. Red symptoms should go to an emergency hospital. This explorer does not diagnose your pet."
+      />
       <SymptomExplorer symptoms={SYMPTOM_GUIDES} />
       <p className="mt-8 mb-0 max-w-reading text-sm text-slate-700">
         If the pet is unconscious, bleeding, seizuring, or bloated, skip the search and open the{" "}

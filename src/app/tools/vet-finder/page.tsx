@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { AlertTriangle } from "lucide-react";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { DetailHero } from "@/components/media/DetailHero";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { VetFinder } from "@/components/tools/VetFinder";
+import { toolImage } from "@/lib/images";
 import { generateToolSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
@@ -73,6 +75,7 @@ export default function VetFinderPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <header className="mb-6 max-w-reading">
+        <DetailHero src={toolImage("vet-finder")} alt="Veterinary emergency hospital entrance" />
         <p className="mb-3 text-sm font-semibold tracking-wide text-brand-accent-700 uppercase">
           Emergency tools
         </p>

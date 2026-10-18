@@ -3,8 +3,10 @@ import { MEDIAVINE_CONTENT_CLASS } from "@/components/ads/MediavineScript";
 import { ClinicalReview } from "@/components/editorial/ClinicalReview";
 import { DirectAnswer } from "@/components/editorial/SnippetAnswer";
 import { EmergencyBlocks } from "@/components/emergency/EmergencyLongArticle";
+import { DetailHero } from "@/components/media/DetailHero";
 import type { EmergencyLongGuide } from "@/content/emergency-guides/types";
 import { takeLeadSnippet } from "@/lib/editorial/lead";
+import { medImage } from "@/lib/images";
 import { PRESCRIPTION_LABEL, type Medication } from "@/lib/medications/types";
 import { cn } from "@/lib/utils";
 
@@ -21,6 +23,7 @@ export function MedicationLongArticle({
   return (
     <article className={MEDIAVINE_CONTENT_CLASS}>
       <header className="mb-8 max-w-reading">
+        <DetailHero src={medImage(medication.slug)} alt={`${medication.name} medication`} />
         <div className="mb-3 text-sm font-semibold tracking-wide text-brand-accent-700 uppercase">
           <Link href="/medications" className="hover:underline">
             Medications and safety

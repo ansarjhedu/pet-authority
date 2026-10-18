@@ -5,6 +5,7 @@ import { MEDIAVINE_CONTENT_CLASS } from "@/components/ads/MediavineScript";
 import { ClinicalReview } from "@/components/editorial/ClinicalReview";
 import { SnippetAnswer } from "@/components/editorial/SnippetAnswer";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { DetailHero } from "@/components/media/DetailHero";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { SymptomLongArticle } from "@/components/symptoms/SymptomLongArticle";
 import { TriageMeter } from "@/components/symptoms/TriageMeter";
@@ -16,6 +17,7 @@ import {
   getSymptomGuide,
 } from "@/lib/clinical/guides";
 import { editorialCopy, symptomLede, symptomSnippet } from "@/lib/editorial/copy";
+import { symptomImage } from "@/lib/images";
 import { robotsForGuide } from "@/lib/seo/indexing";
 import { generateBreadcrumbSchema, generateVeterinaryArticleSchema } from "@/lib/seo/schema";
 
@@ -101,6 +103,10 @@ export default async function SymptomGuidePage({ params }: SymptomPageProps) {
         ) : (
         <article className={MEDIAVINE_CONTENT_CLASS}>
           <header className="mb-8 max-w-reading">
+            <DetailHero
+              src={symptomImage(symptom.species, symptom.slug)}
+              alt={symptom.title}
+            />
             <div className="mb-3 text-sm font-semibold tracking-wide text-brand-accent-700 uppercase">
               {SPECIES_LABEL[symptom.species]}
             </div>

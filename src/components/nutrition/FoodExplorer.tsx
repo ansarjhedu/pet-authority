@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { ContentImage, MediaFrame } from "@/components/media/ContentImage";
 import {
   SAFETY_LABEL,
   SPECIES_LABEL,
@@ -10,6 +11,7 @@ import {
   type SafetyStatus,
 } from "@/lib/nutrition/types";
 import { filterFoods } from "@/lib/nutrition/directory";
+import { foodImage } from "@/lib/images";
 import { cn } from "@/lib/utils";
 
 const SPECIES_OPTIONS: Array<{ id: FoodSpecies | "all"; label: string }> = [
@@ -103,27 +105,41 @@ export function FoodExplorer() {
 
 function FoodResult({ food }: { food: FoodItem }) {
   return (
-    <article className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-5">
-      <div className="mb-3 flex flex-wrap gap-2">
-        <span className="rounded-full bg-brand-primary-50 px-2.5 py-1 text-xs font-bold tracking-wide text-brand-primary uppercase">
+    <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white">
+      <div className="relative">
+        <MediaFrame ratio="aspect-[4/3]" className="rounded-none">
+          <ContentImage
+            src={foodImage(food.slug)}
+            alt={`${food.name} for ${SPECIES_LABEL[food.species]}`}
+            sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
+          />
+        </MediaFrame>
+        <span className="absolute top-3 left-3 rounded-xl bg-brand-primary px-2.5 py-1 text-xs font-bold tracking-wide text-white uppercase shadow-md ring-2 ring-white/90">
           {SPECIES_LABEL[food.species]}
         </span>
-        <span className={cn("rounded-full px-2.5 py-1 text-xs font-bold", PILL[food.safetyStatus])}>
+        <span
+          className={cn(
+            "absolute top-3 right-3 rounded-xl px-2.5 py-1 text-xs font-bold shadow-md ring-2 ring-white/90",
+            PILL[food.safetyStatus],
+          )}
+        >
           {SAFETY_LABEL[food.safetyStatus]}
         </span>
       </div>
-      <h2 className="mb-2 text-xl font-semibold text-slate-800">
-        <Link href={`/nutrition/${food.slug}`} className="hover:text-brand-primary">
-          {food.name}
+      <div className="flex flex-1 flex-col p-5">
+        <h2 className="mb-2 text-xl font-semibold text-slate-800">
+          <Link href={`/nutrition/${food.slug}`} className="hover:text-brand-primary">
+            {food.name}
+          </Link>
+        </h2>
+        <p className="mb-4 text-sm text-slate-700">{food.safeServingSize}</p>
+        <Link
+          href={`/nutrition/${food.slug}`}
+          className="mt-auto inline-flex min-h-11 items-center text-sm font-bold text-brand-primary hover:underline"
+        >
+          Open the safety note
         </Link>
-      </h2>
-      <p className="mb-4 text-sm text-slate-700">{food.safeServingSize}</p>
-      <Link
-        href={`/nutrition/${food.slug}`}
-        className="mt-auto inline-flex min-h-11 items-center text-sm font-bold text-brand-primary hover:underline"
-      >
-        Open the safety note
-      </Link>
+      </div>
     </article>
   );
 }

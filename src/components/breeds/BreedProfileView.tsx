@@ -4,6 +4,7 @@ import { MEDIAVINE_CONTENT_CLASS } from "@/components/ads/MediavineScript";
 import { BreedGuideArticle } from "@/components/breeds/BreedGuideArticle";
 import { ClinicalReview } from "@/components/editorial/ClinicalReview";
 import { SnippetAnswer } from "@/components/editorial/SnippetAnswer";
+import { DetailHero } from "@/components/media/DetailHero";
 import { getBreedGuide } from "@/content/breed-guides";
 import {
   breedQuestion,
@@ -15,6 +16,7 @@ import {
 } from "@/lib/editorial/copy";
 import { healthRiskHref } from "@/lib/breeds/directory";
 import { SPECIES_LABEL, SPECIES_PATH, type Breed } from "@/lib/breeds/types";
+import { breedImage } from "@/lib/images";
 
 const SIZE_LABEL: Record<Breed["size"], string> = {
   toy: "Toy",
@@ -65,6 +67,7 @@ export function BreedProfileView({ breed }: { breed: Breed }) {
         ) : (
         <article className={MEDIAVINE_CONTENT_CLASS}>
           <header className="mb-8 max-w-reading">
+            <DetailHero src={breedImage(breed.slug)} alt={`${breed.name} portrait`} />
             <div className="mb-3 text-sm font-semibold tracking-wide text-brand-accent-700 uppercase">
               <Link href={SPECIES_PATH[breed.species]} className="hover:underline">
                 {SPECIES_LABEL[breed.species]}

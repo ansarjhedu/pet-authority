@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { ContentImage, MediaFrame } from "@/components/media/ContentImage";
 import {
   SEVERITY_LABEL,
   SPECIES_LABEL,
@@ -9,6 +10,7 @@ import {
   type Species,
   type SymptomGuide,
 } from "@/lib/clinical/guides";
+import { symptomImage } from "@/lib/images";
 import { cn } from "@/lib/utils";
 
 const SPECIES_TABS: Array<{ id: "all" | Species; label: string }> = [
@@ -124,32 +126,41 @@ export function SymptomExplorer({ symptoms }: { symptoms: SymptomGuide[] }) {
         <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
           {visible.map((symptom) => (
             <li key={symptom.id}>
-              <article className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-5">
-                <div className="mb-3 flex flex-wrap gap-2">
-                  <span className="rounded-full bg-brand-primary-50 px-2.5 py-1 text-xs font-bold tracking-wide text-brand-primary uppercase">
+              <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white">
+                <div className="relative">
+                  <MediaFrame ratio="aspect-[4/3]" className="rounded-none">
+                    <ContentImage
+                      src={symptomImage(symptom.species, symptom.slug)}
+                      alt={symptom.title}
+                      sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                    />
+                  </MediaFrame>
+                  <span className="absolute top-3 left-3 rounded-xl bg-brand-primary px-2.5 py-1 text-xs font-bold tracking-wide text-white uppercase shadow-md ring-2 ring-white/90">
                     {SPECIES_LABEL[symptom.species]}
                   </span>
                   <span
                     className={cn(
-                      "rounded-full px-2.5 py-1 text-xs font-bold",
+                      "absolute top-3 right-3 rounded-xl px-2.5 py-1 text-xs font-bold shadow-md ring-2 ring-white/90",
                       PILL_CLASS[symptom.severityTier],
                     )}
                   >
                     {SEVERITY_LABEL[symptom.severityTier]}
                   </span>
                 </div>
-                <h2 className="mb-2 text-lg font-semibold text-slate-800">{symptom.title}</h2>
-                <p className="mb-3 text-sm text-slate-700">{symptom.shortDescription}</p>
-                <p className="mb-4 text-sm text-slate-700">
-                  <span className="font-semibold text-slate-800">Common causes: </span>
-                  {symptom.commonCauses.slice(0, 2).join("; ")}.
-                </p>
-                <Link
-                  href={`/health-symptoms/${symptom.species}/${symptom.slug}`}
-                  className="mt-auto inline-flex min-h-11 items-center text-sm font-bold text-brand-primary hover:underline"
-                >
-                  Open the full guide →
-                </Link>
+                <div className="flex flex-1 flex-col p-5">
+                  <h2 className="mb-2 text-lg font-semibold text-slate-800">{symptom.title}</h2>
+                  <p className="mb-3 text-sm text-slate-700">{symptom.shortDescription}</p>
+                  <p className="mb-4 text-sm text-slate-700">
+                    <span className="font-semibold text-slate-800">Common causes: </span>
+                    {symptom.commonCauses.slice(0, 2).join("; ")}.
+                  </p>
+                  <Link
+                    href={`/health-symptoms/${symptom.species}/${symptom.slug}`}
+                    className="mt-auto inline-flex min-h-11 items-center text-sm font-bold text-brand-primary hover:underline"
+                  >
+                    Open the full guide →
+                  </Link>
+                </div>
               </article>
             </li>
           ))}

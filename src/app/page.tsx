@@ -16,21 +16,30 @@ import {
   Utensils,
   type LucideIcon,
 } from "lucide-react";
+import { ContentImage, MediaFrame } from "@/components/media/ContentImage";
+import {
+  HOME_CARE_IMAGES,
+  HOME_CATEGORY_IMAGES,
+  HOME_HERO_IMAGE,
+  HOME_TOXIN_IMAGES,
+  toolImage,
+} from "@/lib/images";
 
 const categories: {
   label: string;
   detail: string;
   href: string;
   icon: LucideIcon;
+  image: string;
 }[] = [
-  { label: "Dogs", detail: "Breeds and daily care", href: "/dogs", icon: Dog },
-  { label: "Cats", detail: "Health and home care", href: "/cats", icon: Cat },
-  { label: "Birds", detail: "Aviary warning signs", href: "/birds", icon: Bird },
-  { label: "Small Pets", detail: "Rabbits and pocket pets", href: "/small-pets", icon: Rabbit },
-  { label: "Symptoms & Triage", detail: "What can wait, what cannot", href: "/health-symptoms", icon: HeartPulse },
-  { label: "Food Calculator", detail: "Portions from body weight", href: "/tools/pet-food-calculator", icon: Calculator },
-  { label: "Free AI Assistant", detail: "Sort a care question", href: "/tools/ai-assistant", icon: Sparkles },
-  { label: "Vet Finder", detail: "Clinics near a place name", href: "/tools/vet-finder", icon: MapPin },
+  { label: "Dogs", detail: "Breeds and daily care", href: "/dogs", icon: Dog, image: HOME_CATEGORY_IMAGES.dogs },
+  { label: "Cats", detail: "Health and home care", href: "/cats", icon: Cat, image: HOME_CATEGORY_IMAGES.cats },
+  { label: "Birds", detail: "Aviary warning signs", href: "/birds", icon: Bird, image: HOME_CATEGORY_IMAGES.birds },
+  { label: "Small Pets", detail: "Rabbits and pocket pets", href: "/small-pets", icon: Rabbit, image: HOME_CATEGORY_IMAGES["small-pets"] },
+  { label: "Symptoms & Triage", detail: "What can wait, what cannot", href: "/health-symptoms", icon: HeartPulse, image: HOME_CATEGORY_IMAGES.symptoms },
+  { label: "Food Calculator", detail: "Portions from body weight", href: "/tools/pet-food-calculator", icon: Calculator, image: HOME_CATEGORY_IMAGES.calculator },
+  { label: "Free AI Assistant", detail: "Sort a care question", href: "/tools/ai-assistant", icon: Sparkles, image: HOME_CATEGORY_IMAGES.ai },
+  { label: "Vet Finder", detail: "Clinics near a place name", href: "/tools/vet-finder", icon: MapPin, image: HOME_CATEGORY_IMAGES["vet-finder"] },
 ];
 
 const triageLevels = [
@@ -147,30 +156,35 @@ const homeTools: {
   detail: string;
   href: string;
   icon: LucideIcon;
+  image: string;
 }[] = [
   {
     title: "Pet food calculator",
     detail: "Portion ranges from body weight for dogs and cats.",
     href: "/tools/pet-food-calculator",
     icon: Calculator,
+    image: toolImage("pet-food-calculator"),
   },
   {
     title: "Diet planner",
     detail: "A week of meals and a food-transition schedule you can print.",
     href: "/tools/diet-planner",
     icon: Utensils,
+    image: toolImage("diet-planner"),
   },
   {
     title: "Free AI assistant",
     detail: "Sort a care question into monitor, urgent, or emergency.",
     href: "/tools/ai-assistant",
     icon: Sparkles,
+    image: toolImage("ai-assistant"),
   },
   {
     title: "Vet finder",
     detail: "Open clinics near a city or postal code when you need to travel.",
     href: "/tools/vet-finder",
     icon: MapPin,
+    image: toolImage("vet-finder"),
   },
 ];
 
@@ -204,61 +218,87 @@ const poisonLines = [
 
 export default function Home() {
   return (
-    <div className="container py-8 lg:py-12">
-      <div className="w-full space-y-14">
-        <section className="home-rise overflow-hidden rounded-3xl bg-brand-primary text-white">
-          <div className="max-w-3xl p-6 sm:p-10 xl:p-12">
-            <p className="mb-3 text-sm font-semibold tracking-wide text-brand-accent-200 uppercase">
-              Pet Safety Hub
-            </p>
-            <h1 className="mb-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl xl:text-5xl">
-              Symptom triage, toxin guides, and feeding help you can act on tonight.
-            </h1>
-            <p className="mb-6 text-base leading-relaxed text-brand-primary-100 xl:text-lg">
-              Start with Code Green, Yellow, or Red. Open a grape, chocolate, lily, or xylitol page
-              when exposure already happened. A licensed veterinarian still makes the diagnosis.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Link
-                href="/health-symptoms"
-                className="inline-flex min-h-11 items-center rounded-full bg-white px-5 text-sm font-semibold text-brand-primary hover:bg-brand-accent-50"
-              >
-                Start with symptoms
-              </Link>
-              <Link
-                href="/emergency"
-                className="inline-flex min-h-11 items-center rounded-full bg-brand-accent-800 px-5 text-sm font-semibold text-white hover:bg-brand-accent-900"
-              >
-                Emergency guide
-              </Link>
-              <Link
-                href="/tools/ai-assistant"
-                className="inline-flex min-h-11 items-center rounded-full border border-white/40 px-5 text-sm font-semibold text-white hover:bg-white/10"
-              >
-                Free AI assistant
-              </Link>
-            </div>
+    <div className="w-full pb-12 lg:pb-16">
+      <section className="home-rise relative min-h-[22rem] overflow-hidden bg-brand-primary text-white sm:min-h-[26rem] xl:min-h-[30rem]">
+        <div className="absolute inset-0">
+          <ContentImage
+            src={HOME_HERO_IMAGE}
+            alt="Pet owner with a calm dog and cat at home"
+            priority
+            sizes="100vw"
+            className="object-cover opacity-45"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-primary via-brand-primary/88 to-brand-primary/50" />
+        </div>
+        <div className="relative mx-auto flex min-h-[22rem] w-full max-w-[100rem] flex-col justify-end px-4 py-10 sm:min-h-[26rem] sm:px-6 sm:py-14 lg:px-8 xl:min-h-[30rem] xl:px-10 xl:py-16">
+          <p className="mb-3 text-sm font-semibold tracking-wide text-brand-accent-200 uppercase">
+            Pet Safety Hub
+          </p>
+          <h1 className="mb-4 max-w-4xl text-3xl font-semibold tracking-tight text-white sm:text-4xl xl:text-5xl">
+            Symptom triage, toxin guides, and feeding help you can act on tonight.
+          </h1>
+          <p className="mb-6 max-w-2xl text-base leading-relaxed text-brand-primary-100 xl:text-lg">
+            Start with Code Green, Yellow, or Red. Open a grape, chocolate, lily, or xylitol page
+            when exposure already happened. A licensed veterinarian still makes the diagnosis.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <Link
+              href="/health-symptoms"
+              className="inline-flex min-h-11 items-center rounded-full bg-white px-5 text-sm font-semibold text-brand-primary hover:bg-brand-accent-50"
+            >
+              Start with symptoms
+            </Link>
+            <Link
+              href="/emergency"
+              className="inline-flex min-h-11 items-center rounded-full bg-brand-accent-800 px-5 text-sm font-semibold text-white hover:bg-brand-accent-900"
+            >
+              Emergency guide
+            </Link>
+            <Link
+              href="/tools/ai-assistant"
+              className="inline-flex min-h-11 items-center rounded-full border border-white/40 px-5 text-sm font-semibold text-white hover:bg-white/10"
+            >
+              Free AI assistant
+            </Link>
           </div>
-        </section>
+        </div>
+      </section>
 
+      <div className="mx-auto w-full max-w-[100rem] space-y-14 px-4 pt-10 sm:px-6 lg:px-8 xl:px-10 xl:pt-14">
         <nav
           aria-label="Categories"
-          className="home-rise home-rise-delay-1 grid grid-cols-2 gap-3 sm:grid-cols-4 xl:gap-4"
+          className="home-rise home-rise-delay-1 grid grid-cols-2 gap-3 sm:grid-cols-4 xl:gap-5"
         >
-          {categories.map((category) => {
+          {categories.map((category, index) => {
             const Icon = category.icon;
+            const iconCorner = index % 2 === 0 ? "left-3" : "right-3";
             return (
               <Link
                 key={category.href}
                 href={category.href}
-                className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition-colors hover:border-brand-primary/30 hover:bg-brand-primary-50 sm:p-5"
+                className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-colors hover:border-brand-primary/30"
               >
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-primary text-white transition-transform group-hover:scale-105">
-                  <Icon className="h-5 w-5" aria-hidden="true" strokeWidth={1.75} />
-                </span>
-                <span className="mt-4">
-                  <span className="block text-sm font-semibold text-brand-primary">{category.label}</span>
-                  <span className="mt-1 block text-xs leading-snug text-slate-600">{category.detail}</span>
+                <div className="relative">
+                  <MediaFrame ratio="aspect-[4/3] xl:aspect-[5/4]" className="rounded-none">
+                    <ContentImage
+                      src={category.image}
+                      alt=""
+                      sizes="(max-width: 640px) 50vw, 25vw"
+                    />
+                  </MediaFrame>
+                  <span
+                    className={`absolute top-3 ${iconCorner} flex h-10 w-10 items-center justify-center rounded-xl bg-brand-primary text-white shadow-md ring-2 ring-white/90 transition-transform group-hover:scale-105`}
+                  >
+                    <Icon className="h-5 w-5" aria-hidden="true" strokeWidth={1.75} />
+                  </span>
+                </div>
+                <span className="flex flex-col p-4 sm:p-5">
+                  <span className="block text-sm font-semibold text-brand-primary xl:text-base">
+                    {category.label}
+                  </span>
+                  <span className="mt-1 block text-xs leading-snug text-slate-600 xl:text-sm">
+                    {category.detail}
+                  </span>
                 </span>
               </Link>
             );
@@ -266,28 +306,28 @@ export default function Home() {
         </nav>
 
         <section className="home-rise home-rise-delay-2 space-y-5">
-          <div className="max-w-3xl">
+          <div className="max-w-4xl">
             <p className="mb-2 text-xs font-semibold tracking-wide text-brand-accent-700 uppercase">
               Symptom triage
             </p>
             <h2 className="mb-3 text-2xl font-semibold text-brand-primary xl:text-3xl">
               Three codes for the next hour
             </h2>
-            <p className="mb-0 text-slate-700">
+            <p className="mb-0 text-slate-700 xl:text-lg">
               Every illness guide on Pet Safety Hub uses the same three levels so you can decide
               whether to watch, book soon, or leave for the hospital.
             </p>
           </div>
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-3 xl:gap-6">
             {triageLevels.map((level) => (
-              <div key={level.code} className={`rounded-2xl border p-5 xl:p-6 ${level.tone}`}>
+              <div key={level.code} className={`rounded-2xl border p-5 xl:p-7 ${level.tone}`}>
                 <span
                   className={`mb-3 inline-flex rounded-full px-3 py-1 text-xs font-bold tracking-wide uppercase ${level.badge}`}
                 >
                   {level.code}
                 </span>
-                <p className="mb-2 text-sm font-semibold">{level.timing}</p>
-                <p className="mb-0 text-sm leading-relaxed opacity-90">{level.detail}</p>
+                <p className="mb-2 text-sm font-semibold xl:text-base">{level.timing}</p>
+                <p className="mb-0 text-sm leading-relaxed opacity-90 xl:text-base">{level.detail}</p>
               </div>
             ))}
           </div>
@@ -299,9 +339,9 @@ export default function Home() {
           </Link>
         </section>
 
-        <section className="home-rise home-rise-delay-3 rounded-3xl border border-triage-red/20 bg-gradient-to-br from-triage-red-surface via-brand-surface to-brand-surface-warm p-6 sm:p-8 xl:p-10">
-          <div className="mb-6 flex flex-wrap items-start justify-between gap-4">
-            <div className="max-w-3xl">
+        <section className="home-rise home-rise-delay-3 rounded-3xl border border-triage-red/20 bg-gradient-to-br from-triage-red-surface via-brand-surface to-brand-surface-warm p-6 sm:p-8 xl:p-12">
+          <div className="mb-6 flex flex-wrap items-start justify-between gap-4 xl:mb-8">
+            <div className="max-w-4xl">
               <div className="mb-2 flex items-center gap-2 text-triage-red">
                 <AlertTriangle className="h-5 w-5" aria-hidden="true" />
                 <p className="mb-0 text-xs font-semibold tracking-wide uppercase">Poison & toxins</p>
@@ -309,7 +349,7 @@ export default function Home() {
               <h2 className="mb-3 text-2xl font-semibold text-brand-primary xl:text-3xl">
                 Common household toxins
               </h2>
-              <p className="mb-0 text-slate-700">
+              <p className="mb-0 text-slate-700 xl:text-lg">
                 These guides name clinic treatments without home dosing charts. If exposure already
                 happened, call a poison hotline while you travel.
               </p>
@@ -321,18 +361,31 @@ export default function Home() {
               Full emergency board
             </Link>
           </div>
-          <div className="mb-8 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+          <div className="mb-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3 xl:gap-5">
             {toxinGuides.map((guide) => (
               <Link
                 key={guide.href}
                 href={guide.href}
-                className="rounded-2xl border border-white/80 bg-white/90 p-4 transition-colors hover:border-triage-red/30 hover:bg-white xl:p-5"
+                className="group overflow-hidden rounded-2xl border border-white/80 bg-white/90 transition-colors hover:border-triage-red/30 hover:bg-white"
               >
-                <p className="mb-1 text-xs font-semibold tracking-wide text-triage-red uppercase">
-                  {guide.species}
-                </p>
-                <p className="mb-2 text-base font-semibold text-slate-800">{guide.title}</p>
-                <p className="mb-0 text-sm leading-relaxed text-slate-600">{guide.summary}</p>
+                {HOME_TOXIN_IMAGES[guide.href] ? (
+                  <div className="relative">
+                    <MediaFrame ratio="aspect-[4/3]" className="rounded-none">
+                      <ContentImage
+                        src={HOME_TOXIN_IMAGES[guide.href]}
+                        alt=""
+                        sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                      />
+                    </MediaFrame>
+                    <span className="absolute top-3 left-3 rounded-full bg-triage-red px-2.5 py-1 text-[11px] font-bold tracking-wide text-white uppercase shadow-sm">
+                      {guide.species}
+                    </span>
+                  </div>
+                ) : null}
+                <span className="block p-4 xl:p-5">
+                  <p className="mb-2 text-base font-semibold text-slate-800 xl:text-lg">{guide.title}</p>
+                  <p className="mb-0 text-sm leading-relaxed text-slate-600">{guide.summary}</p>
+                </span>
               </Link>
             ))}
           </div>
@@ -366,7 +419,7 @@ export default function Home() {
         </section>
 
         <section className="home-rise space-y-5">
-          <div className="max-w-3xl">
+          <div className="max-w-4xl">
             <div className="mb-2 flex items-center gap-2 text-brand-accent-700">
               <BookOpen className="h-5 w-5" aria-hidden="true" />
               <p className="mb-0 text-xs font-semibold tracking-wide uppercase">Care library</p>
@@ -374,43 +427,59 @@ export default function Home() {
             <h2 className="mb-3 text-2xl font-semibold text-brand-primary xl:text-3xl">
               From the care library
             </h2>
-            <p className="mb-0 text-slate-700">
+            <p className="mb-0 text-slate-700 xl:text-lg">
               These guides show how nutrition, illness signs, and home monitoring read across the
               library.
             </p>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
-            {articles.map((article) => (
-              <ArticleCard key={article.href} {...article} />
+          <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4 xl:gap-6">
+            {articles.map((article, index) => (
+              <ArticleCard key={article.href} {...article} iconCorner={index % 2 === 0 ? "left" : "right"} />
             ))}
           </div>
         </section>
 
         <section className="home-rise space-y-5">
-          <div className="max-w-3xl">
+          <div className="max-w-4xl">
             <h2 className="mb-3 text-2xl font-semibold text-brand-primary xl:text-3xl">
               Tools for the next decision
             </h2>
-            <p className="mb-0 text-slate-700">
+            <p className="mb-0 text-slate-700 xl:text-lg">
               Calculators and finders help you size a meal, plan a diet change, or locate an open
               clinic. They do not replace a licensed veterinarian.
             </p>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-            {homeTools.map((tool) => {
+          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4 xl:gap-5">
+            {homeTools.map((tool, index) => {
               const Icon = tool.icon;
+              const iconCorner = index % 2 === 0 ? "left-3" : "right-3";
               return (
                 <Link
                   key={tool.href}
                   href={tool.href}
-                  className="group flex gap-4 rounded-2xl border border-slate-200 bg-white p-5 transition-colors hover:border-brand-primary/30 hover:bg-brand-primary-50"
+                  className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white transition-colors hover:border-brand-primary/30"
                 >
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-accent text-white transition-transform group-hover:scale-105">
-                    <Icon className="h-5 w-5" aria-hidden="true" strokeWidth={1.75} />
-                  </span>
-                  <span>
-                    <span className="block text-base font-semibold text-brand-primary">{tool.title}</span>
-                    <span className="mt-1 block text-sm leading-snug text-slate-600">{tool.detail}</span>
+                  <div className="relative">
+                    <MediaFrame ratio="aspect-[4/3]" className="rounded-none">
+                      <ContentImage
+                        src={tool.image}
+                        alt=""
+                        sizes="(max-width: 640px) 100vw, 25vw"
+                      />
+                    </MediaFrame>
+                    <span
+                      className={`absolute top-3 ${iconCorner} flex h-11 w-11 items-center justify-center rounded-xl bg-brand-primary text-white shadow-md ring-2 ring-white/90 transition-transform group-hover:scale-105`}
+                    >
+                      <Icon className="h-5 w-5" aria-hidden="true" strokeWidth={1.75} />
+                    </span>
+                  </div>
+                  <span className="flex flex-col p-5">
+                    <span className="block text-base font-semibold text-brand-primary xl:text-lg">
+                      {tool.title}
+                    </span>
+                    <span className="mt-1 block text-sm leading-snug text-slate-600">
+                      {tool.detail}
+                    </span>
                   </span>
                 </Link>
               );
@@ -418,9 +487,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="home-rise overflow-hidden rounded-3xl border border-brand-primary/15 bg-brand-primary-50 px-6 py-8 sm:px-8 xl:px-10">
+        <section className="home-rise overflow-hidden rounded-3xl border border-brand-primary/15 bg-brand-primary-50 px-6 py-8 sm:px-8 xl:px-12 xl:py-10">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-            <div className="max-w-3xl">
+            <div className="max-w-4xl">
               <div className="mb-2 flex items-center gap-2 text-brand-primary">
                 <ShieldCheck className="h-5 w-5" aria-hidden="true" />
                 <p className="mb-0 text-xs font-semibold tracking-wide uppercase">Editorial standards</p>
@@ -428,7 +497,7 @@ export default function Home() {
               <h2 className="mb-3 text-2xl font-semibold text-brand-primary xl:text-3xl">
                 Compiled from published clinical sources
               </h2>
-              <p className="mb-0 text-slate-700">
+              <p className="mb-0 text-slate-700 xl:text-lg">
                 The Pet Safety Hub Editorial Team works from references such as the ASPCA Animal
                 Poison Control Center and the Merck Veterinary Manual. Pages are educational. They
                 do not replace an exam by a licensed veterinarian.
@@ -461,27 +530,42 @@ function ArticleCard({
   kicker,
   summary,
   icon: Icon,
+  iconCorner = "left",
 }: {
   title: string;
   href: string;
   kicker: string;
   summary: string;
   icon: LucideIcon;
+  iconCorner?: "left" | "right";
 }) {
+  const image = HOME_CARE_IMAGES[href];
+  const corner = iconCorner === "left" ? "left-3" : "right-3";
   return (
-    <article className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-5 transition-colors hover:border-brand-primary/25">
-      <span className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-brand-primary text-white">
-        <Icon className="h-5 w-5" aria-hidden="true" strokeWidth={1.75} />
-      </span>
-      <p className="mb-2 text-xs font-semibold tracking-wide text-brand-accent-700 uppercase">
-        {kicker}
-      </p>
-      <h3 className="mb-3 text-lg font-semibold leading-snug text-slate-800">
-        <Link href={href} className="hover:text-brand-primary">
-          {title}
-        </Link>
-      </h3>
-      <p className="mb-0 text-sm leading-relaxed text-slate-700">{summary}</p>
+    <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white transition-colors hover:border-brand-primary/25">
+      {image ? (
+        <div className="relative">
+          <MediaFrame ratio="aspect-[3/2]" className="rounded-none">
+            <ContentImage src={image} alt="" sizes="(max-width: 640px) 100vw, 25vw" />
+          </MediaFrame>
+          <span
+            className={`absolute top-3 ${corner} flex h-10 w-10 items-center justify-center rounded-xl bg-brand-primary text-white shadow-md ring-2 ring-white/90`}
+          >
+            <Icon className="h-5 w-5" aria-hidden="true" strokeWidth={1.75} />
+          </span>
+        </div>
+      ) : null}
+      <div className="flex flex-1 flex-col p-5">
+        <p className="mb-2 text-xs font-semibold tracking-wide text-brand-accent-700 uppercase">
+          {kicker}
+        </p>
+        <h3 className="mb-3 text-lg font-semibold leading-snug text-slate-800">
+          <Link href={href} className="hover:text-brand-primary">
+            {title}
+          </Link>
+        </h3>
+        <p className="mb-0 text-sm leading-relaxed text-slate-700">{summary}</p>
+      </div>
     </article>
   );
 }

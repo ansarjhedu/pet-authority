@@ -4,6 +4,7 @@ import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { SITE_OG_IMAGE } from "@/lib/images";
 import { generateOrganizationSchema, generateWebSiteSchema, getSiteUrl } from "@/lib/seo/schema";
 import "./globals.css";
 
@@ -27,11 +28,13 @@ export const metadata: Metadata = {
     description: siteDescription,
     url: getSiteUrl(),
     locale: "en_US",
+    images: [{ url: SITE_OG_IMAGE, width: 1200, height: 675, alt: "Pet Safety Hub" }],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Pet Safety Hub",
     description: siteDescription,
+    images: [SITE_OG_IMAGE],
   },
   robots: {
     index: true,

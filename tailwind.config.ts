@@ -2,11 +2,11 @@ import type { Config } from "tailwindcss";
 import plugin from "tailwindcss/plugin";
 
 /**
- * Page shell: centered max-w-7xl (80rem) with responsive horizontal padding.
+ * Page shell: centered max-w-[100rem] with responsive horizontal padding.
  * Long-form copy should use max-w-reading (70ch, inside the 65–75 character range).
  */
 const containerPreset = {
-  maxWidth: "90rem",
+  maxWidth: "100rem",
   padding: {
     DEFAULT: "1rem",
     sm: "1.5rem",

@@ -63,7 +63,7 @@ export default async function FoodPage({ params }: FoodPageProps) {
           { name: label, path: `/nutrition/${food.slug}` },
         ])}
       />
-      <div className="container pt-8">
+      <div className="mx-auto w-full max-w-[100rem] px-4 pt-8 sm:px-6 lg:px-8 xl:px-10">
         <Breadcrumbs
           items={[
             { name: "Home", path: "/" },
