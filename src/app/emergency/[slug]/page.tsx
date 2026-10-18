@@ -1,25 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { MEDIAVINE_CONTENT_CLASS } from "@/components/ads/MediavineScript";
-import { ClinicalReview } from "@/components/editorial/ClinicalReview";
-import { SnippetAnswer } from "@/components/editorial/SnippetAnswer";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
-import { DetailHero } from "@/components/media/DetailHero";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { ActionChecklist } from "@/components/emergency/ActionChecklist";
 import { EmergencyLongArticle } from "@/components/emergency/EmergencyLongArticle";
-import { HotlineBar } from "@/components/emergency/HotlineBar";
 import { getEmergencyLongGuide } from "@/content/emergency-guides";
-import {
-  EMERGENCY_GUIDES,
-  SPECIES_LABEL,
-  actionWindowLabel,
-  getEmergencyGuide,
-  urgencyLabel,
-} from "@/lib/clinical/guides";
-import { emergencyBody, emergencyProcedure, emergencySnippet } from "@/lib/editorial/copy";
-import { emergencyImage } from "@/lib/images";
+import { EMERGENCY_GUIDES, getEmergencyGuide } from "@/lib/clinical/guides";
 import { robotsForGuide } from "@/lib/seo/indexing";
 import { generateBreadcrumbSchema, generateVeterinaryArticleSchema } from "@/lib/seo/schema";
 
@@ -39,11 +25,12 @@ export async function generateMetadata({ params }: EmergencyGuidePageProps): Pro
   if (!guide) {
     return { title: "Emergency guide", robots: { index: false, follow: true } };
   }
+  const longGuide = getEmergencyLongGuide(guide.slug);
   return {
-    title: guide.title,
+    title: longGuide?.title ?? guide.title,
     description: guide.emergencyOverview,
     alternates: { canonical: `/emergency/${guide.slug}` },
-    robots: robotsForGuide(Boolean(getEmergencyLongGuide(guide.slug))),
+    robots: robotsForGuide(Boolean(longGuide)),
   };
 }
 
@@ -54,22 +41,23 @@ export default async function EmergencyGuidePage({ params }: EmergencyGuidePageP
     notFound();
   }
   const longGuide = getEmergencyLongGuide(guide.slug);
+  if (!longGuide) {
+    notFound();
+  }
 
   return (
-    <div className="container py-8 lg:py-12">
-      {longGuide ? (
-        <JsonLd
-          data={generateVeterinaryArticleSchema(
-            {
-              title: longGuide.title,
-              description: guide.emergencyOverview,
-              path: `/emergency/${guide.slug}`,
-              faqs: longGuide.faqs,
-            },
-            "emergency",
-          )}
-        />
-      ) : null}
+    <div className="mx-auto w-full max-w-[100rem] px-4 py-8 sm:px-6 lg:px-8 xl:px-10 lg:py-12">
+      <JsonLd
+        data={generateVeterinaryArticleSchema(
+          {
+            title: longGuide.title,
+            description: guide.emergencyOverview,
+            path: `/emergency/${guide.slug}`,
+            faqs: longGuide.faqs,
+          },
+          "emergency",
+        )}
+      />
       <JsonLd
         data={generateBreadcrumbSchema([
           { name: "Home", path: "/" },
@@ -85,76 +73,7 @@ export default async function EmergencyGuidePage({ params }: EmergencyGuidePageP
         ]}
       />
       <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_20rem]">
-        {longGuide ? (
-          <EmergencyLongArticle guide={guide} longGuide={longGuide} />
-        ) : (
-        <article className={MEDIAVINE_CONTENT_CLASS}>
-          <DetailHero
-            src={emergencyImage(guide.slug)}
-            alt=""
-            className="mb-4 max-w-none"
-          />
-          <header className="mb-6 rounded-3xl bg-triage-red px-5 py-6 text-white sm:px-8">
-            <div className="mb-3 text-sm font-semibold tracking-wide text-white uppercase">
-              {SPECIES_LABEL[guide.species]} · {urgencyLabel(guide.urgency)}
-            </div>
-            <h1 className="mb-4 max-w-reading text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-              {guide.title}
-            </h1>
-            <div className="mb-6 max-w-reading text-base font-semibold text-white">
-              {actionWindowLabel(guide.actionWithinMinutes)}
-            </div>
-            <Link
-              href="/tools/vet-finder"
-              className="inline-flex min-h-11 items-center rounded-full bg-white px-5 text-sm font-bold text-triage-red hover:bg-triage-red-surface"
-            >
-              Call an emergency hospital
-            </Link>
-          </header>
-          <ClinicalReview />
-          <div className="mb-8">
-            <HotlineBar />
-          </div>
-          <div className="space-y-8">
-          <section className="max-w-reading">
-            <h2 className="mb-3 text-2xl font-semibold text-slate-800">What is {guide.title.toLowerCase()}?</h2>
-            <SnippetAnswer>{emergencySnippet(guide.slug)}</SnippetAnswer>
-            <p className="mb-6 leading-relaxed">{emergencyBody(guide.emergencyOverview)}</p>
-          </section>
-
-          <section>
-            <h2 className="mb-4 text-2xl font-semibold text-slate-800">
-              What to Do in the Next 15 Minutes
-            </h2>
-            <ActionChecklist steps={guide.whatToDoSteps} />
-          </section>
-
-          <section className="rounded-2xl border-2 border-triage-yellow bg-triage-yellow-surface p-5">
-            <h2 className="mb-3 text-xl font-semibold text-triage-yellow-foreground">What NOT to Do</h2>
-            <ul className="list-disc space-y-2 pl-5 text-sm text-triage-yellow-foreground">
-              {guide.whatNotToDoWarnings.map((warning) => (
-                <li key={warning}>{warning}</li>
-              ))}
-            </ul>
-          </section>
-
-          <section className="max-w-reading">
-            <h2 className="mb-3 text-2xl font-semibold text-slate-800">Signs the team will ask about</h2>
-            <ul className="mb-0 list-disc space-y-2 pl-5">
-              {guide.clinicalSigns.map((sign) => (
-                <li key={sign}>{sign}</li>
-              ))}
-            </ul>
-          </section>
-
-          <section className="max-w-reading">
-            <h2 className="mb-3 text-2xl font-semibold text-slate-800">What the ER Vet Will Do</h2>
-            <p className="mb-6 leading-relaxed">{emergencyProcedure(guide.estimatedVetProcedures)}</p>
-          </section>
-          </div>
-        </article>
-        )}
-
+        <EmergencyLongArticle guide={guide} longGuide={longGuide} />
         <aside className="h-fit space-y-4">
           <section className="rounded-2xl border border-slate-200 bg-white p-5">
             <h2 className="mb-3 text-base font-semibold text-brand-primary">While you are on the way</h2>

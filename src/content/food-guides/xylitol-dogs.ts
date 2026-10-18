@@ -209,7 +209,7 @@ export const xylitolDogsGuide: EmergencyLongGuide = {
         {
           type: "links",
           items: [
-            { href: "/nutrition/grapes-raisins-dogs", label: "Grape and raisin kidney risk if fruit was also eaten" },
+            { href: "/nutrition/grapes-raisins", label: "Grape and raisin kidney risk if fruit was also eaten" },
             { href: "/medications/diphenhydramine", label: "Why a liquid medicine may hide xylitol" },
             { href: "/emergency/chocolate-toxicity", label: "Dark chocolate poisoning if cocoa was in the same food" },
             { href: "/editorial-standards", label: "How clinical pages are checked" },

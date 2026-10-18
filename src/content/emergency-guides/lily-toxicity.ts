@@ -201,8 +201,8 @@ export const lilyToxicityGuide: EmergencyLongGuide = {
         {
           type: "links",
           items: [
-            { href: "/nutrition/grapes-raisins-dogs", label: "Grape and raisin toxicity if fruit was also involved" },
-            { href: "/nutrition/onions-garlic-dogs", label: "Onion and garlic poisoning from table scraps" },
+            { href: "/nutrition/grapes-raisins", label: "Grape and raisin toxicity if fruit was also involved" },
+            { href: "/nutrition/onions-garlic", label: "Onion and garlic poisoning from table scraps" },
             { href: "/medications/ibuprofen", label: "Ibuprofen toxicity if a human pain tablet was given" },
             { href: "/editorial-standards", label: "How clinical pages are checked" },
           ],

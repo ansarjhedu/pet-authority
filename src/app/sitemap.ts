@@ -7,11 +7,11 @@ import { getSymptomLongGuide } from "@/content/symptom-guides";
 import { EMERGENCY_GUIDES, SYMPTOM_GUIDES } from "@/lib/clinical/guides";
 import { BREEDS } from "@/lib/breeds/directory";
 import { breedPath } from "@/lib/breeds/types";
-import { FOODS } from "@/lib/nutrition/directory";
+import { FOOD_TOPICS } from "@/lib/nutrition/topics";
 import { MEDICATIONS } from "@/lib/medications/directory";
 import { absoluteUrl } from "@/lib/seo/schema";
 
-const UPDATED = new Date("2026-10-11T00:00:00.000Z");
+const UPDATED = new Date("2026-10-18T00:00:00.000Z");
 
 type ChangeFrequency = NonNullable<MetadataRoute.Sitemap[number]["changeFrequency"]>;
 
@@ -65,8 +65,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const emergencies = EMERGENCY_GUIDES.filter((guide) => getEmergencyLongGuide(guide.slug)).map(
     (guide) => entry(`/emergency/${guide.slug}`, 1, "weekly"),
   );
-  const foods = FOODS.filter((food) => getFoodLongGuide(food.slug)).map((food) =>
-    entry(`/nutrition/${food.slug}`, 0.9, "monthly"),
+  const foods = FOOD_TOPICS.filter((topic) => getFoodLongGuide(topic.slug)).map((topic) =>
+    entry(`/nutrition/${topic.slug}`, 0.9, "monthly"),
   );
   const medications = MEDICATIONS.filter((medication) => getMedicationLongGuide(medication.slug)).map(
     (medication) => entry(`/medications/${medication.slug}`, 0.9, "monthly"),

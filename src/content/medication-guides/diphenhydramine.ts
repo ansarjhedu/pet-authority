@@ -178,7 +178,7 @@ export const diphenhydramineGuide: EmergencyLongGuide = {
           type: "links",
           items: [
             { href: "/medications/ibuprofen", label: "Why ibuprofen is not a pet pain plan" },
-            { href: "/nutrition/xylitol-dogs", label: "Why xylitol in a liquid medicine is an emergency" },
+            { href: "/nutrition/xylitol", label: "Why xylitol in a liquid medicine is an emergency" },
             { href: "/emergency/chocolate-toxicity", label: "Dark chocolate poisoning if cocoa was also eaten" },
           ],
         },

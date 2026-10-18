@@ -12,6 +12,7 @@ import {
 } from "@/lib/nutrition/types";
 import { filterFoods } from "@/lib/nutrition/directory";
 import { foodImage } from "@/lib/images";
+import { foodArticleHref, FOOD_TOPIC_IMAGE, FOOD_TOPIC_SLUG } from "@/lib/nutrition/topics";
 import { cn } from "@/lib/utils";
 
 const SPECIES_OPTIONS: Array<{ id: FoodSpecies | "all"; label: string }> = [
@@ -104,12 +105,15 @@ export function FoodExplorer() {
 }
 
 function FoodResult({ food }: { food: FoodItem }) {
+  const href = foodArticleHref(food);
+  const topicSlug = FOOD_TOPIC_SLUG[food.slug] ?? food.slug;
+  const imageSlug = FOOD_TOPIC_IMAGE[topicSlug] ?? food.slug;
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white">
       <div className="relative">
         <MediaFrame ratio="aspect-[4/3]" className="rounded-none">
           <ContentImage
-            src={foodImage(food.slug)}
+            src={foodImage(imageSlug)}
             alt={`${food.name} for ${SPECIES_LABEL[food.species]}`}
             sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
           />
@@ -128,13 +132,13 @@ function FoodResult({ food }: { food: FoodItem }) {
       </div>
       <div className="flex flex-1 flex-col p-5">
         <h2 className="mb-2 text-xl font-semibold text-slate-800">
-          <Link href={`/nutrition/${food.slug}`} className="hover:text-brand-primary">
+          <Link href={href} className="hover:text-brand-primary">
             {food.name}
           </Link>
         </h2>
         <p className="mb-4 text-sm text-slate-700">{food.safeServingSize}</p>
         <Link
-          href={`/nutrition/${food.slug}`}
+          href={href}
           className="mt-auto inline-flex min-h-11 items-center text-sm font-bold text-brand-primary hover:underline"
         >
           Open the safety note

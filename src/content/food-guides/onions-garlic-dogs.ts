@@ -206,8 +206,8 @@ export const onionsGarlicDogsGuide: EmergencyLongGuide = {
         {
           type: "links",
           items: [
-            { href: "/nutrition/onions-garlic-cats", label: "Onion and garlic guidance for cats" },
-            { href: "/nutrition/grapes-raisins-dogs", label: "Grape and raisin kidney risk if fruit was in the same meal" },
+            { href: "/nutrition/onions-garlic", label: "Onion and garlic guidance for cats" },
+            { href: "/nutrition/grapes-raisins", label: "Grape and raisin kidney risk if fruit was in the same meal" },
             { href: "/health-symptoms/dogs/vomiting-yellow-bile", label: "Yellow bile vomiting if the stomach is already upset" },
             { href: "/emergency/chocolate-toxicity", label: "Dark chocolate poisoning if cocoa was also eaten" },
             { href: "/editorial-standards", label: "How clinical pages are checked" },

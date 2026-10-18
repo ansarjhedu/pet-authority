@@ -39,6 +39,9 @@ export default async function MedicationPage({ params }: MedicationPageProps) {
     notFound();
   }
   const longGuide = getMedicationLongGuide(medication.slug);
+  if (!longGuide) {
+    notFound();
+  }
   return (
     <>
       {longGuide ? (

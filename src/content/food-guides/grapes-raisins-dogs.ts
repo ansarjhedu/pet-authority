@@ -209,8 +209,8 @@ export const grapesRaisinsDogsGuide: EmergencyLongGuide = {
         {
           type: "links",
           items: [
-            { href: "/nutrition/xylitol-dogs", label: "Xylitol ingestion if the trail mix was sugar-free" },
-            { href: "/nutrition/onions-garlic-dogs", label: "Onion and garlic poisoning if the food was seasoned" },
+            { href: "/nutrition/xylitol", label: "Xylitol ingestion if the trail mix was sugar-free" },
+            { href: "/nutrition/onions-garlic", label: "Onion and garlic poisoning if the food was seasoned" },
             { href: "/health-symptoms/dogs/vomiting-yellow-bile", label: "Yellow bile vomiting if the dog is already sick" },
             { href: "/editorial-standards", label: "How clinical pages are checked" },
           ],

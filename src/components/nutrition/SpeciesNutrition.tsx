@@ -1,7 +1,10 @@
 import Link from "next/link";
+import { HubIntro } from "@/components/editorial/HubIntro";
 import { ContentImage, MediaFrame } from "@/components/media/ContentImage";
 import { HubBanner } from "@/components/media/HubBanner";
 import { foodImage, hubImage } from "@/lib/images";
+import { foodArticleHref } from "@/lib/nutrition/topics";
+import { getFood } from "@/lib/nutrition/directory";
 
 const DOG_STAGES = [
   {
@@ -39,30 +42,97 @@ const CAT_STAGES = [
   },
 ] as const;
 
-const DOG_CHIPS = [
-  { href: "/nutrition/pumpkin-dogs", slug: "pumpkin-dogs", label: "Pumpkin" },
-  { href: "/nutrition/blueberries-dogs", slug: "blueberries-dogs", label: "Blueberries" },
-  { href: "/nutrition/cooked-chicken-dogs", slug: "cooked-chicken-dogs", label: "Cooked chicken" },
-  { href: "/nutrition/carrots-dogs", slug: "carrots-dogs", label: "Carrots" },
-  { href: "/nutrition/chocolate-dogs", slug: "chocolate-dogs", label: "Chocolate" },
-  { href: "/nutrition/grapes-raisins-dogs", slug: "grapes-raisins-dogs", label: "Grapes" },
-  { href: "/nutrition/xylitol-dogs", slug: "xylitol-dogs", label: "Xylitol" },
-  { href: "/nutrition/onions-garlic-dogs", slug: "onions-garlic-dogs", label: "Onions" },
+const DOG_CHIP_SLUGS = [
+  "pumpkin-dogs",
+  "blueberries-dogs",
+  "cooked-chicken-dogs",
+  "carrots-dogs",
+  "chocolate-dogs",
+  "grapes-raisins-dogs",
+  "xylitol-dogs",
+  "onions-garlic-dogs",
 ] as const;
 
-const CAT_CHIPS = [
-  { href: "/nutrition/pumpkin-cats", slug: "pumpkin-cats", label: "Pumpkin" },
-  { href: "/nutrition/cooked-chicken-cats", slug: "cooked-chicken-cats", label: "Cooked chicken" },
-  { href: "/nutrition/salmon-cats", slug: "salmon-cats", label: "Salmon" },
-  { href: "/nutrition/blueberries-cats", slug: "blueberries-cats", label: "Blueberries" },
-  { href: "/nutrition/lilies-cats", slug: "lilies-cats", label: "Lilies" },
-  { href: "/nutrition/onions-garlic-cats", slug: "onions-garlic-cats", label: "Onions" },
-  { href: "/nutrition/chocolate-cats", slug: "chocolate-cats", label: "Chocolate" },
+const CAT_CHIP_SLUGS = [
+  "pumpkin-cats",
+  "cooked-chicken-cats",
+  "salmon-cats",
+  "blueberries-cats",
+  "lilies-cats",
+  "onions-garlic-cats",
+  "chocolate-cats",
 ] as const;
+
+const SPECIES_FRAME = {
+  dogs: {
+    title: "Dog nutrition",
+    lede: "Match calories to life stage, keep a visible waist, and treat chocolate, grapes, xylitol, and onion seasoning as same-hour calls—not taste tests. Water intake should track the food; a sudden thirst spike still needs a clinic.",
+    howToUse:
+      "Start with the life-stage cards, then size portions with the calorie calculator. Open the food cards below for dog-specific notes, or jump to the full food safety search when the leftover on the counter is not on this short list.",
+    whatThisIsNot:
+      "This page is not a homemade diet recipe book, not a detox protocol after a toxin, and not a free pass to share human dessert. Code Red foods belong on their emergency-style guides the same hour.",
+    urgentCards: [
+      {
+        href: "/nutrition/chocolate",
+        title: "Chocolate",
+        blurb: "Darker chocolate and smaller dogs raise the theobromine risk fast.",
+      },
+      {
+        href: "/nutrition/grapes-raisins",
+        title: "Grapes and raisins",
+        blurb: "Any amount in a dog is treated as a kidney emergency.",
+      },
+      {
+        href: "/nutrition/xylitol",
+        title: "Xylitol",
+        blurb: "Sugar-free gum and baked goods can drop blood sugar within about an hour.",
+      },
+    ],
+    hydration:
+      "A practical planning figure is about 1 oz of water per pound of body weight per day (about 50–60 mL per kg), plus moisture already in wet food. A sudden jump in drinking, or a dog who will not drink and will not eat, needs a veterinarian—not a bigger water bowl alone.",
+  },
+  cats: {
+    title: "Cat nutrition",
+    lede: "Cats are obligate carnivores with thin fasting margins. Measure meals, protect taurine through complete diets, and treat true lilies as a kidney emergency even when the plant was “just decorative.”",
+    howToUse:
+      "Use the life-stage cards for kitten through senior, then open the cat food cards for safe toppers versus toxins. Lily pollen and vase water count. For any kitchen leftover not listed here, use the full food safety search.",
+    whatThisIsNot:
+      "This page is not a raw-diet how-to, not a home lily antidote, and not a reason to wait when a male cat strains without urine. Complete commercial or vet-designed diets still carry the micronutrient load house leftovers cannot.",
+    urgentCards: [
+      {
+        href: "/nutrition/lilies",
+        title: "Lilies",
+        blurb: "True lilies and daylilies can destroy kidneys from a chew, pollen, or vase water.",
+      },
+      {
+        href: "/nutrition/onions-garlic",
+        title: "Onions and garlic",
+        blurb: "Powdered broth and leftovers still count as allium exposure.",
+      },
+      {
+        href: "/nutrition/chocolate",
+        title: "Chocolate",
+        blurb: "Cats rarely seek it, but any amount is still a poison call.",
+      },
+    ],
+    hydration:
+      "Many cats drink little from a still bowl. Wet food helps, and a practical planning figure is still about 1 mL of water per kilocalorie eaten across bowl plus food moisture. A sudden thirst increase belongs on the drinking-more-water triage page; a male who strains with little urine is an emergency.",
+  },
+} as const;
 
 export function SpeciesNutrition({ species }: { species: "dogs" | "cats" }) {
   const stages = species === "dogs" ? DOG_STAGES : CAT_STAGES;
-  const chips = species === "dogs" ? DOG_CHIPS : CAT_CHIPS;
+  const chipSlugs = species === "dogs" ? DOG_CHIP_SLUGS : CAT_CHIP_SLUGS;
+  const frame = SPECIES_FRAME[species];
+  const chips = chipSlugs
+    .map((slug) => getFood(slug))
+    .filter((food): food is NonNullable<typeof food> => Boolean(food))
+    .map((food) => ({
+      href: foodArticleHref(food),
+      slug: food.slug,
+      label: food.name,
+      imageSlug: food.slug,
+    }));
   const label = species === "dogs" ? "dog" : "cat";
 
   return (
@@ -71,8 +141,14 @@ export function SpeciesNutrition({ species }: { species: "dogs" | "cats" }) {
         src={hubImage("nutrition")}
         alt={`${label} nutrition`}
         eyebrow={species === "dogs" ? "Dogs" : "Cats"}
-        title={species === "dogs" ? "Dog nutrition" : "Cat nutrition"}
-        lede="Life stage changes the calorie target. Water needs track the food. The safe-food cards open the species note rather than a generic list."
+        title={frame.title}
+        lede={frame.lede}
+      />
+
+      <HubIntro
+        howToUse={frame.howToUse}
+        whatThisIsNot={frame.whatThisIsNot}
+        urgentCards={[...frame.urgentCards]}
       />
 
       <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_20rem] xl:gap-10">
@@ -91,11 +167,7 @@ export function SpeciesNutrition({ species }: { species: "dogs" | "cats" }) {
 
           <section>
             <h2 className="mb-3 text-2xl font-semibold text-slate-800">Hydration</h2>
-            <p className="mb-0 max-w-reading text-slate-700">
-              A practical planning figure is about 1 milliliter of water for each kilocalorie eaten.
-              Wet food already contains moisture, so the bowl may look quieter. A sudden increase in
-              drinking, or a {label} who will not drink and will not eat, needs a veterinarian.
-            </p>
+            <p className="mb-0 max-w-reading text-slate-700">{frame.hydration}</p>
           </section>
 
           <section>
@@ -111,7 +183,7 @@ export function SpeciesNutrition({ species }: { species: "dogs" | "cats" }) {
                   >
                     <MediaFrame ratio="aspect-[4/3]" className="rounded-none">
                       <ContentImage
-                        src={foodImage(chip.slug)}
+                        src={foodImage(chip.imageSlug)}
                         alt={chip.label}
                         sizes="(max-width: 640px) 50vw, 25vw"
                       />

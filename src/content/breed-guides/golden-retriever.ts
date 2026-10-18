@@ -2,7 +2,7 @@ import type { BreedGuide } from "@/lib/breeds/guide";
 
 export const goldenRetrieverGuide: BreedGuide = {
   title: "Golden Retriever Complete Care Guide: Health, Nutrition, Lifespan & Costs",
-  lede: "This guide covers Golden Retrievers kept in the United States, the United Kingdom, and Australia. Ranges below use pounds (kilograms) and yearly costs in dollars, pounds, and Australian dollars. A veterinarian who has examined your dog still has to set the plan for that animal.",
+  lede: "Golden Retrievers are gentle sporting dogs that suit active families who can give about an hour of daily exercise and regular brushing—not long days alone. Know bloat signs early. Ranges below use pounds (kilograms) and yearly costs in dollars and pounds sterling.",
   sections: [
     {
       heading: "1. Quick Breed Summary",
@@ -204,7 +204,7 @@ export const goldenRetrieverGuide: BreedGuide = {
             { href: "/emergency/bloat-gdv", label: "Open the bloat emergency guide" },
             { href: "/emergency/chocolate-toxicity", label: "Dark chocolate poisoning in dogs" },
             { href: "/health-symptoms/dogs/vomiting-yellow-bile", label: "Yellow bile vomiting in dogs" },
-            { href: "/nutrition/grapes-raisins-dogs", label: "Grape and raisin toxicity in dogs" },
+            { href: "/nutrition/grapes-raisins", label: "Grape and raisin toxicity in dogs" },
           ],
         },
       ],

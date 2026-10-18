@@ -248,8 +248,8 @@ export const chocolateToxicityGuide: EmergencyLongGuide = {
         {
           type: "links",
           items: [
-            { href: "/nutrition/grapes-raisins-dogs", label: "Grape and raisin toxicity in dogs" },
-            { href: "/nutrition/xylitol-dogs", label: "Xylitol poisoning in dogs" },
+            { href: "/nutrition/grapes-raisins", label: "Grape and raisin toxicity in dogs" },
+            { href: "/nutrition/xylitol", label: "Xylitol poisoning in dogs" },
             { href: "/medications/ibuprofen", label: "Ibuprofen toxicity in dogs and cats" },
           ],
         },

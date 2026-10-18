@@ -212,7 +212,7 @@ export const ibuprofenGuide: EmergencyLongGuide = {
             { href: "/medications/acetaminophen", label: "Why acetaminophen is a separate emergency" },
             { href: "/medications/carprofen", label: "Why a dog NSAID is not a license to add ibuprofen" },
             { href: "/emergency/chocolate-toxicity", label: "Dark chocolate poisoning if cocoa was also eaten" },
-            { href: "/nutrition/grapes-raisins-dogs", label: "Grape toxicity if fruit was in the same incident" },
+            { href: "/nutrition/grapes-raisins", label: "Grape toxicity if fruit was in the same incident" },
             { href: "/medications/diphenhydramine", label: "Diphenhydramine safety if a combination tablet was used" },
             { href: "/editorial-standards", label: "How clinical pages are checked" },
           ],

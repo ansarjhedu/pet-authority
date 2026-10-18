@@ -2,7 +2,7 @@ import type { BreedGuide } from "@/lib/breeds/guide";
 
 export const ragdollGuide: BreedGuide = {
   title: "Ragdoll Complete Care Guide: Health, Nutrition, Lifespan & Costs",
-  lede: "This guide covers Ragdolls kept in the United States, the United Kingdom, and Australia. Ranges below use pounds (kilograms) and yearly costs in dollars, pounds, and Australian dollars. A veterinarian who has examined your cat still has to set the plan for that animal.",
+  lede: "Ragdolls are calm, affectionate indoor cats that suit apartments and gentle families—if you watch the litter box and keep play short but daily. Male straining with little urine is an emergency. Ranges below use pounds (kilograms) and yearly costs in dollars and pounds sterling.",
   sections: [
     {
       heading: "1. Quick Breed Summary",

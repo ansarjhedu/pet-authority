@@ -76,7 +76,7 @@ export function VetFinder() {
         </div>
         <p className="inline-flex min-h-11 items-center gap-2 self-start rounded-full border border-brand-primary/15 bg-brand-primary-50 px-3 py-1.5 text-sm font-semibold text-brand-primary">
           <ShieldCheck className="h-4 w-4" aria-hidden="true" />
-          Verified Clinical Directory
+          Curated emergency clinic list
         </p>
       </div>
 

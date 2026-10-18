@@ -135,9 +135,9 @@ export const blueberriesDogsGuide: EmergencyLongGuide = {
         {
           type: "links",
           items: [
-            { href: "/nutrition/xylitol-dogs", label: "Read the xylitol guide for dogs" },
-            { href: "/nutrition/grapes-raisins-dogs", label: "Grapes and raisins are not a safe fruit swap" },
-            { href: "/nutrition/onions-garlic-dogs", label: "Onion and garlic are not a safe seasoning" },
+            { href: "/nutrition/xylitol", label: "Read the xylitol guide for dogs" },
+            { href: "/nutrition/grapes-raisins", label: "Grapes and raisins are not a safe fruit swap" },
+            { href: "/nutrition/onions-garlic", label: "Onion and garlic are not a safe seasoning" },
           ],
         },
       ],

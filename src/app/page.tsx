@@ -74,7 +74,7 @@ const toxinGuides: {
 }[] = [
   {
     title: "Grapes and raisins in dogs",
-    href: "/nutrition/grapes-raisins-dogs",
+    href: "/nutrition/grapes-raisins",
     species: "Dogs",
     summary: "Any amount is Code Red. Kidney injury often appears in 24 to 72 hours, and there is no antidote.",
   },
@@ -92,7 +92,7 @@ const toxinGuides: {
   },
   {
     title: "Xylitol in dogs",
-    href: "/nutrition/xylitol-dogs",
+    href: "/nutrition/xylitol",
     species: "Dogs",
     summary: "Sugar-free gum and baked goods can drop blood sugar within about 30 to 60 minutes. Liver injury can follow.",
   },
@@ -104,7 +104,7 @@ const toxinGuides: {
   },
   {
     title: "Onion and garlic in dogs",
-    href: "/nutrition/onions-garlic-dogs",
+    href: "/nutrition/onions-garlic",
     species: "Dogs",
     summary: "Cooking does not remove the risk. Red blood cell damage often shows on days 2 to 5.",
   },

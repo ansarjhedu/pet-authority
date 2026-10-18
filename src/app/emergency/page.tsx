@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { HubIntro } from "@/components/editorial/HubIntro";
 import { EmergencyBoard } from "@/components/emergency/EmergencyBoard";
 import { HotlineBar } from "@/components/emergency/HotlineBar";
 import { HubBanner } from "@/components/media/HubBanner";
@@ -27,6 +28,38 @@ export default function EmergencyPage() {
       <div className="mb-6">
         <HotlineBar />
       </div>
+
+      <HubIntro
+        howToUse="Open the species filter, then the matching emergency card. Each guide covers recognition, the first minutes, what not to do at home, and what the ER may do. Call the hospital while you travel."
+        whatThisIsNot="This hub is not a home surgery kit, not a peroxide dosing chart, and not a reason to wait overnight when the page says minutes matter."
+        urgentCards={[
+          {
+            href: "/emergency/bloat-gdv",
+            title: "Bloat / GDV",
+            blurb: "Unproductive retching with a swelling abdomen needs an emergency hospital now.",
+          },
+          {
+            href: "/emergency/feline-urethral-blockage",
+            title: "Feline urethral blockage",
+            blurb: "A male cat straining with little urine is a same-hour emergency.",
+          },
+          {
+            href: "/emergency/lily-toxicity",
+            title: "Lily toxicity",
+            blurb: "Any true-lily exposure in a cat, including pollen, is a kidney emergency.",
+          },
+          {
+            href: "/emergency/chocolate-toxicity",
+            title: "Chocolate toxicity",
+            blurb: "Bring the wrapper, the amount missing, and the weight in pounds (kilograms).",
+          },
+          {
+            href: "/emergency/heatstroke",
+            title: "Heatstroke",
+            blurb: "Move to shade, start cooling carefully, and travel—do not dunk an unconscious pet.",
+          },
+        ]}
+      />
 
       <Link
         href="/tools/vet-finder"

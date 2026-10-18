@@ -33,24 +33,25 @@ export default function PrivacyPolicyPage() {
         </p>
         <h2 className="mb-3 text-2xl font-semibold text-brand-primary">Analytics</h2>
         <p className="mb-6 text-slate-700">
-          Pet Safety Hub uses Google Analytics to measure page views and traffic sources. Google may
-          collect device and usage data under Google&apos;s privacy policy at
-          policies.google.com/privacy. You can limit Analytics collection with Google&apos;s browser
-          add-on at tools.google.com/dlpage/gaoptout.
+          When a Google Analytics measurement ID is configured for the deployment, Pet Safety Hub
+          loads Google Analytics to measure page views and traffic sources. Google may collect device
+          and usage data under Google&apos;s privacy policy at policies.google.com/privacy. You can
+          limit Analytics collection with Google&apos;s browser add-on at
+          tools.google.com/dlpage/gaoptout. Analytics is not a clinical record.
         </p>
         <h2 className="mb-3 text-2xl font-semibold text-brand-primary">Advertising and cookies</h2>
         <p className="mb-6 text-slate-700">
-          Pet Safety Hub does not run advertising cookies until an ad network has approved the site.
-          If Google AdSense or another partner is added later, that partner may set cookies or
-          similar beacons to measure views, limit repeat ads, and reduce fraud, under that
-          partner&apos;s own policy. Google describes AdSense data use at
-          policies.google.com/technologies/ads.
+          Advertising scripts (for example Mediavine or Google AdSense) load only when the matching
+          site or publisher ID is configured for that deployment. Until an ad partner is enabled,
+          Pet Safety Hub does not set advertising cookies from those networks. When a partner is
+          enabled, that partner may set cookies or similar beacons to measure views, limit repeat
+          ads, and reduce fraud, under that partner&apos;s own policy. Google describes AdSense data
+          use at policies.google.com/technologies/ads.
         </p>
         <p className="mb-6 text-slate-700">
-          When advertising is enabled for visitors in the European Economic Area and the United
-          Kingdom, the site will offer a consent choice before non-essential advertising cookies are
-          stored. Essential cookies that only keep the site working do not need that choice. Ads are
-          not running on this site until that setup is complete.
+          Before non-essential advertising cookies are stored for visitors in the European Economic
+          Area and the United Kingdom, the publisher will add a consent choice. Essential cookies
+          that only keep the site working do not need that choice.
         </p>
         <h2 className="mb-3 text-2xl font-semibold text-brand-primary">GDPR, CCPA, and CPRA</h2>
         <p className="mb-6 text-slate-700">

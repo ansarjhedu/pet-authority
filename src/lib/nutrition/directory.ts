@@ -42,10 +42,10 @@ export function foodEmergencyHref(food: FoodItem): string | null {
   if (food.safetyStatus !== "TOXIC_DEADLY") {
     return null;
   }
-  if (food.slug.startsWith("chocolate")) {
+  if (food.slug.includes("chocolate") || food.name.toLowerCase() === "chocolate") {
     return "/emergency/chocolate-toxicity";
   }
-  if (food.slug.startsWith("lilies")) {
+  if (food.slug.includes("lil")) {
     return "/emergency/lily-toxicity";
   }
   return "/emergency";

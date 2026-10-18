@@ -123,7 +123,7 @@ export function BreedGuideArticle({ breed, guide }: { breed: Breed; guide: Breed
         </h1>
         {lead ? <DirectAnswer>{lead}</DirectAnswer> : null}
         <p className="mb-6 leading-relaxed text-slate-700">{guide.lede}</p>
-        <ClinicalReview />
+        <ClinicalReview variant="editorial" />
       </header>
       <div className="space-y-8">
         {sections.map((section) => {

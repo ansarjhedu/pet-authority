@@ -56,12 +56,12 @@ export const HOME_CATEGORY_IMAGES = {
 } as const;
 
 export const HOME_TOXIN_IMAGES: Record<string, string> = {
-  "/nutrition/grapes-raisins-dogs": "/images/home/toxin-grapes.jpg",
+  "/nutrition/grapes-raisins": "/images/home/toxin-grapes.jpg",
   "/emergency/chocolate-toxicity": "/images/home/toxin-chocolate.jpg",
   "/emergency/lily-toxicity": "/images/home/toxin-lilies.jpg",
-  "/nutrition/xylitol-dogs": "/images/home/toxin-xylitol.jpg",
+  "/nutrition/xylitol": "/images/home/toxin-xylitol.jpg",
   "/medications/ibuprofen": "/images/home/toxin-ibuprofen.jpg",
-  "/nutrition/onions-garlic-dogs": "/images/home/toxin-onion.jpg",
+  "/nutrition/onions-garlic": "/images/home/toxin-onion.jpg",
 };
 
 export const HOME_CARE_IMAGES: Record<string, string> = {
